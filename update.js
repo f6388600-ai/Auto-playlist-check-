@@ -4,10 +4,11 @@ const path = require('path');
 
 const filePath = path.join(__dirname, 'channels.json');
 
-// একাধিক পাবলিক আইপিটিভি সোর্স (ফলব্যাক সিস্টেম)
+// ইন্টারনেট থেকে ডেটা আনার জন্য বিভিন্ন জনপ্রিয় ওপেন-সোর্স ও পাবলিক আইপিটিভি সোর্স
 const sources = [
-    'https://iptv-org.github.io/iptv/languages/bn.m3u',
-    'https://iptv-org.github.io/iptv/countries/bgd.m3u' // বাংলাদেশ রিজিওনাল সোর্স
+    'https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8',
+    'https://iptv-org.github.io/iptv/index.m3u', // মূল গ্লোবাল প্লেলিস্ট (যেখান থেকে বাংলা/এশিয়ান ফিল্টার করা যাবে)
+    'https://raw.githubusercontent.com/ipstreet-dev/iptv/main/playlist.m3u'
 ];
 
 async function updateIPTVPlaylist() {
@@ -15,12 +16,12 @@ async function updateIPTVPlaylist() {
 
     for (let url of sources) {
         try {
-            console.log(`🔄 Trying to fetch from: ${url}`);
+            console.log(`🔄 Trying to fetch from internet source: ${url}`);
             const response = await axios.get(url, {
                 headers: {
                     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
                 },
-                timeout: 8000
+                timeout: 15000
             });
 
             const data = response.data;
@@ -41,7 +42,8 @@ async function updateIPTVPlaylist() {
                     }
                 } else if (line.startsWith('http')) {
                     if (currentName) {
-                        // ডুপ্লিকেট লিংক এড়ানোর জন্য চেক করা
+                        // বাংলাদেশ বা সাধারণ জনপ্রিয় চ্যানেলগুলো ফিল্টার করতে পারেন অথবা সব রাখতে পারেন
+                        // এখানে আমরা গ্লোবাল বা পাবলিক লিংকগুলো সংগ্রহ করছি
                         let exists = channels.some(ch => ch.url === line);
                         if (!exists) {
                             channels.push({
@@ -57,22 +59,22 @@ async function updateIPTVPlaylist() {
             }
 
             if (channels.length > 0) {
-                console.log(`✅ Successfully fetched ${channels.length} channels from this source.`);
-                break; // যদি ডেটা পেয়ে যায়, পরবর্তী সোর্সে যাওয়ার দরকার নেই
+                console.log(`✅ Successfully fetched ${channels.length} channels from ${url}`);
+                break; // সফলভাবে ডেটা পেলে লুপ ভেঙে বের হয়ে যাবে
             }
         } catch (error) {
-            console.log(`⚠️ Failed to fetch from ${url}, trying next source...`);
+            console.log(`⚠️️ Failed to fetch from ${url}: ${error.message}`);
         }
     }
 
-    // যদি কোনো সোর্স থেকেই লাইভ ডেটা না আসে, তবে ব্যাকআপ হিসেবে টেস্ট স্ট্রিম বা আগের ডেটা বহাল রাখা
+    // যদি ইন্টারনেট সোর্স থেকে চ্যানেল পাওয়া যায়, তবে সেভ হবে
     if (channels.length > 0) {
+        // ফাইলের সাইজ ঠিক রাখার জন্য প্রথম ১০০-২০০ টি চ্যানেল রাখতে পারেন অথবা সব রাখতে পারেন
         fs.writeFileSync(filePath, JSON.stringify(channels, null, 2));
-        console.log(`🚀 Total saved channels: ${channels.length}`);
+        console.log(`🚀 Saved total ${channels.length} channels to channels.json`);
     } else {
-        console.log('❌ All internet sources failed to respond.');
+        console.log('❌ Error: All internet sources failed or returned 404.');
     }
 }
 
 updateIPTVPlaylist();
-                                                   
