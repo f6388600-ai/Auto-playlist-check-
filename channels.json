@@ -1,1 +1,12 @@
-
+[
+  {
+    "name": "Test Big Buck Bunny (Live Stream)",
+    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Big_buck_bunny_poster_big.jpg/220px-Big_buck_bunny_poster_big.jpg"
+  },
+  {
+    "name": "Sintel Trailer (HLS Test)",
+    "url": "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Sintel_poster.jpg/220px-Sintel_poster.jpg"
+  }
+]
