@@ -2,8 +2,12 @@ name: Auto Update IPTV
 
 on:
   schedule:
-    - cron: '0 0 * * *' # প্রতিদিন একবার অটো রান হবে
-  workflow_dispatch: # গিটহাব থেকে ম্যানুয়াল রান করার বাটন
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+# এই পারমিশন ব্লকটি যোগ করতে হবে
+permissions:
+  contents: write
 
 jobs:
   build:
