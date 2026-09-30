@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto IPTV Player</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <style>
+        body { font-family: Arial, sans-serif; background: #121212; color: #fff; margin: 0; padding: 20px; }
+        .container { display: flex; gap: 20px; max-width: 1100px; margin: auto; }
+        .player-box { flex: 2; text-align: center; }
+        video { width: 100%; max-height: 400px; background: #000; border-radius: 8px; }
+        .list-box { flex: 1; max-height: 450px; overflow-y: auto; background: #1e1e1e; padding: 15px; border-radius: 8px; }
+        .item { display: flex; align-items: center; gap: 10px; padding: 10px; background: #2a2a2a; margin-bottom: 8px; border-radius: 5px; cursor: pointer; }
+        .item:hover { background: #3a3a3a; }
+        .item img { width: 25px; height: 25px; object-fit: contain; }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">📺 Auto IPTV System</h1>
+    
+    <div class="container">
+        <div class="player-box">
+            <video id="videoPlayer" controls autoplay></video>
+            <h3 id="nowPlaying">Select a channel</h3>
+        </div>
+        <div class="list-box" id="channelList">
+            <p>Loading live channels...</p>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('videoPlayer');
+        const listContainer = document.getElementById('channelList');
+        const nowPlayingTitle = document.getElementById('nowPlaying');
+
+        async function fetchChannels() {
+            try {
+                const res = await fetch('/api/channels');
+                const data = await res.json();
+                
+                listContainer.innerHTML = '';
+                if (data.length === 0) {
+                    listContainer.innerHTML = '<p>No live channels found.</p>';
+                    return;
+                }
+
+                data.forEach(ch => {
+                    const div = document.createElement('div');
+                    div.className = 'item';
+                    div.innerHTML = `<img src="${ch.logo || ''}" onerror="this.style.display='none'"><span>${ch.name}</span>`;
+                    div.onclick = () => playStream(ch.url, ch.name);
+                    listContainer.appendChild(div);
+                });
+            } catch (err) {
+                listContainer.innerHTML = '<p>Failed to load channels.</p>';
+            }
+        }
+
+        function playStream(url, name) {
+            nowPlayingTitle.innerText = `Playing: ${name}`;
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(url);
+                hls.attachMedia(video);
+                hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
+            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                video.src = url;
+                video.addEventListener('loadedmetadata', () => video.play());
+            }
+        }
+
+        fetchChannels();
+    </script>
+</body>
+  </html>
+  
