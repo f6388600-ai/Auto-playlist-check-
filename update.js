@@ -1,32 +1,61 @@
+const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 
 const filePath = path.join(__dirname, 'channels.json');
 
-// ডিফল্ট বা টেস্ট চ্যানেল লিস্ট (লিংক কাজ না করলে এগুলো ব্যাকআপ হিসেবে থাকবে)
-const defaultChannels = [
-    {
-        name: "Test Big Buck Bunny (Live Stream)",
-        url: "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Big_buck_bunny_poster_big.jpg/220px-Big_buck_bunny_poster_big.jpg"
-    },
-    {
-        name: "Sintel Trailer (HLS Test)",
-        url: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8",
-        logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Sintel_poster.jpg/220px-Sintel_poster.jpg"
-    }
-];
-
-function updateIPTVPlaylist() {
+async function updateIPTVPlaylist() {
     try {
-        console.log('🔄 Writing test/live channels to channels.json...');
+        console.log('🔄 Fetching real IPTV playlist from internet...');
+        // বাংলাদেশ ও এশিয়ান রিজিওনাল রিয়েল পাবলিক প্লেলিস্ট লিংক
+        const playlistUrl = 'https://iptv-org.github.io/iptv/languages/bn.m3u';
         
-        // সরাসরি ফাইলে ডাটা সেভ করা
-        fs.writeFileSync(filePath, JSON.stringify(defaultChannels, null, 2));
-        console.log(`✅ Success! Saved ${defaultChannels.length} channels.`);
+        const response = await axios.get(playlistUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+            }
+        });
+        
+        const data = response.data;
+        const lines = data.split('\n');
+        let channels = [];
+        let currentName = '';
+        let currentLogo = '';
+
+        for (let line of lines) {
+            line = line.trim();
+
+            if (line.startsWith('#EXTINF:')) {
+                let logoMatch = line.match(/tvg-logo="(.*?)"/);
+                currentLogo = logoMatch ? logoMatch[1] : '';
+
+                let parts = line.split(',');
+                if (parts.length > 1) {
+                    currentName = parts[parts.length - 1].trim();
+                }
+            } else if (line.startsWith('http')) {
+                if (currentName) {
+                    channels.push({
+                        name: currentName,
+                        url: line,
+                        logo: currentLogo
+                    });
+                }
+                currentName = '';
+                currentLogo = '';
+            }
+        }
+
+        if (channels.length > 0) {
+            fs.writeFileSync(filePath, JSON.stringify(channels, null, 2));
+            console.log(`✅ Success! Saved ${channels.length} real live channels.`);
+        } else {
+            console.log('⚠️️ Playlist was empty or could not be parsed.');
+        }
     } catch (error) {
-        console.error('❌ Error:', error.message);
+        console.error('❌ Error fetching from internet:', error.message);
     }
 }
 
 updateIPTVPlaylist();
+            
