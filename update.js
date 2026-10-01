@@ -1,80 +1,94 @@
-const axios = require('axios');
-const fs = require('fs');
-const path = require('path');
+import fetch from 'node-fetch';
+import fs from 'fs/promises';
 
-const filePath = path.join(__dirname, 'channels.json');
-
-// ইন্টারনেট থেকে ডেটা আনার জন্য বিভিন্ন জনপ্রিয় ওপেন-সোর্স ও পাবলিক আইপিটিভি সোর্স
-const sources = [
-    'https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8',
-    'https://iptv-org.github.io/iptv/index.m3u', // মূল গ্লোবাল প্লেলিস্ট (যেখান থেকে বাংলা/এশিয়ান ফিল্টার করা যাবে)
-    'https://raw.githubusercontent.com/ipstreet-dev/iptv/main/playlist.m3u'
+// 👇 এখানে যত source চান add করুন
+const SOURCES = [
+  'https://iptv-org.github.io/iptv/index.m3u',
+  'https://iptv-org.github.io/iptv/categories/news.m3u',
+  'https://iptv-org.github.io/iptv/countries/bd.m3u',
+  'https://raw.githubusercontent.com/iptv-org/iptv/master/streams/bd.m3u',
+  // আপনার নিজের source add করুন
 ];
 
-async function updateIPTVPlaylist() {
-    let channels = [];
+// 👇 Keyword filter — এখানে যা দিবেন সেটাই খুঁজবে
+const KEYWORDS = ['bangla', 'bd', 'sports', 'news', 'movie'];
+const EXCLUDE  = ['xxx', 'adult', 'test'];
 
-    for (let url of sources) {
-        try {
-            console.log(`🔄 Trying to fetch from internet source: ${url}`);
-            const response = await axios.get(url, {
-                headers: {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
-                },
-                timeout: 15000
-            });
-
-            const data = response.data;
-            const lines = data.split('\n');
-            let currentName = '';
-            let currentLogo = '';
-
-            for (let line of lines) {
-                line = line.trim();
-
-                if (line.startsWith('#EXTINF:')) {
-                    let logoMatch = line.match(/tvg-logo="(.*?)"/);
-                    currentLogo = logoMatch ? logoMatch[1] : '';
-
-                    let parts = line.split(',');
-                    if (parts.length > 1) {
-                        currentName = parts[parts.length - 1].trim();
-                    }
-                } else if (line.startsWith('http')) {
-                    if (currentName) {
-                        // বাংলাদেশ বা সাধারণ জনপ্রিয় চ্যানেলগুলো ফিল্টার করতে পারেন অথবা সব রাখতে পারেন
-                        // এখানে আমরা গ্লোবাল বা পাবলিক লিংকগুলো সংগ্রহ করছি
-                        let exists = channels.some(ch => ch.url === line);
-                        if (!exists) {
-                            channels.push({
-                                name: currentName,
-                                url: line,
-                                logo: currentLogo
-                            });
-                        }
-                    }
-                    currentName = '';
-                    currentLogo = '';
-                }
-            }
-
-            if (channels.length > 0) {
-                console.log(`✅ Successfully fetched ${channels.length} channels from ${url}`);
-                break; // সফলভাবে ডেটা পেলে লুপ ভেঙে বের হয়ে যাবে
-            }
-        } catch (error) {
-            console.log(`⚠️️ Failed to fetch from ${url}: ${error.message}`);
-        }
+function parseM3U(text) {
+  const lines = text.split('\n');
+  const channels = [];
+  let meta = {};
+  for (const line of lines) {
+    if (line.startsWith('#EXTINF')) {
+      const name = line.split(',').pop().trim();
+      const logo = line.match(/tvg-logo="([^"]*)"/)?.[1] || '';
+      const group = line.match(/group-title="([^"]*)"/)?.[1] || '';
+      const lang = line.match(/tvg-language="([^"]*)"/)?.[1] || '';
+      const country = line.match(/tvg-country="([^"]*)"/)?.[1] || '';
+      meta = { name, logo, group, lang, country };
+    } else if (line.startsWith('http')) {
+      channels.push({ ...meta, url: line.trim() });
     }
-
-    // যদি ইন্টারনেট সোর্স থেকে চ্যানেল পাওয়া যায়, তবে সেভ হবে
-    if (channels.length > 0) {
-        // ফাইলের সাইজ ঠিক রাখার জন্য প্রথম ১০০-২০০ টি চ্যানেল রাখতে পারেন অথবা সব রাখতে পারেন
-        fs.writeFileSync(filePath, JSON.stringify(channels, null, 2));
-        console.log(`🚀 Saved total ${channels.length} channels to channels.json`);
-    } else {
-        console.log('❌ Error: All internet sources failed or returned 404.');
-    }
+  }
+  return channels;
 }
 
-updateIPTVPlaylist();
+async function checkLive(url, timeout = 5000) {
+  try {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), timeout);
+    const res = await fetch(url, { method: 'HEAD', signal: ctrl.signal });
+    clearTimeout(t);
+    return res.ok;
+  } catch { return false; }
+}
+
+async function collect() {
+  let all = [];
+  for (const src of SOURCES) {
+    try {
+      console.log(`📡 Fetching ${src}`);
+      const res = await fetch(src);
+      const text = await res.text();
+      all.push(...parseM3U(text));
+    } catch (e) { console.error(`❌ ${src}`, e.message); }
+  }
+
+  // Keyword filter
+  const filtered = all.filter(c => {
+    const blob = `${c.name} ${c.group} ${c.lang} ${c.country}`.toLowerCase();
+    if (EXCLUDE.some(x => blob.includes(x))) return false;
+    if (KEYWORDS.length === 0) return true;
+    return KEYWORDS.some(k => blob.includes(k.toLowerCase()));
+  });
+
+  // Dedupe
+  const seen = new Set();
+  const unique = filtered.filter(c => {
+    const key = c.url.split('?')[0];
+    if (seen.has(key)) return false;
+    seen.add(key); return true;
+  });
+
+  // Live check (parallel, 20 at a time)
+  console.log(`🔍 Checking ${unique.length} streams...`);
+  const results = [];
+  for (let i = 0; i < unique.length; i += 20) {
+    const batch = unique.slice(i, i + 20);
+    const checks = await Promise.all(batch.map(c => checkLive(c.url)));
+    batch.forEach((c, idx) => {
+      if (checks[idx]) results.push({ ...c, live: true });
+    });
+    console.log(`✅ ${results.length} live so far`);
+  }
+
+  await fs.writeFile('channels.json', JSON.stringify({
+    updated: new Date().toISOString(),
+    total: results.length,
+    channels: results
+  }, null, 2));
+
+  console.log(`💾 Saved ${results.length} live channels`);
+}
+
+collect();
