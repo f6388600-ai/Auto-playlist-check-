@@ -1,78 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Auto IPTV Player</title>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <style>
-        body { font-family: Arial, sans-serif; background: #121212; color: #fff; margin: 0; padding: 20px; }
-        .container { display: flex; gap: 20px; max-width: 1100px; margin: auto; }
-        .player-box { flex: 2; text-align: center; }
-        video { width: 100%; max-height: 400px; background: #000; border-radius: 8px; }
-        .list-box { flex: 1; max-height: 450px; overflow-y: auto; background: #1e1e1e; padding: 15px; border-radius: 8px; }
-        .item { display: flex; align-items: center; gap: 10px; padding: 10px; background: #2a2a2a; margin-bottom: 8px; border-radius: 5px; cursor: pointer; }
-        .item:hover { background: #3a3a3a; }
-        .item img { width: 25px; height: 25px; object-fit: contain; }
-    </style>
+<meta charset="utf-8">
+<title>IPTV Live Search</title>
+<style>
+  body{font-family:sans-serif;background:#0d1117;color:#c9d1d9;margin:0;padding:20px}
+  input,select{padding:8px;margin:4px;background:#161b22;color:#c9d1d9;border:1px solid #30363d;border-radius:6px}
+  .card{display:inline-block;width:200px;padding:10px;margin:6px;background:#161b22;border-radius:8px;font-size:13px}
+  .live{color:#3fb950} .dead{color:#f85149}
+  img{width:40px;height:40px;object-fit:contain}
+</style>
 </head>
 <body>
+<h2>📺 IPTV Live Search</h2>
+<input id="q" placeholder="🔍 channel name..." oninput="search()">
+<select id="country" onchange="search()"><option value="">All Country</option></select>
+<select id="cat" onchange="search()"><option value="">All Category</option></select>
+<div id="stats"></div>
+<div id="list"></div>
 
-    <h1 style="text-align: center;">📺 Auto IPTV System</h1>
-    
-    <div class="container">
-        <div class="player-box">
-            <video id="videoPlayer" controls autoplay></video>
-            <h3 id="nowPlaying">Select a channel</h3>
-        </div>
-        <div class="list-box" id="channelList">
-            <p>Loading live channels...</p>
-        </div>
-    </div>
-
-    <script>
-        const video = document.getElementById('videoPlayer');
-        const listContainer = document.getElementById('channelList');
-        const nowPlayingTitle = document.getElementById('nowPlaying');
-
-        async function fetchChannels() {
-            try {
-                const res = await fetch('/api/channels');
-                const data = await res.json();
-                
-                listContainer.innerHTML = '';
-                if (data.length === 0) {
-                    listContainer.innerHTML = '<p>No live channels found.</p>';
-                    return;
-                }
-
-                data.forEach(ch => {
-                    const div = document.createElement('div');
-                    div.className = 'item';
-                    div.innerHTML = `<img src="${ch.logo || ''}" onerror="this.style.display='none'"><span>${ch.name}</span>`;
-                    div.onclick = () => playStream(ch.url, ch.name);
-                    listContainer.appendChild(div);
-                });
-            } catch (err) {
-                listContainer.innerHTML = '<p>Failed to load channels.</p>';
-            }
-        }
-
-        function playStream(url, name) {
-            nowPlayingTitle.innerText = `Playing: ${name}`;
-            if (Hls.isSupported()) {
-                const hls = new Hls();
-                hls.loadSource(url);
-                hls.attachMedia(video);
-                hls.on(Hls.Events.MANIFEST_PARSED, () => video.play());
-            } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-                video.src = url;
-                video.addEventListener('loadedmetadata', () => video.play());
-            }
-        }
-
-        fetchChannels();
-    </script>
+<script>
+let all = [];
+async function load(){
+  const r = await fetch('/api/channels');
+  const d = await r.json();
+  all = d.channels;
+  document.getElementById('stats').innerText = `Total: ${d.total} | Updated: ${d.updated}`;
+  // populate filters
+  const countries = [...new Set(all.map(c=>c.country).filter(Boolean))];
+  const cats = [...new Set(all.map(c=>c.group).filter(Boolean))];
+  countries.forEach(c=>country.add(new Option(c,c)));
+  cats.forEach(c=>cat.add(new Option(c,c)));
+  render(all);
+}
+function search(){
+  const q = document.getElementById('q').value.toLowerCase();
+  const co = document.getElementById('country').value;
+  const ca = document.getElementById('cat').value;
+  const f = all.filter(c =>
+    (!q || c.name.toLowerCase().includes(q)) &&
+    (!co || c.country===co) &&
+    (!ca || c.group===ca)
+  );
+  render(f);
+}
+function render(list){
+  document.getElementById('list').innerHTML = list.map(c=>`
+    <div class="card">
+      <img src="${c.logo||''}" onerror="this.style.display='none'">
+      <div><b>${c.name}</b></div>
+      <div>${c.country||''} • ${c.group||''}</div>
+      <div class="live">● LIVE</div>
+    </div>`).join('');
+}
+load();
+</script>
 </body>
-  </html>
-  
+</html>
