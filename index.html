@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>📺 IPTV Live Search</title>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;padding:16px;font-family:system-ui,-apple-system,sans-serif;background:#0d1117;color:#c9d1d9}
+  h1{margin:0 0 12px;font-size:22px;display:flex;align-items:center;gap:8px}
+  .bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+  input,select{padding:9px 12px;background:#161b22;color:#c9d1d9;border:1px solid #30363d;border-radius:8px;font-size:14px}
+  input{flex:1;min-width:220px}
+  input:focus,select:focus{outline:none;border-color:#58a6ff;box-shadow:0 0 0 2px rgba(88,166,255,.2)}
+  .stats{font-size:13px;color:#8b949e;margin-bottom:14px}
+  .stats b{color:#c9d1d9}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+  .card{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:12px;cursor:pointer;transition:.15s}
+  .card:hover{border-color:#3fb950;transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.3)}
+  .card img{width:42px;height:42px;object-fit:contain;background:#0d1117;border-radius:6px}
+  .card b{display:block;font-size:13px;margin-top:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .meta{font-size:11px;color:#8b949e;margin-top:4px}
+  .live{color:#3fb950;font-size:11px;margin-top:4px;font-weight:600}
+  .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:99;justify-content:center;align-items:center;padding:20px}
+  .modal.on{display:flex}
+  .modal video{width:100%;max-width:960px;background:#000;border-radius:10px}
+  .close{position:absolute;top:16px;right:20px;color:#fff;font-size:32px;cursor:pointer;background:none;border:none;line-height:1}
+  .btn{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;background:#238636;color:#fff;text-decoration:none;border-radius:8px;font-size:13px;border:none;cursor:pointer;font-weight:500}
+  .btn:hover{background:#2ea043}
+  .btn.secondary{background:#21262d;border:1px solid #30363d}
+  .btn.secondary:hover{background:#30363d}
+  .empty{text-align:center;padding:60px 20px;color:#8b949e}
+  .empty span{font-size:48px;display:block;margin-bottom:12px}
+</style>
+</head>
+<body>
+
+<h1>📺 IPTV Live Search</h1>
+
+<div class="bar">
+  <input id="q" placeholder="🔍 Search channel (bangla, sports, news...)" autocomplete="off">
+  <select id="country"><option value="">All Country</option></select>
+  <select id="cat"><option value="">All Category</option></select>
+  <button class="btn" id="dlBtn" onclick="downloadM3U()">⬇ M3U</button>
+</div>
+
+<div class="stats" id="stats">Loading channels...</div>
+<div class="grid" id="grid"></div>
+
+<div class="modal" id="modal" onclick="closePlayer()">
+  <button class="close" title="Close (Esc)">&times;</button>
+  <video id="video" controls autoplay playsinline onclick="event.stopPropagation()"></video>
+</div>
+
+<script>
+let ALL = [];
+let HLS = null;
+let UPDATED = null;
+
+async function load() {
+  try {
+    const r = await fetch('./channels.json?t=' + Date.now());
+    if (!r.ok) throw new Error('Failed to load channels.json');
+    const d = await r.json();
+
+    // Support both formats: plain array OR { updated, total, channels: [...] }
+    if (Array.isArray(d)) {
+      ALL = d;
+      UPDATED = null;
+    } else {
+      ALL = d.channels || [];
+      UPDATED = d.updated || null;
+    }
+
+    // Build filter dropdowns (only if data has the fields)
+    const countries = [...new Set(ALL.map(c => c.country).filter(Boolean))].sort();
+    const cats      = [...new Set(ALL.map(c => c.group).filter(Boolean))].sort();
+
+    const cs = document.getElementById('country');
+    const ca = document.getElementById('cat');
+
+    // Clear old options except first
+    while (cs.options.length > 1) cs.remove(1);
+    while (ca.options.length > 1) ca.remove(1);
+
+    countries.forEach(c => cs.add(new Option(c, c)));
+    cats.forEach(c => ca.add(new Option(c, c)));
+
+    // Hide empty dropdowns for cleaner UI
+    cs.style.display = countries.length ? '' : 'none';
+    ca.style.display = cats.length ? '' : 'none';
+
+    document.getElementById('q').addEventListener('input', render);
+    cs.addEventListener('change', render);
+    ca.addEventListener('change', render);
+
+    render();
+  } catch (e) {
+    document.getElementById('stats').innerHTML = '❌ Could not load channels.json';
+    console.error(e);
+  }
+}
+
+function render() {
+  const q  = document.getElementById('q').value.toLowerCase().trim();
+  const co = document.getElementById('country').value;
+  const ca = document.getElementById('cat').value;
+
+  const list = ALL.filter(c => {
+    const blob = `${c.name || ''} ${c.group || ''} ${c.country || ''} ${c.lang || ''}`.toLowerCase();
+    return (!q  || blob.includes(q)) &&
+           (!co || c.country === co) &&
+           (!ca || c.group === ca);
+  });
+
+  const updatedText = UPDATED
+    ? ` • Updated: ${new Date(UPDATED).toLocaleString()}`
+    : '';
+
+  document.getElementById('stats').innerHTML =
+    `📊 Showing <b>${list.length}</b> / ${ALL.length} channels${updatedText}`;
+
+  const grid = document.getElementById('grid');
+  if (list.length === 0) {
+    grid.innerHTML = `<div class="empty"><span>🔍</span>No channels found</div>`;
+    window._current = [];
+    return;
+  }
+
+  grid.innerHTML = list.map((c, i) => `
+    <div class="card" onclick="play(${i})">
+      <img src="${c.logo || ''}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+      <b title="${escapeHtml(c.name)}">${escapeHtml(c.name)}</b>
+      <div class="meta">${[c.country, c.group].filter(Boolean).join(' • ') || 'Live Stream'}</div>
+      <div class="live">● LIVE</div>
+    </div>
+  `).join('');
+
+  window._current = list;
+}
+
+function escapeHtml(str) {
+  return String(str || '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function play(i) {
+  const c = window._current[i];
+  if (!c || !c.url) return;
+
+  const modal = document.getElementById('modal');
+  const video = document.getElementById('video');
+  modal.classList.add('on');
+
+  if (HLS) { HLS.destroy(); HLS = null; }
+  video.src = '';
+
+  // YouTube / Twitch links → open in new tab (can't play in <video>)
+  if (/youtube\.com|youtu\.be|twitch\.tv/i.test(c.url)) {
+    window.open(c.url, '_blank');
+    closePlayer();
+    return;
+  }
+
+  if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = c.url;
+  } else if (window.Hls && Hls.isSupported()) {
+    HLS = new Hls({ enableWorker: true, lowLatencyMode: true });
+    HLS.loadSource(c.url);
+    HLS.attachMedia(video);
+    HLS.on(Hls.Events.ERROR, (_, data) => {
+      if (data.fatal) {
+        console.error('HLS error', data);
+        alert('Stream play করতে পারছে না। অন্য চ্যানেল চেষ্টা করুন।');
+      }
+    });
+  } else {
+    alert('আপনার ব্রাউজারে HLS support নেই');
+  }
+  video.play().catch(() => {});
+}
+
+function closePlayer() {
+  const video = document.getElementById('video');
+  video.pause();
+  video.removeAttribute('src');
+  video.load();
+  if (HLS) { HLS.destroy(); HLS = null; }
+  document.getElementById('modal').classList.remove('on');
+}
+
+function downloadM3U() {
+  // Download currently filtered list (or all if no filter)
+  const list = window._current && window._current.length ? window._current : ALL;
+  let m3u = '#EXTM3U\n';
+  list.forEach(c => {
+    const logo = c.logo ? ` tvg-logo="${c.logo}"` : '';
+    const group = c.group ? ` group-title="${c.group}"` : '';
+    m3u += `#EXTINF:-1${logo}${group},${c.name}\n${c.url}\n`;
+  });
+
+  const blob = new Blob([m3u], { type: 'audio/x-mpegurl' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'playlist.m3u';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closePlayer();
+});
+
+load();
+</script>
+</body>
+</html>

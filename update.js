@@ -1,4 +1,4 @@
-// ✅ Node 20 native fetch — কোনো node-fetch লাগবে না
+// ✅ Node 20+ native fetch
 import fs from 'fs/promises';
 
 // ============ CONFIG ============
@@ -15,13 +15,13 @@ const SOURCES = [
   'https://iptv-org.github.io/iptv/languages/hin.m3u',
 ];
 
-// 🔍 এখানে আপনার keyword add/remove করুন (empty = সব channel)
+// 🔍 Keyword filter (empty array = keep everything)
 const KEYWORDS = [
   'bangla', 'bd', 'sports', 'news', 'movie',
   'music', 'kids', 'entertainment', 'bangladesh'
 ];
 
-// 🚫 এগুলো বাদ যাবে
+// 🚫 Exclude these
 const EXCLUDE = ['xxx', 'adult', '18+', 'test', 'porn'];
 
 const CHECK_TIMEOUT = 5000;   // 5s per stream
@@ -122,7 +122,7 @@ async function main() {
     console.log(`   ✅ ${live.length} live / ${i + batch.length} checked`);
   }
 
-  // 5. Save
+  // 5. Save in structure that the frontend expects
   const output = {
     updated: new Date().toISOString(),
     total: live.length,
