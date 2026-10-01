@@ -1,58 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>IPTV Live Search</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>📺 IPTV Live Search</title>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
 <style>
-  body{font-family:sans-serif;background:#0d1117;color:#c9d1d9;margin:0;padding:20px}
-  input,select{padding:8px;margin:4px;background:#161b22;color:#c9d1d9;border:1px solid #30363d;border-radius:6px}
-  .card{display:inline-block;width:200px;padding:10px;margin:6px;background:#161b22;border-radius:8px;font-size:13px}
-  .live{color:#3fb950} .dead{color:#f85149}
-  img{width:40px;height:40px;object-fit:contain}
+  *{box-sizing:border-box}
+  body{margin:0;padding:16px;font-family:system-ui,sans-serif;background:#0d1117;color:#c9d1d9}
+  h1{margin:0 0 12px;font-size:20px}
+  .bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+  input,select{padding:8px 10px;background:#161b22;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;font-size:14px}
+  input{flex:1;min-width:200px}
+  .stats{font-size:12px;color:#8b949e;margin-bottom:12px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+  .card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:10px;cursor:pointer;transition:.15s}
+  .card:hover{border-color:#3fb950;transform:translateY(-2px)}
+  .card img{width:40px;height:40px;object-fit:contain;background:#0d1117;border-radius:4px}
+  .card b{display:block;font-size:13px;margin-top:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .meta{font-size:11px;color:#8b949e;margin-top:4px}
+  .live{color:#3fb950;font-size:11px;margin-top:4px}
+  .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:99;justify-content:center;align-items:center;padding:20px}
+  .modal.on{display:flex}
+  .modal video{width:100%;max-width:900px;background:#000;border-radius:8px}
+  .close{position:absolute;top:20px;right:20px;color:#fff;font-size:30px;cursor:pointer;background:none;border:none}
+  a.btn{display:inline-block;padding:8px 12px;background:#238636;color:#fff;text-decoration:none;border-radius:6px;font-size:13px}
 </style>
 </head>
 <body>
-<h2>📺 IPTV Live Search</h2>
-<input id="q" placeholder="🔍 channel name..." oninput="search()">
-<select id="country" onchange="search()"><option value="">All Country</option></select>
-<select id="cat" onchange="search()"><option value="">All Category</option></select>
-<div id="stats"></div>
-<div id="list"></div>
+
+<h1>📺 IPTV Live Search</h1>
+
+<div class="bar">
+  <input id="q" placeholder="🔍 Search channel (bangla, sports, news...)" oninput="render()">
+  <select id="country" onchange="render()"><option value="">All Country</option></select>
+  <select id="cat" onchange="render()"><option value="">All Category</option></select>
+  <a class="btn" href="/playlist.m3u">⬇ M3U</a>
+</div>
+
+<div class="stats" id="stats">Loading...</div>
+<div class="grid" id="grid"></div>
+
+<div class="modal" id="modal" onclick="closePlayer()">
+  <button class="close">&times;</button>
+  <video id="video" controls autoplay onclick="event.stopPropagation()"></video>
+</div>
 
 <script>
-let all = [];
-async function load(){
+let ALL = [];
+let HLS = null;
+
+async function load() {
   const r = await fetch('/api/channels');
   const d = await r.json();
-  all = d.channels;
-  document.getElementById('stats').innerText = `Total: ${d.total} | Updated: ${d.updated}`;
-  // populate filters
-  const countries = [...new Set(all.map(c=>c.country).filter(Boolean))];
-  const cats = [...new Set(all.map(c=>c.group).filter(Boolean))];
-  countries.forEach(c=>country.add(new Option(c,c)));
-  cats.forEach(c=>cat.add(new Option(c,c)));
-  render(all);
+  ALL = d.channels || [];
+  document.getElementById('stats').innerText =
+    `📊 ${d.total} live channels • Updated: ${d.updated ? new Date(d.updated).toLocaleString() : 'never'}`;
+
+  const countries = [...new Set(ALL.map(c => c.country).filter(Boolean))].sort();
+  const cats      = [...new Set(ALL.map(c => c.group).filter(Boolean))].sort();
+
+  const cs = document.getElementById('country');
+  const ca = document.getElementById('cat');
+  countries.forEach(c => cs.add(new Option(c, c)));
+  cats.forEach(c => ca.add(new Option(c, c)));
+
+  render();
 }
-function search(){
-  const q = document.getElementById('q').value.toLowerCase();
+
+function render() {
+  const q  = document.getElementById('q').value.toLowerCase();
   const co = document.getElementById('country').value;
   const ca = document.getElementById('cat').value;
-  const f = all.filter(c =>
-    (!q || c.name.toLowerCase().includes(q)) &&
-    (!co || c.country===co) &&
-    (!ca || c.group===ca)
+
+  const list = ALL.filter(c =>
+    (!q  || `${c.name} ${c.group} ${c.country} ${c.lang}`.toLowerCase().includes(q)) &&
+    (!co || c.country === co) &&
+    (!ca || c.group === ca)
   );
-  render(f);
-}
-function render(list){
-  document.getElementById('list').innerHTML = list.map(c=>`
-    <div class="card">
-      <img src="${c.logo||''}" onerror="this.style.display='none'">
-      <div><b>${c.name}</b></div>
-      <div>${c.country||''} • ${c.group||''}</div>
+
+  document.getElementById('stats').innerHTML =
+    `📊 Showing <b>${list.length}</b> / ${ALL.length} channels`;
+
+  document.getElementById('grid').innerHTML = list.map((c, i) => `
+    <div class="card" onclick="play(${i})" data-idx="${i}">
+      <img src="${c.logo || ''}" onerror="this.style.visibility='hidden'">
+      <b title="${c.name}">${c.name}</b>
+      <div class="meta">${c.country || '?'} • ${c.group || '?'}</div>
       <div class="live">● LIVE</div>
-    </div>`).join('');
+    </div>
+  `).join('');
+
+  window._current = list;
 }
+
+function play(i) {
+  const c = window._current[i];
+  const modal = document.getElementById('modal');
+  const video = document.getElementById('video');
+  modal.classList.add('on');
+
+  if (HLS) { HLS.destroy(); HLS = null; }
+
+  if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = c.url;
+  } else if (window.Hls && Hls.isSupported()) {
+    HLS = new Hls();
+    HLS.loadSource(c.url);
+    HLS.attachMedia(video);
+  } else {
+    alert('Browser HLS support নেই');
+  }
+  video.play().catch(()=>{});
+}
+
+function closePlayer() {
+  const video = document.getElementById('video');
+  video.pause();
+  video.src = '';
+  if (HLS) { HLS.destroy(); HLS = null; }
+  document.getElementById('modal').classList.remove('on');
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closePlayer();
+});
+
 load();
 </script>
 </body>
