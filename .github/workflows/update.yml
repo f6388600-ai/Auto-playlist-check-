@@ -2,7 +2,7 @@ name: Auto Update IPTV
 
 on:
   schedule:
-    - cron: '0 */6 * * *'   # প্রতি ৬ ঘণ্টা
+    - cron: '0 */6 * * *'   # every 6 hours
   workflow_dispatch:         # manual run button
 
 permissions:
@@ -19,9 +19,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Install deps
-        run: npm install
 
       - name: Run updater
         run: node update.js
