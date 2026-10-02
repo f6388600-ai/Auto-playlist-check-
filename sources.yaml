@@ -1,10 +1,9 @@
 # ============================================
-# IPTV Auto Aggregator - Source List
-# Unlimited public sources supported
+# IPTV Auto Aggregator - BD + Indian Bangla Focus
 # ============================================
 
 sources:
-  # ---- Official Public Free-to-Air Sources ----
+  # ---- Main Public Sources ----
   - name: "iptv-org Index"
     url: "https://iptv-org.github.io/iptv/index.m3u"
     type: m3u
@@ -25,31 +24,29 @@ sources:
     type: m3u
     enabled: true
 
-  # ---- Add your own public sources below (unlimited) ----
-  # - name: "My Playlist"
-  #   url: "https://raw.githubusercontent.com/USER/REPO/main/playlist.m3u"
+  # ---- Add more public sources if needed ----
+  # - name: "Custom BD Playlist"
+  #   url: "https://raw.githubusercontent.com/USER/REPO/main/bd.m3u"
   #   type: m3u
-  #   enabled: true
-  #
-  # - name: "Another JSON Source"
-  #   url: "https://example.com/channels.json"
-  #   type: json
   #   enabled: true
 
 # ============================================
-# Settings
+# Settings - BD + India only
 # ============================================
 settings:
-  max_channels_per_source: 100
+  max_channels_per_source: 4000
   health_check: true
   health_timeout: 6
   health_workers: 40
   remove_duplicates: true
   keep_only_https: false
-  preferred_countries: ["BD", "Bangla", "Indian Bangla", "zee Bangla"]
-  preferred_categories: ["News", "Sports", "zio"]
 
-  # Output files
+  # Only Bangladesh + India
+  preferred_countries: ["BD", "IN"]
+
+  # Leave empty for all categories (News, Entertainment, etc.)
+  preferred_categories: []
+
   output_m3u: "playlists/playlist.m3u"
   output_online_m3u: "playlists/online.m3u"
   output_json: "playlists/channels.json"
