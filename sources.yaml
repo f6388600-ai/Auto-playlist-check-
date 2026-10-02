@@ -1,0 +1,56 @@
+# ============================================
+# IPTV Auto Aggregator - Source List
+# Unlimited public sources supported
+# ============================================
+
+sources:
+  # ---- Official Public Free-to-Air Sources ----
+  - name: "iptv-org Index"
+    url: "https://iptv-org.github.io/iptv/index.m3u"
+    type: m3u
+    enabled: true
+
+  - name: "Free-TV IPTV"
+    url: "https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8"
+    type: m3u
+    enabled: true
+
+  - name: "Dearbulut Best"
+    url: "https://dearbulut.github.io/iptv/playlists/best.m3u"
+    type: m3u
+    enabled: true
+
+  - name: "Dearbulut Online"
+    url: "https://dearbulut.github.io/iptv/playlists/online.m3u"
+    type: m3u
+    enabled: true
+
+  # ---- Add your own public sources below (unlimited) ----
+  # - name: "My Playlist"
+  #   url: "https://raw.githubusercontent.com/USER/REPO/main/playlist.m3u"
+  #   type: m3u
+  #   enabled: true
+  #
+  # - name: "Another JSON Source"
+  #   url: "https://example.com/channels.json"
+  #   type: json
+  #   enabled: true
+
+# ============================================
+# Settings
+# ============================================
+settings:
+  max_channels_per_source: 3000
+  health_check: true
+  health_timeout: 6
+  health_workers: 40
+  remove_duplicates: true
+  keep_only_https: false
+  preferred_countries: []          # Example: ["BD", "IN", "US", "GB"]
+  preferred_categories: []         # Example: ["News", "Sports", "Entertainment"]
+
+  # Output files
+  output_m3u: "playlists/playlist.m3u"
+  output_online_m3u: "playlists/online.m3u"
+  output_json: "playlists/channels.json"
+  log_file: "playlists/update.log"
