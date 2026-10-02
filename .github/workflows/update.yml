@@ -1,36 +1,151 @@
-name: Auto Update IPTV
+name: IPTV Auto Update
 
 on:
   schedule:
-    - cron: '0 */6 * * *'   # every 6 hours
-  workflow_dispatch:         # manual run button
+    - cron: "*/30 * * * *"          # Every 30 minutes
+  workflow_dispatch:                 # Manual run button
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node 20
-        uses: actions/setup-node@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          node-version: '20'
+          python-version: "3.12"
+          cache: "pip"
 
-      - name: Run updater
-        run: node update.js
-
-      - name: Commit & Push
+      - name: Install dependencies
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add channels.json
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Aggregator
+        run: python scripts/update.py
+
+      - name: Generate index.html
+        run: |
+          python - << 'EOF'
+          import json
+          from pathlib import Path
+          from datetime import datetime, timezone
+
+          status_file = Path("playlists/status.json")
+          status = {}
+          if status_file.exists():
+              status = json.loads(status_file.read_text())
+
+          updated = status.get("updated_at", datetime.now(timezone.utc).isoformat())
+          total = status.get("total_channels", 0)
+          online = status.get("online_channels", 0)
+
+          html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPTV Auto Aggregator</title>
+  <style>
+    :root {{ --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; --accent: #38bdf8; --muted: #94a3b8; }}
+    * {{ box-sizing: border-box; margin: 0; padding: 0; }}
+    body {{ font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; padding: 2rem 1rem; }}
+    .container {{ max-width: 720px; margin: 0 auto; }}
+    h1 {{ font-size: 1.8rem; margin-bottom: 0.5rem; }}
+    .subtitle {{ color: var(--muted); margin-bottom: 2rem; }}
+    .card {{ background: var(--card); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }}
+    .stats {{ display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }}
+    .stat {{ text-align: center; }}
+    .stat .num {{ font-size: 2rem; font-weight: 700; color: var(--accent); }}
+    .stat .label {{ color: var(--muted); font-size: 0.9rem; }}
+    a.btn {{ display: block; background: var(--accent); color: #0f172a; text-decoration: none; padding: 0.9rem 1.2rem; border-radius: 8px; font-weight: 600; margin-bottom: 0.7rem; text-align: center; transition: opacity 0.2s; }}
+    a.btn:hover {{ opacity: 0.9; }}
+    a.btn.secondary {{ background: #334155; color: var(--text); }}
+    .meta {{ color: var(--muted); font-size: 0.85rem; margin-top: 1.5rem; text-align: center; }}
+    code {{ background: #334155; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.85rem; }}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>IPTV Auto Aggregator</h1>
+    <p class="subtitle">Public free-to-air channels • Auto updated every 30 min</p>
+
+    <div class="card">
+      <div class="stats">
+        <div class="stat">
+          <div class="num">{online}</div>
+          <div class="label">Online Channels</div>
+        </div>
+        <div class="stat">
+          <div class="num">{total}</div>
+          <div class="label">Total Unique</div>
+        </div>
+      </div>
+
+      <a class="btn" href="playlists/online.m3u">Download Online Playlist (M3U)</a>
+      <a class="btn secondary" href="playlists/playlist.m3u">Download Full Playlist (M3U)</a>
+      <a class="btn secondary" href="playlists/channels.json">Download JSON</a>
+    </div>
+
+    <div class="card">
+      <p style="margin-bottom:0.8rem;color:var(--muted);font-size:0.9rem;">Direct links (copy to any IPTV player):</p>
+      <p style="word-break:break-all;font-size:0.85rem;margin-bottom:0.5rem;">
+        <code id="online-url"></code>
+      </p>
+      <p style="word-break:break-all;font-size:0.85rem;">
+        <code id="full-url"></code>
+      </p>
+    </div>
+
+    <p class="meta">Last updated: {updated}<br>Powered by IPTV Auto Aggregator</p>
+  </div>
+  <script>
+    const base = window.location.href.replace(/\\/?$/, '/');
+    document.getElementById('online-url').textContent = base + 'playlists/online.m3u';
+    document.getElementById('full-url').textContent = base + 'playlists/playlist.m3u';
+  </script>
+</body>
+</html>"""
+          Path("index.html").write_text(html, encoding="utf-8")
+          print("index.html generated")
+          EOF
+
+      - name: Commit updated files
+        run: |
+          git config user.name "IPTV-Auto-Bot"
+          git config user.email "iptv-auto@users.noreply.github.com"
+          git add playlists/ index.html || true
           if git diff --staged --quiet; then
             echo "No changes"
           else
-            git commit -m "🔄 Auto-update channels [skip ci]"
+            git commit -m "Auto update: $(date -u +'%Y-%m-%d %H:%M UTC')"
             git push
           fi
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
