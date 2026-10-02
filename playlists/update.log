@@ -1,0 +1,47 @@
+[2026-10-02 03:15:52] INFO    | ============================================================
+[2026-10-02 03:15:52] INFO    | IPTV Auto Aggregator v2.0
+[2026-10-02 03:15:52] INFO    | Sources configured: 4
+[2026-10-02 03:15:52] INFO    | ============================================================
+[2026-10-02 03:15:52] INFO    | FETCH | iptv-org Index
+[2026-10-02 03:15:52] INFO    | OK    | iptv-org Index → 11152 channels
+[2026-10-02 03:15:52] INFO    | LIMIT | iptv-org Index → first 3000
+[2026-10-02 03:15:52] INFO    | FETCH | Free-TV IPTV
+[2026-10-02 03:15:52] INFO    | OK    | Free-TV IPTV → 2080 channels
+[2026-10-02 03:15:52] INFO    | FETCH | Dearbulut Best
+[2026-10-02 03:15:53] INFO    | OK    | Dearbulut Best → 10090 channels
+[2026-10-02 03:15:53] INFO    | LIMIT | Dearbulut Best → first 3000
+[2026-10-02 03:15:53] INFO    | FETCH | Dearbulut Online
+[2026-10-02 03:15:53] INFO    | OK    | Dearbulut Online → 8355 channels
+[2026-10-02 03:15:53] INFO    | LIMIT | Dearbulut Online → first 3000
+[2026-10-02 03:15:53] INFO    | TOTAL | Collected 11080 channels from 4/4 sources
+[2026-10-02 03:15:53] INFO    | DEDUP | 11080 → 5788 unique
+[2026-10-02 03:15:53] INFO    | HEALTH| Checking 5788 streams (40 workers, 6s timeout)
+[2026-10-02 03:16:00] INFO    | HEALTH| Progress 300/5788
+[2026-10-02 03:16:14] INFO    | HEALTH| Progress 600/5788
+[2026-10-02 03:16:27] INFO    | HEALTH| Progress 900/5788
+[2026-10-02 03:16:44] INFO    | HEALTH| Progress 1200/5788
+[2026-10-02 03:16:57] INFO    | HEALTH| Progress 1500/5788
+[2026-10-02 03:17:09] INFO    | HEALTH| Progress 1800/5788
+[2026-10-02 03:17:23] INFO    | HEALTH| Progress 2100/5788
+[2026-10-02 03:17:37] INFO    | HEALTH| Progress 2400/5788
+[2026-10-02 03:17:53] INFO    | HEALTH| Progress 2700/5788
+[2026-10-02 03:18:09] INFO    | HEALTH| Progress 3000/5788
+[2026-10-02 03:18:26] INFO    | HEALTH| Progress 3300/5788
+[2026-10-02 03:18:37] INFO    | HEALTH| Progress 3600/5788
+[2026-10-02 03:18:44] INFO    | HEALTH| Progress 3900/5788
+[2026-10-02 03:19:00] INFO    | HEALTH| Progress 4200/5788
+[2026-10-02 03:19:13] INFO    | HEALTH| Progress 4500/5788
+[2026-10-02 03:19:22] INFO    | HEALTH| Progress 4800/5788
+[2026-10-02 03:19:28] INFO    | HEALTH| Progress 5100/5788
+[2026-10-02 03:19:39] INFO    | HEALTH| Progress 5400/5788
+[2026-10-02 03:19:48] INFO    | HEALTH| Progress 5700/5788
+[2026-10-02 03:20:08] INFO    | HEALTH| Progress 5788/5788
+[2026-10-02 03:20:08] INFO    | HEALTH| Finished → 4067 working / 5788 total (254.4s)
+[2026-10-02 03:20:08] INFO    | WRITE | playlist.m3u → 5788 channels
+[2026-10-02 03:20:08] INFO    | WRITE | online.m3u → 4067 channels
+[2026-10-02 03:20:08] INFO    | WRITE | channels.json → 5788 channels
+[2026-10-02 03:20:08] INFO    | ============================================================
+[2026-10-02 03:20:08] INFO    | DONE  | Total unique : 5788
+[2026-10-02 03:20:08] INFO    | DONE  | Online       : 4067
+[2026-10-02 03:20:08] INFO    | DONE  | Sources OK   : 4/4
+[2026-10-02 03:20:08] INFO    | ============================================================
