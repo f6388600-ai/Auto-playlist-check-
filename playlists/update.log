@@ -1,29 +1,29 @@
-[2026-10-02 16:12:51] INFO    | ============================================================
-[2026-10-02 16:12:51] INFO    | IPTV Auto Aggregator v2.0
-[2026-10-02 16:12:51] INFO    | Sources configured: 4
-[2026-10-02 16:12:51] INFO    | ============================================================
-[2026-10-02 16:12:51] INFO    | FETCH | iptv-org Index
-[2026-10-02 16:12:52] INFO    | OK    | iptv-org Index → 11152 channels
-[2026-10-02 16:12:52] INFO    | LIMIT | iptv-org Index → first 4000
-[2026-10-02 16:12:52] INFO    | FETCH | Free-TV IPTV
-[2026-10-02 16:12:52] INFO    | OK    | Free-TV IPTV → 2080 channels
-[2026-10-02 16:12:52] INFO    | FETCH | Dearbulut Best
-[2026-10-02 16:12:52] INFO    | OK    | Dearbulut Best → 10113 channels
-[2026-10-02 16:12:52] INFO    | LIMIT | Dearbulut Best → first 4000
-[2026-10-02 16:12:52] INFO    | FETCH | Dearbulut Online
-[2026-10-02 16:12:52] INFO    | OK    | Dearbulut Online → 8359 channels
-[2026-10-02 16:12:52] INFO    | LIMIT | Dearbulut Online → first 4000
-[2026-10-02 16:12:52] INFO    | TOTAL | Collected 14080 channels from 4/4 sources
-[2026-10-02 16:12:52] INFO    | DEDUP | 14080 → 7142 unique
-[2026-10-02 16:12:52] INFO    | FILTER| 7142 → 284
-[2026-10-02 16:12:52] INFO    | HEALTH| Checking 284 streams (40 workers, 6s timeout)
-[2026-10-02 16:13:16] INFO    | HEALTH| Progress 284/284
-[2026-10-02 16:13:16] INFO    | HEALTH| Finished → 244 working / 284 total (24.0s)
-[2026-10-02 16:13:16] INFO    | WRITE | playlist.m3u → 284 channels
-[2026-10-02 16:13:16] INFO    | WRITE | online.m3u → 244 channels
-[2026-10-02 16:13:16] INFO    | WRITE | channels.json → 284 channels
-[2026-10-02 16:13:16] INFO    | ============================================================
-[2026-10-02 16:13:16] INFO    | DONE  | Total unique : 284
-[2026-10-02 16:13:16] INFO    | DONE  | Online       : 244
-[2026-10-02 16:13:16] INFO    | DONE  | Sources OK   : 4/4
-[2026-10-02 16:13:16] INFO    | ============================================================
+[2026-10-02 20:52:27] INFO    | ============================================================
+[2026-10-02 20:52:27] INFO    | IPTV Auto Aggregator v2.0
+[2026-10-02 20:52:27] INFO    | Sources configured: 4
+[2026-10-02 20:52:27] INFO    | ============================================================
+[2026-10-02 20:52:27] INFO    | FETCH | iptv-org Index
+[2026-10-02 20:52:27] INFO    | OK    | iptv-org Index → 11152 channels
+[2026-10-02 20:52:27] INFO    | LIMIT | iptv-org Index → first 4000
+[2026-10-02 20:52:27] INFO    | FETCH | Free-TV IPTV
+[2026-10-02 20:52:27] INFO    | OK    | Free-TV IPTV → 2080 channels
+[2026-10-02 20:52:27] INFO    | FETCH | Dearbulut Best
+[2026-10-02 20:52:27] INFO    | OK    | Dearbulut Best → 10113 channels
+[2026-10-02 20:52:27] INFO    | LIMIT | Dearbulut Best → first 4000
+[2026-10-02 20:52:27] INFO    | FETCH | Dearbulut Online
+[2026-10-02 20:52:27] INFO    | OK    | Dearbulut Online → 8359 channels
+[2026-10-02 20:52:27] INFO    | LIMIT | Dearbulut Online → first 4000
+[2026-10-02 20:52:27] INFO    | TOTAL | Collected 14080 channels from 4/4 sources
+[2026-10-02 20:52:27] INFO    | DEDUP | 14080 → 7142 unique
+[2026-10-02 20:52:27] INFO    | FILTER| 7142 → 284
+[2026-10-02 20:52:27] INFO    | HEALTH| Checking 284 streams (40 workers, 6s timeout)
+[2026-10-02 20:52:51] INFO    | HEALTH| Progress 284/284
+[2026-10-02 20:52:51] INFO    | HEALTH| Finished → 246 working / 284 total (24.1s)
+[2026-10-02 20:52:51] INFO    | WRITE | playlist.m3u → 284 channels
+[2026-10-02 20:52:51] INFO    | WRITE | online.m3u → 246 channels
+[2026-10-02 20:52:51] INFO    | WRITE | channels.json → 284 channels
+[2026-10-02 20:52:51] INFO    | ============================================================
+[2026-10-02 20:52:51] INFO    | DONE  | Total unique : 284
+[2026-10-02 20:52:51] INFO    | DONE  | Online       : 246
+[2026-10-02 20:52:51] INFO    | DONE  | Sources OK   : 4/4
+[2026-10-02 20:52:51] INFO    | ============================================================
