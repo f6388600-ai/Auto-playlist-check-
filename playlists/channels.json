@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-02T04:52:25.730126+00:00",
-  "total": 276,
+  "generated_at": "2026-10-02T09:59:31.298172+00:00",
+  "total": 277,
   "channels": [
     {
       "name": "DeporTV",
@@ -1596,6 +1596,17 @@
       "country": "MN",
       "language": null,
       "source": "Free-TV IPTV"
+    },
+    {
+      "name": "All Time Movies (576p)",
+      "url": "https://samitaorigin.tangotv.in/ALLTIMEMOVIES/SAMITAORIGIN/index.m3u8",
+      "logo": "https://yt3.googleusercontent.com/U4INXhwmEUOABHoemQBpI6C9t4jb9iBmDvZ3ZT3lAb9Au_jVl32NL8XDpy-9cBjRJ2LP69Ovzg=s900-c-k-c0x00ffffff-no-rj",
+      "group": "Movies",
+      "tvg_id": "AllTimeMovies.in",
+      "tvg_name": "All Time Movies",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
     },
     {
       "name": "B4U Kadak (576p)",
