@@ -1,0 +1,183 @@
+#!/usr/bin/env python3
+"""Generate index.html with search for GitHub Pages"""
+
+import json
+from pathlib import Path
+from datetime import datetime, timezone
+
+BASE = Path(__file__).resolve().parent.parent
+STATUS_FILE = BASE / "playlists" / "status.json"
+OUT_FILE = BASE / "index.html"
+
+status = {}
+if STATUS_FILE.exists():
+    status = json.loads(STATUS_FILE.read_text(encoding="utf-8"))
+
+updated = status.get("updated_at", datetime.now(timezone.utc).isoformat())
+total = status.get("total_channels", 0)
+online = status.get("online_channels", 0)
+
+html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPTV Auto Aggregator</title>
+  <style>
+    :root {{ --bg:#0f172a; --card:#1e293b; --text:#e2e8f0; --accent:#38bdf8; --muted:#94a3b8; --green:#4ade80; }}
+    * {{ box-sizing:border-box; margin:0; padding:0; }}
+    body {{ font-family:system-ui,-apple-system,sans-serif; background:var(--bg); color:var(--text); min-height:100vh; padding:1.5rem 1rem; }}
+    .container {{ max-width:800px; margin:0 auto; }}
+    h1 {{ font-size:1.7rem; margin-bottom:0.3rem; }}
+    .subtitle {{ color:var(--muted); margin-bottom:1.5rem; font-size:0.95rem; }}
+    .card {{ background:var(--card); border-radius:12px; padding:1.3rem; margin-bottom:1rem; }}
+    .stats {{ display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.2rem; }}
+    .stat {{ text-align:center; }}
+    .stat .num {{ font-size:1.8rem; font-weight:700; color:var(--accent); }}
+    .stat .label {{ color:var(--muted); font-size:0.85rem; }}
+    a.btn, button.btn {{ display:block; width:100%; background:var(--accent); color:#0f172a; border:none; text-decoration:none; padding:0.85rem 1rem; border-radius:8px; font-weight:600; margin-bottom:0.6rem; text-align:center; cursor:pointer; font-size:0.95rem; }}
+    a.btn.secondary, button.btn.secondary {{ background:#334155; color:var(--text); }}
+    a.btn:hover, button.btn:hover {{ opacity:0.9; }}
+    .search-box {{ width:100%; padding:0.9rem 1rem; border-radius:8px; border:1px solid #334155; background:#0f172a; color:var(--text); font-size:1rem; margin-bottom:1rem; outline:none; }}
+    .search-box:focus {{ border-color:var(--accent); }}
+    .results-info {{ color:var(--muted); font-size:0.9rem; margin-bottom:0.8rem; }}
+    .channel {{ background:#0f172a; border-radius:8px; padding:0.8rem 1rem; margin-bottom:0.5rem; display:flex; justify-content:space-between; align-items:center; gap:0.8rem; }}
+    .channel-info {{ flex:1; min-width:0; }}
+    .channel-name {{ font-weight:600; margin-bottom:0.2rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }}
+    .channel-meta {{ font-size:0.8rem; color:var(--muted); }}
+    .channel-actions {{ display:flex; gap:0.4rem; flex-shrink:0; }}
+    .channel-actions button {{ background:#334155; color:var(--text); border:none; padding:0.4rem 0.7rem; border-radius:6px; font-size:0.8rem; cursor:pointer; }}
+    .channel-actions button:hover {{ background:#475569; }}
+    .channel-actions button.copy-ok {{ background:var(--green); color:#0f172a; }}
+    #results {{ max-height:420px; overflow-y:auto; }}
+    .meta {{ color:var(--muted); font-size:0.85rem; margin-top:1.2rem; text-align:center; }}
+    code {{ background:#334155; padding:0.15rem 0.4rem; border-radius:4px; font-size:0.8rem; word-break:break-all; }}
+    .hidden {{ display:none; }}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>IPTV Auto Aggregator</h1>
+    <p class="subtitle">Public free-to-air channels • Auto updated every 30 min</p>
+
+    <div class="card">
+      <div class="stats">
+        <div class="stat"><div class="num">{online}</div><div class="label">Online Channels</div></div>
+        <div class="stat"><div class="num">{total}</div><div class="label">Total Unique</div></div>
+      </div>
+      <a class="btn" href="playlists/online.m3u">Download Online Playlist (M3U)</a>
+      <a class="btn secondary" href="playlists/playlist.m3u">Download Full Playlist (M3U)</a>
+      <a class="btn secondary" href="playlists/channels.json">Download JSON</a>
+    </div>
+
+    <div class="card">
+      <h2 style="font-size:1.15rem;margin-bottom:0.8rem;">Search Channels</h2>
+      <input type="text" id="search" class="search-box" placeholder="Search example: zee bangla, sony, sports..." autocomplete="off">
+      <div class="results-info" id="results-info">Type to search...</div>
+      <div id="action-buttons" class="hidden" style="margin-bottom:0.8rem;">
+        <button class="btn" id="download-m3u">Download Filtered M3U</button>
+        <button class="btn secondary" id="copy-all">Copy All Links</button>
+      </div>
+      <div id="results"></div>
+    </div>
+
+    <div class="card">
+      <p style="margin-bottom:0.6rem;color:var(--muted);font-size:0.9rem;">Direct playlist links:</p>
+      <p style="margin-bottom:0.4rem;"><code id="online-url"></code></p>
+      <p><code id="full-url"></code></p>
+    </div>
+
+    <p class="meta">Last updated: {updated}<br>Powered by IPTV Auto Aggregator</p>
+  </div>
+
+  <script>
+    const base = window.location.href.replace(/\\/?$/, '/');
+    document.getElementById('online-url').textContent = base + 'playlists/online.m3u';
+    document.getElementById('full-url').textContent = base + 'playlists/playlist.m3u';
+
+    let allChannels = [];
+    let filtered = [];
+
+    fetch('playlists/channels.json')
+      .then(r => r.json())
+      .then(data => {{
+        allChannels = data.channels || data || [];
+        document.getElementById('results-info').textContent = allChannels.length + ' channels loaded. Type to search...';
+      }})
+      .catch(() => {{
+        document.getElementById('results-info').textContent = 'Failed to load channels.json';
+      }});
+
+    const searchInput = document.getElementById('search');
+    const resultsDiv = document.getElementById('results');
+    const resultsInfo = document.getElementById('results-info');
+    const actionButtons = document.getElementById('action-buttons');
+
+    searchInput.addEventListener('input', () => {{
+      const q = searchInput.value.trim().toLowerCase();
+      if (!q) {{
+        filtered = [];
+        resultsDiv.innerHTML = '';
+        resultsInfo.textContent = allChannels.length + ' channels loaded. Type to search...';
+        actionButtons.classList.add('hidden');
+        return;
+      }}
+
+      filtered = allChannels.filter(ch => {{
+        const name = (ch.name || '').toLowerCase();
+        const group = (ch.group || '').toLowerCase();
+        const country = (ch.country || '').toLowerCase();
+        return name.includes(q) || group.includes(q) || country.includes(q);
+      }}).slice(0, 50);
+
+      resultsInfo.textContent = filtered.length + ' result(s) found' + (filtered.length === 50 ? ' (showing first 50)' : '');
+      actionButtons.classList.toggle('hidden', filtered.length === 0);
+
+      resultsDiv.innerHTML = filtered.map((ch, i) => `
+        <div class="channel">
+          <div class="channel-info">
+            <div class="channel-name">${{ch.name || 'Unknown'}}</div>
+            <div class="channel-meta">${{ch.group || 'Ungrouped'}}${{ch.country ? ' • ' + ch.country : ''}}</div>
+          </div>
+          <div class="channel-actions">
+            <button onclick="copyLink(${{i}}, this)">Copy</button>
+          </div>
+        </div>
+      `).join('');
+    }});
+
+    function copyLink(index, btn) {{
+      const url = filtered[index].url;
+      navigator.clipboard.writeText(url).then(() => {{
+        btn.textContent = 'Copied!';
+        btn.classList.add('copy-ok');
+        setTimeout(() => {{ btn.textContent = 'Copy'; btn.classList.remove('copy-ok'); }}, 1500);
+      }});
+    }}
+
+    document.getElementById('copy-all').addEventListener('click', () => {{
+      const text = filtered.map(ch => ch.url).join('\\n');
+      navigator.clipboard.writeText(text).then(() => {{
+        alert(filtered.length + ' links copied!');
+      }});
+    }});
+
+    document.getElementById('download-m3u').addEventListener('click', () => {{
+      let m3u = '#EXTM3U\\n';
+      filtered.forEach(ch => {{
+        m3u += `#EXTINF:-1 group-title="${{ch.group || 'Ungrouped'}}",${{ch.name}}\\n`;
+        m3u += ch.url + '\\n';
+      }});
+      const blob = new Blob([m3u], {{ type: 'audio/x-mpegurl' }});
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'search-result.m3u';
+      a.click();
+    }});
+  </script>
+</body>
+</html>
+"""
+
+OUT_FILE.write_text(html, encoding="utf-8")
+print(f"Generated {OUT_FILE}")
