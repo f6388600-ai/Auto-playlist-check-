@@ -3,74 +3,267 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IPTV Auto Aggregator</title>
+  <title>BD + Indian Bangla IPTV</title>
   <style>
-    :root { --bg:#0f172a; --card:#1e293b; --text:#e2e8f0; --accent:#38bdf8; --muted:#94a3b8; --green:#4ade80; }
-    * { box-sizing:border-box; margin:0; padding:0; }
-    body { font-family:system-ui,-apple-system,sans-serif; background:var(--bg); color:var(--text); min-height:100vh; padding:1.5rem 1rem; }
-    .container { max-width:800px; margin:0 auto; }
-    h1 { font-size:1.7rem; margin-bottom:0.3rem; }
-    .subtitle { color:var(--muted); margin-bottom:1.5rem; font-size:0.95rem; }
-    .card { background:var(--card); border-radius:12px; padding:1.3rem; margin-bottom:1rem; }
-    .stats { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.2rem; }
-    .stat { text-align:center; }
-    .stat .num { font-size:1.8rem; font-weight:700; color:var(--accent); }
-    .stat .label { color:var(--muted); font-size:0.85rem; }
-    a.btn, button.btn { display:block; width:100%; background:var(--accent); color:#0f172a; border:none; text-decoration:none; padding:0.85rem 1rem; border-radius:8px; font-weight:600; margin-bottom:0.6rem; text-align:center; cursor:pointer; font-size:0.95rem; }
-    a.btn.secondary, button.btn.secondary { background:#334155; color:var(--text); }
-    a.btn:hover, button.btn:hover { opacity:0.9; }
-    .search-box { width:100%; padding:0.9rem 1rem; border-radius:8px; border:1px solid #334155; background:#0f172a; color:var(--text); font-size:1rem; margin-bottom:1rem; outline:none; }
-    .search-box:focus { border-color:var(--accent); }
-    .results-info { color:var(--muted); font-size:0.9rem; margin-bottom:0.8rem; }
-    .channel { background:#0f172a; border-radius:8px; padding:0.8rem 1rem; margin-bottom:0.5rem; display:flex; justify-content:space-between; align-items:center; gap:0.8rem; }
-    .channel-info { flex:1; min-width:0; }
-    .channel-name { font-weight:600; margin-bottom:0.2rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .channel-meta { font-size:0.8rem; color:var(--muted); }
-    .channel-actions { display:flex; gap:0.4rem; flex-shrink:0; }
-    .channel-actions button { background:#334155; color:var(--text); border:none; padding:0.4rem 0.7rem; border-radius:6px; font-size:0.8rem; cursor:pointer; }
-    .channel-actions button:hover { background:#475569; }
-    .channel-actions button.copy-ok { background:var(--green); color:#0f172a; }
-    #results { max-height:420px; overflow-y:auto; }
-    .meta { color:var(--muted); font-size:0.85rem; margin-top:1.2rem; text-align:center; }
-    code { background:#334155; padding:0.15rem 0.4rem; border-radius:4px; font-size:0.8rem; word-break:break-all; }
-    .hidden { display:none; }
+    :root {
+      --bg: #0b1220;
+      --card: #141e2e;
+      --text: #e8eef7;
+      --accent: #3b82f6;
+      --muted: #8b9bb4;
+      --green: #22c55e;
+      --red: #ef4444;
+      --border: #243044;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 1.25rem 1rem 3rem;
+    }
+    .container { max-width: 880px; margin: 0 auto; }
+    h1 { font-size: 1.55rem; margin-bottom: 0.25rem; }
+    .subtitle { color: var(--muted); margin-bottom: 1.25rem; font-size: 0.92rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.15rem;
+      margin-bottom: 1rem;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+    .stat { text-align: center; padding: 0.6rem; background: #0b1220; border-radius: 10px; }
+    .stat .num { font-size: 1.6rem; font-weight: 700; color: var(--accent); }
+    .stat .label { color: var(--muted); font-size: 0.82rem; margin-top: 0.15rem; }
+    .btn, button.btn {
+      display: block;
+      width: 100%;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      text-decoration: none;
+      padding: 0.8rem 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      cursor: pointer;
+      font-size: 0.92rem;
+    }
+    .btn.secondary, button.btn.secondary { background: #243044; color: var(--text); }
+    .btn:hover, button.btn:hover { opacity: 0.92; }
+    .search-box {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #0b1220;
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      outline: none;
+    }
+    .search-box:focus { border-color: var(--accent); }
+    .quick {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.9rem;
+    }
+    .quick button {
+      background: #1a2740;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+    .quick button:hover { border-color: var(--accent); color: var(--accent); }
+    .results-info { color: var(--muted); font-size: 0.88rem; margin-bottom: 0.7rem; }
+    .actions { display: none; gap: 0.5rem; margin-bottom: 0.8rem; }
+    .actions.show { display: grid; grid-template-columns: 1fr 1fr; }
+    .channel {
+      background: #0b1220;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.85rem;
+      margin-bottom: 0.55rem;
+    }
+    .channel-top {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background: #1a2740;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .logo-fallback {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background: #1a2740;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--muted);
+      flex-shrink: 0;
+    }
+    .info { flex: 1; min-width: 0; }
+    .name {
+      font-weight: 650;
+      font-size: 0.98rem;
+      margin-bottom: 0.2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+    .meta span { margin-right: 0.55rem; }
+    .channel-actions {
+      display: flex;
+      gap: 0.4rem;
+      margin-top: 0.65rem;
+    }
+    .channel-actions button {
+      flex: 1;
+      border: none;
+      border-radius: 8px;
+      padding: 0.45rem 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-play { background: var(--green); color: #052e16; }
+    .btn-copy { background: #243044; color: var(--text); }
+    .btn-copy.ok { background: var(--green); color: #052e16; }
+    #results { max-height: 520px; overflow-y: auto; padding-right: 2px; }
+    .player-box { display: none; margin-bottom: 1rem; }
+    .player-box.show { display: block; }
+    .player-title { font-size: 0.9rem; margin-bottom: 0.5rem; color: var(--muted); }
+    video {
+      width: 100%;
+      max-height: 280px;
+      background: #000;
+      border-radius: 10px;
+    }
+    .close-player {
+      margin-top: 0.5rem;
+      background: var(--red);
+      color: white;
+      border: none;
+      padding: 0.45rem 0.8rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      cursor: pointer;
+    }
+    .meta-footer {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 1.1rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+    code {
+      background: #1a2740;
+      padding: 0.12rem 0.35rem;
+      border-radius: 5px;
+      font-size: 0.78rem;
+      word-break: break-all;
+    }
+    .empty {
+      text-align: center;
+      color: var(--muted);
+      padding: 1.5rem 0.5rem;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>IPTV Auto Aggregator</h1>
-    <p class="subtitle">Public free-to-air channels • Auto updated every 30 min</p>
+    <h1>BD + Indian Bangla IPTV</h1>
+    <p class="subtitle">Zee Bangla • Star Jalsha • News • OTT style public streams • Auto update</p>
 
     <div class="card">
       <div class="stats">
-        <div class="stat"><div class="num">11</div><div class="label">Online Channels</div></div>
-        <div class="stat"><div class="num">21</div><div class="label">Total Unique</div></div>
+        <div class="stat">
+          <div class="num" id="stat-online">239</div>
+          <div class="label">Online</div>
+        </div>
+        <div class="stat">
+          <div class="num" id="stat-total">276</div>
+          <div class="label">Total (BD + IN)</div>
+        </div>
       </div>
-      <a class="btn" href="playlists/online.m3u">Download Online Playlist (M3U)</a>
-      <a class="btn secondary" href="playlists/playlist.m3u">Download Full Playlist (M3U)</a>
+      <a class="btn" href="playlists/online.m3u">Download Online M3U</a>
+      <a class="btn secondary" href="playlists/playlist.m3u">Download Full M3U</a>
       <a class="btn secondary" href="playlists/channels.json">Download JSON</a>
     </div>
 
+    <div class="card player-box" id="player-box">
+      <div class="player-title" id="player-title">Playing...</div>
+      <video id="video" controls playsinline></video>
+      <button class="close-player" id="close-player">Close Player</button>
+    </div>
+
     <div class="card">
-      <h2 style="font-size:1.15rem;margin-bottom:0.8rem;">Search Channels</h2>
-      <input type="text" id="search" class="search-box" placeholder="Search example: zee bangla, sony, sports..." autocomplete="off">
-      <div class="results-info" id="results-info">Type to search...</div>
-      <div id="action-buttons" class="hidden" style="margin-bottom:0.8rem;">
+      <h2 style="font-size:1.05rem;margin-bottom:0.7rem;">Search Channels</h2>
+      <input type="text" id="search" class="search-box"
+             placeholder="Search: zee bangla, star jalsha, somoy, independent..." autocomplete="off">
+
+      <div class="quick">
+        <button data-q="zee bangla">Zee Bangla</button>
+        <button data-q="star jalsha">Star Jalsha</button>
+        <button data-q="somoy">Somoy TV</button>
+        <button data-q="independent">Independent</button>
+        <button data-q="channel i">Channel i</button>
+        <button data-q="ntv">NTV</button>
+        <button data-q="news">News</button>
+        <button data-q="bangla">Bangla</button>
+      </div>
+
+      <div class="results-info" id="results-info">Loading channels...</div>
+
+      <div class="actions" id="action-buttons">
         <button class="btn" id="download-m3u">Download Filtered M3U</button>
         <button class="btn secondary" id="copy-all">Copy All Links</button>
       </div>
-      <div id="results"></div>
+
+      <div id="results">
+        <div class="empty">Type a name to search</div>
+      </div>
     </div>
 
     <div class="card">
-      <p style="margin-bottom:0.6rem;color:var(--muted);font-size:0.9rem;">Direct playlist links:</p>
-      <p style="margin-bottom:0.4rem;"><code id="online-url"></code></p>
+      <p style="margin-bottom:0.5rem;color:var(--muted);font-size:0.88rem;">Direct links:</p>
+      <p style="margin-bottom:0.35rem;"><code id="online-url"></code></p>
       <p><code id="full-url"></code></p>
     </div>
 
-    <p class="meta">Last updated: 2026-10-02T04:40:37.279255+00:00<br>Powered by IPTV Auto Aggregator</p>
+    <p class="meta-footer">
+      Last updated: 2026-10-02T04:52:25.732619+00:00<br>
+      Public free-to-air sources only • BD + India filter
+    </p>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.7/dist/hls.min.js"></script>
   <script>
     const base = window.location.href.replace(/\/?$/, '/');
     document.getElementById('online-url').textContent = base + 'playlists/online.m3u';
@@ -78,75 +271,167 @@
 
     let allChannels = [];
     let filtered = [];
-
-    fetch('playlists/channels.json')
-      .then(r => r.json())
-      .then(data => {
-        allChannels = data.channels || data || [];
-        document.getElementById('results-info').textContent = allChannels.length + ' channels loaded. Type to search...';
-      })
-      .catch(() => {
-        document.getElementById('results-info').textContent = 'Failed to load channels.json';
-      });
+    let hls = null;
 
     const searchInput = document.getElementById('search');
     const resultsDiv = document.getElementById('results');
     const resultsInfo = document.getElementById('results-info');
     const actionButtons = document.getElementById('action-buttons');
+    const playerBox = document.getElementById('player-box');
+    const video = document.getElementById('video');
+    const playerTitle = document.getElementById('player-title');
+
+    fetch('playlists/channels.json')
+      .then(r => r.json())
+      .then(data => {
+        allChannels = data.channels || data || [];
+        resultsInfo.textContent = allChannels.length + ' channels loaded (BD + IN). Type to search...';
+        resultsDiv.innerHTML = '<div class="empty">Type a name to search (e.g. zee bangla)</div>';
+      })
+      .catch(() => {
+        resultsInfo.textContent = 'Failed to load channels.json — run the workflow first';
+        resultsDiv.innerHTML = '<div class="empty">No data yet</div>';
+      });
+
+    document.querySelectorAll('.quick button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        searchInput.value = btn.getAttribute('data-q');
+        searchInput.dispatchEvent(new Event('input'));
+        searchInput.focus();
+      });
+    });
+
+    function escapeHtml(s) {
+      return String(s)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderResults() {
+      if (!filtered.length) {
+        resultsDiv.innerHTML = '<div class="empty">No results found</div>';
+        actionButtons.classList.remove('show');
+        return;
+      }
+      actionButtons.classList.add('show');
+      resultsDiv.innerHTML = filtered.map((ch, i) => {
+        const logo = ch.logo
+          ? `<img class="logo" src="${ch.logo}" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="logo-fallback" style="display:none">TV</div>`
+          : `<div class="logo-fallback">TV</div>`;
+        const group = ch.group || 'Ungrouped';
+        const country = ch.country || '-';
+        const source = ch.source || '-';
+        return `
+          <div class="channel">
+            <div class="channel-top">
+              ${logo}
+              <div class="info">
+                <div class="name">${escapeHtml(ch.name || 'Unknown')}</div>
+                <div class="meta">
+                  <span>${escapeHtml(group)}</span>
+                  <span>${escapeHtml(country)}</span>
+                  <span>${escapeHtml(source)}</span>
+                </div>
+              </div>
+            </div>
+            <div class="channel-actions">
+              <button class="btn-play" onclick="playStream(${i})">Play</button>
+              <button class="btn-copy" onclick="copyLink(${i}, this)">Copy Link</button>
+            </div>
+          </div>`;
+      }).join('');
+    }
 
     searchInput.addEventListener('input', () => {
       const q = searchInput.value.trim().toLowerCase();
       if (!q) {
         filtered = [];
-        resultsDiv.innerHTML = '';
-        resultsInfo.textContent = allChannels.length + ' channels loaded. Type to search...';
-        actionButtons.classList.add('hidden');
+        resultsInfo.textContent = allChannels.length + ' channels loaded (BD + IN). Type to search...';
+        resultsDiv.innerHTML = '<div class="empty">Type a name to search</div>';
+        actionButtons.classList.remove('show');
         return;
       }
-
       filtered = allChannels.filter(ch => {
         const name = (ch.name || '').toLowerCase();
         const group = (ch.group || '').toLowerCase();
         const country = (ch.country || '').toLowerCase();
-        return name.includes(q) || group.includes(q) || country.includes(q);
-      }).slice(0, 50);
+        const source = (ch.source || '').toLowerCase();
+        return name.includes(q) || group.includes(q) || country.includes(q) || source.includes(q);
+      }).slice(0, 40);
 
-      resultsInfo.textContent = filtered.length + ' result(s) found' + (filtered.length === 50 ? ' (showing first 50)' : '');
-      actionButtons.classList.toggle('hidden', filtered.length === 0);
-
-      resultsDiv.innerHTML = filtered.map((ch, i) => `
-        <div class="channel">
-          <div class="channel-info">
-            <div class="channel-name">${ch.name || 'Unknown'}</div>
-            <div class="channel-meta">${ch.group || 'Ungrouped'}${ch.country ? ' • ' + ch.country : ''}</div>
-          </div>
-          <div class="channel-actions">
-            <button onclick="copyLink(${i}, this)">Copy</button>
-          </div>
-        </div>
-      `).join('');
+      resultsInfo.textContent = filtered.length + ' result(s)' + (filtered.length === 40 ? ' (first 40)' : '');
+      renderResults();
     });
 
-    function copyLink(index, btn) {
+    window.copyLink = function(index, btn) {
       const url = filtered[index].url;
       navigator.clipboard.writeText(url).then(() => {
         btn.textContent = 'Copied!';
-        btn.classList.add('copy-ok');
-        setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copy-ok'); }, 1500);
+        btn.classList.add('ok');
+        setTimeout(() => { btn.textContent = 'Copy Link'; btn.classList.remove('ok'); }, 1400);
       });
-    }
+    };
+
+    window.playStream = function(index) {
+      const ch = filtered[index];
+      if (!ch || !ch.url) return;
+      playerTitle.textContent = 'Playing: ' + (ch.name || 'Stream');
+      playerBox.classList.add('show');
+      playerBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      if (hls) {
+        hls.destroy();
+        hls = null;
+      }
+      video.pause();
+      video.removeAttribute('src');
+      video.load();
+
+      const url = ch.url;
+      if (window.Hls && Hls.isSupported() && (url.includes('.m3u8') || url.includes('m3u8'))) {
+        hls = new Hls({ enableWorker: true, lowLatencyMode: true });
+        hls.loadSource(url);
+        hls.attachMedia(video);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          video.play().catch(() => {});
+        });
+        hls.on(Hls.Events.ERROR, (_, data) => {
+          if (data.fatal) {
+            playerTitle.textContent = 'Play failed — try Copy Link + VLC';
+          }
+        });
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = url;
+        video.play().catch(() => {});
+      } else {
+        window.open(url, '_blank');
+        playerTitle.textContent = 'Opened in new tab (browser may not support HLS)';
+      }
+    };
+
+    document.getElementById('close-player').addEventListener('click', () => {
+      if (hls) { hls.destroy(); hls = null; }
+      video.pause();
+      video.removeAttribute('src');
+      video.load();
+      playerBox.classList.remove('show');
+    });
 
     document.getElementById('copy-all').addEventListener('click', () => {
       const text = filtered.map(ch => ch.url).join('\n');
       navigator.clipboard.writeText(text).then(() => {
-        alert(filtered.length + ' links copied!');
+        alert(filtered.length + ' links copied');
       });
     });
 
     document.getElementById('download-m3u').addEventListener('click', () => {
       let m3u = '#EXTM3U\n';
       filtered.forEach(ch => {
-        m3u += `#EXTINF:-1 group-title="${ch.group || 'Ungrouped'}",${ch.name}\n`;
+        const group = (ch.group || 'Ungrouped').replace(/"/g, '');
+        const name = (ch.name || 'Unknown').replace(/,/g, ' ');
+        m3u += `#EXTINF:-1 group-title="${group}",${name}\n`;
         m3u += ch.url + '\n';
       });
       const blob = new Blob([m3u], { type: 'audio/x-mpegurl' });
