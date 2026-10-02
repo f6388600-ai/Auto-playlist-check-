@@ -236,6 +236,15 @@ def apply_filters(channels: list, settings: dict, logger):
     categories = [c.lower() for c in (settings.get("preferred_categories") or [])]
     https_only = settings.get("keep_only_https", False)
 
+    # Bangla / BD / Indian keyword helpers when country tag is missing
+    bangla_keywords = [
+        "bangla", "bengali", "bangladesh", "bd ", " bd", "dhaka",
+        "zee bangla", "star jalsha", "jalsha", "somoy", "independent tv",
+        "channel i", "ntv", "rtv", "ekattor", "boishakhi", "mytv",
+        "banglavision", "ananda", "colors bangla", "sun bangla",
+        "zee sarthak", "star vijay", "indian", "kolkata"
+    ]
+
     if not countries and not categories and not https_only:
         return channels
 
@@ -243,14 +252,28 @@ def apply_filters(channels: list, settings: dict, logger):
     for ch in channels:
         if https_only and not (ch.get("url") or "").startswith("https://"):
             continue
+
+        name = (ch.get("name") or "").lower()
+        group = (ch.get("group") or "").lower()
+        country = (ch.get("country") or "").upper()
+        blob = f"{name} {group}"
+
         if countries:
-            c = (ch.get("country") or "").upper()
-            if c and c not in countries:
-                continue
+            # Keep if country matches OR name/group looks Bangla/Indian
+            country_ok = country in countries if country else False
+            keyword_ok = any(k in blob for k in bangla_keywords)
+            if not (country_ok or keyword_ok):
+                # If country is set to something else (US/GB etc.) drop it
+                if country and country not in countries:
+                    continue
+                # If no country and no keyword, drop when strict BD/IN mode
+                if not country and not keyword_ok:
+                    continue
+
         if categories:
-            g = (ch.get("group") or "").lower()
-            if g and not any(cat in g for cat in categories):
+            if group and not any(cat in group for cat in categories):
                 continue
+
         filtered.append(ch)
 
     logger.info(f"FILTER| {len(channels)} → {len(filtered)}")
