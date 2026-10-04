@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-04T00:30:03.027277+00:00",
-  "total": 282,
+  "generated_at": "2026-10-04T06:16:21.685026+00:00",
+  "total": 281,
   "channels": [
     {
       "name": "DeporTV",
@@ -144,17 +144,6 @@
       "country": "IN",
       "language": "hin",
       "source": "Dearbulut Best"
-    },
-    {
-      "name": "ARTV (Chile) (720p)",
-      "url": "http://45.162.193.35/ARTV/index.m3u8",
-      "logo": "https://i.imgur.com/rKP1ihL.png",
-      "group": "Culture",
-      "tvg_id": "ARTV.cl@SD",
-      "tvg_name": null,
-      "country": null,
-      "language": null,
-      "source": "iptv-org Index"
     },
     {
       "name": "Canal 17 RTVD (1080p)",
@@ -1488,7 +1477,7 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "ARTV (Portugal) (720p) [Not 24/7]",
+      "name": "ARTV (720p) [Not 24/7]",
       "url": "https://playout172.livextend.cloud/liveiframe/_definst_/liveartvabr/playlist.m3u8",
       "logo": "https://i.imgur.com/y00t9hr.png",
       "group": "Legislative",
