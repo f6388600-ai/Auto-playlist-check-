@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T00:37:37.924310+00:00",
+  "generated_at": "2026-10-06T07:14:00.847604+00:00",
   "total": 281,
   "channels": [
     {
@@ -263,6 +263,17 @@
       "tvg_id": "AnandaTV.bd",
       "tvg_name": "Ananda TV",
       "country": "BD",
+      "language": "ben",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Colors Bangla (1080p)",
+      "url": "http://103.151.60.162:2122/play/a02o/index.m3u8?hls",
+      "logo": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/8049/1782291598049-h.jpg",
+      "group": "Entertainment",
+      "tvg_id": "ColorsBangla.in",
+      "tvg_name": "Colors Bangla",
+      "country": "IN",
       "language": "ben",
       "source": "Dearbulut Best"
     },
@@ -1675,8 +1686,8 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Jalsha Movies (576p)",
-      "url": "http://51.75.127.199:3141/jalshamovies/index.m3u8",
+      "name": "Jalsha Movies (1080p)",
+      "url": "http://103.185.24.134:3001/JALSHA-MOVIES-HD/index.m3u8",
       "logo": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/1445/1782291521445-h.jpg",
       "group": "Movies",
       "tvg_id": "JalshaMovies.in",
@@ -2827,7 +2838,7 @@
       "tvg_name": "Joy TV",
       "country": "IN",
       "language": "tam",
-      "source": "Dearbulut Best"
+      "source": "Dearbulut Online"
     },
     {
       "name": "JTBS Classic (720p)",
@@ -2838,7 +2849,7 @@
       "tvg_name": "JTBS Classic",
       "country": "IN",
       "language": "ben;eng",
-      "source": "Dearbulut Best"
+      "source": "Dearbulut Online"
     },
     {
       "name": "Knock Bhakti (1080p)",
@@ -3026,17 +3037,6 @@
       "country": null,
       "language": null,
       "source": "iptv-org Index"
-    },
-    {
-      "name": "DeporTV (1080p)",
-      "url": "http://181.209.105.115:2525/play/deportv/index.m3u8",
-      "logo": "https://i.imgur.com/THk9ARS.png",
-      "group": "Sports",
-      "tvg_id": "DeporTV.ar",
-      "tvg_name": "DeporTV",
-      "country": "AR",
-      "language": "spa",
-      "source": "Dearbulut Best"
     },
     {
       "name": "BRTV (Indonesia) (720p)",
