@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-06T23:36:00.189431+00:00",
-  "total": 280,
+  "generated_at": "2026-10-07T04:35:02.308108+00:00",
+  "total": 281,
   "channels": [
     {
       "name": "DeporTV",
@@ -264,6 +264,17 @@
       "tvg_name": "Ananda TV",
       "country": "BD",
       "language": "ben",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Asianet (720p)",
+      "url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/AsianetHD.m3u8",
+      "logo": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/7408/1782289617408-h.jpg",
+      "group": "Entertainment",
+      "tvg_id": "Asianet.in",
+      "tvg_name": "Asianet",
+      "country": "IN",
+      "language": "mal",
       "source": "Dearbulut Best"
     },
     {
@@ -1422,17 +1433,6 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "Disney Channel (576p)",
-      "url": "http://51.75.127.199:3141/disneychannel/index.m3u8",
-      "logo": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/1540/1785251571540-h.jpg",
-      "group": "Kids",
-      "tvg_id": "DisneyChannel.in",
-      "tvg_name": "Disney Channel",
-      "country": "IN",
-      "language": "hin;eng;tam;tel",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "Duronto TV (720p)",
       "url": "https://box.bbaria.net/DurontoTV/index.m3u8",
       "logo": "https://i.imgur.com/gXsddRK.png",
@@ -1596,6 +1596,17 @@
       "country": "MN",
       "language": null,
       "source": "Free-TV IPTV"
+    },
+    {
+      "name": "&TV (1080p)",
+      "url": "https://3f56f997.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9BbmRUVl9ITFM/playlist.m3u8",
+      "logo": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/%26TV_Transparent_c5cc189b-8493-48d2-b07c-3fa4f92d754a.png",
+      "group": "Movies",
+      "tvg_id": "AndTV.in",
+      "tvg_name": "&TV",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
     },
     {
       "name": "All Time Movies (720p)",
