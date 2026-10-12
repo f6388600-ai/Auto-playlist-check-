@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-12T02:36:24.268751+00:00",
-  "total": 264,
+  "generated_at": "2026-10-12T10:18:33.087949+00:00",
+  "total": 270,
   "channels": [
     {
       "name": "DeporTV",
@@ -509,6 +509,17 @@
       "source": "Dearbulut Online"
     },
     {
+      "name": "MH One Dil Se (360p)",
+      "url": "https://mumt01.tangotv.in/O5aw8Zn3MHONEDILSE/index.m3u8",
+      "logo": "https://dilse.mhone.in/wp-content/uploads/2022/02/MH-ONE-dil-se-LOGO-white-copy.png",
+      "group": "Entertainment",
+      "tvg_id": "MHOneDilSe.in",
+      "tvg_name": "MH One Dil Se",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Online"
+    },
+    {
       "name": "EmanTv (1080p)",
       "url": "https://avr.host247.net/live/emantv/playlist.m3u8",
       "logo": "https://i.imgur.com/QmgaPSi.png",
@@ -935,6 +946,17 @@
       "tvg_name": "Metro TV",
       "country": "IN",
       "language": "tel",
+      "source": "Dearbulut Online"
+    },
+    {
+      "name": "Mh 1 Prime (360p)",
+      "url": "https://streams.tangotv.in/MHONE/ORIGIN/index.m3u8",
+      "logo": null,
+      "group": "General",
+      "tvg_id": "Mh1Prime.in",
+      "tvg_name": "Mh 1 Prime",
+      "country": "IN",
+      "language": "hin",
       "source": "Dearbulut Online"
     },
     {
@@ -1642,6 +1664,17 @@
       "source": "Dearbulut Online"
     },
     {
+      "name": "MH One Movies (360p)",
+      "url": "https://mumt03.tangotv.in/Dsly5z3HMHONEMOVIE/index.m3u8",
+      "logo": null,
+      "group": "Movies",
+      "tvg_id": "MHOneMovies.in",
+      "tvg_name": "MH One Movies",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Online"
+    },
+    {
       "name": "9X Jhakaas (1080p)",
       "url": "https://wiselp.wiseplayout.com/9X_Jhakaas/master.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s90012_ld_h15_aa.png?lock=720x540",
@@ -1727,6 +1760,17 @@
       "tvg_name": "Mastiii",
       "country": "IN",
       "language": "hin",
+      "source": "Dearbulut Online"
+    },
+    {
+      "name": "Mh 1 Music (1080p)",
+      "url": "https://livestream.jswk.online/playlisttest/live/playlist.m3u8",
+      "logo": "https://dtil.tmsimg.com/assets/s143539_ld_h15_aa.png?lock=720x540",
+      "group": "Music",
+      "tvg_id": "Mh1Music.in",
+      "tvg_name": "Mh 1 Music",
+      "country": "IN",
+      "language": "pan",
       "source": "Dearbulut Online"
     },
     {
@@ -2423,6 +2467,17 @@
       "source": "Dearbulut Online"
     },
     {
+      "name": "Mh 1 News (360p)",
+      "url": "https://livestream.jswk.online/mhonenews/live/index.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/MH%20One%20News.png",
+      "group": "News",
+      "tvg_id": "Mh1News.in",
+      "tvg_name": "Mh 1 News",
+      "country": "IN",
+      "language": "pan",
+      "source": "Dearbulut Online"
+    },
+    {
       "name": "INTV",
       "url": "http://tv1.intv.mk:1935/live/intv/index.m3u8",
       "logo": "https://i.imgur.com/K7BSjqY.png",
@@ -2770,6 +2825,17 @@
       "group": "Religious",
       "tvg_id": "MercyTV.in",
       "tvg_name": "Mercy TV",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Online"
+    },
+    {
+      "name": "MH One Shraddha (360p)",
+      "url": "https://livestream.jswk.online/mhoneshraddha/live/index.m3u8",
+      "logo": "https://dtil.tmsimg.com/assets/GNLZZGG002NFEZK.png?lock=720x540",
+      "group": "Religious",
+      "tvg_id": "MHOneShraddha.in",
+      "tvg_name": "MH One Shraddha",
       "country": "IN",
       "language": "hin",
       "source": "Dearbulut Online"
