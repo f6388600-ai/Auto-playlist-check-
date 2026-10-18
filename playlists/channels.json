@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T23:46:49.966383+00:00",
+  "generated_at": "2026-10-18T03:15:50.501717+00:00",
   "total": 276,
   "channels": [
     {
@@ -1514,11 +1514,11 @@
       "url": "http://58.8.186.128:10006/bysid/2616",
       "logo": "https://i.imgur.com/ucTh9tO.png",
       "group": "Lifestyle",
-      "tvg_id": "FashionTVAsia.fr@SD",
-      "tvg_name": null,
-      "country": null,
-      "language": null,
-      "source": "iptv-org Index"
+      "tvg_id": "FashionTVAsia.fr",
+      "tvg_name": "FashionTV Asia",
+      "country": "FR",
+      "language": "eng",
+      "source": "Dearbulut Best"
     },
     {
       "name": "FashionTV Europe (1080p)",
