@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-18T23:30:44.760237+00:00",
-  "total": 274,
+  "generated_at": "2026-10-19T03:28:47.618578+00:00",
+  "total": 275,
   "channels": [
     {
       "name": "DeporTV",
@@ -2945,6 +2945,17 @@
       "logo": "https://i2.paste.pics/bf68b159547597c39574aec9dd7c626a.png",
       "group": "Sports",
       "tvg_id": "CRTV.cl@SD",
+      "tvg_name": null,
+      "country": null,
+      "language": null,
+      "source": "iptv-org Index"
+    },
+    {
+      "name": "CRTV Sports and Entertainment (360p)",
+      "url": "https://live1.acangroup.org:1929/publiclive/crtv_sport/playlist.m3u8",
+      "logo": "https://i.imgur.com/DiIei9F.png",
+      "group": "Sports",
+      "tvg_id": "CRTVSportsandEntertainment.cm@SD",
       "tvg_name": null,
       "country": null,
       "language": null,
