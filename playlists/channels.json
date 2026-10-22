@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T00:06:43.020783+00:00",
+  "generated_at": "2026-10-22T05:12:00.309920+00:00",
   "total": 275,
   "channels": [
     {
@@ -286,17 +286,6 @@
       "tvg_name": "Ananda TV",
       "country": "BD",
       "language": "ben",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "Colors (1080p)",
-      "url": "http://103.151.60.162:2122/play/a02q/index.m3u8?hls",
-      "logo": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/Colors_Transparent_16069908-8494-4eb4-bd40-5afca3969088.png",
-      "group": "Entertainment",
-      "tvg_id": "Colors.in",
-      "tvg_name": "Colors",
-      "country": "IN",
-      "language": "hin",
       "source": "Dearbulut Best"
     },
     {
@@ -1565,6 +1554,17 @@
       "source": "Free-TV IPTV"
     },
     {
+      "name": "&TV (1080p)",
+      "url": "https://3f56f997.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1nYl9BbmRUVl9ITFM/playlist.m3u8",
+      "logo": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/%26TV_Transparent_c5cc189b-8493-48d2-b07c-3fa4f92d754a.png",
+      "group": "Movies",
+      "tvg_id": "AndTV.in",
+      "tvg_name": "&TV",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "All Time Movies (720p)",
       "url": "https://samitaorigin.tangotv.in/ALLTIMEMOVIES/SAMITAORIGIN/index.m3u8",
       "logo": "https://yt3.googleusercontent.com/U4INXhwmEUOABHoemQBpI6C9t4jb9iBmDvZ3ZT3lAb9Au_jVl32NL8XDpy-9cBjRJ2LP69Ovzg=s900-c-k-c0x00ffffff-no-rj",
@@ -2761,7 +2761,7 @@
       "tvg_name": "Ishwar Bhakti TV",
       "country": "IN",
       "language": "hin",
-      "source": "Dearbulut Best"
+      "source": "Dearbulut Online"
     },
     {
       "name": "Jinvani Channel (576p)",
