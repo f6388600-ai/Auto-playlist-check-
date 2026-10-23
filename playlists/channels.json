@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-23T01:15:06.550108+00:00",
-  "total": 283,
+  "generated_at": "2026-10-23T06:18:32.199915+00:00",
+  "total": 282,
   "channels": [
     {
       "name": "Cartoon Network HD+ (720p)",
@@ -345,7 +345,7 @@
     },
     {
       "name": "DD National (1080p)",
-      "url": "http://107.167.16.138/ddnational/index.m3u8?token=test",
+      "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/40492a64c1db4a1385ba1a397d357d3a/index.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s158252_ld_h9_aa.png?lock=720x540",
       "group": "Entertainment",
       "tvg_id": "DDNational.in",
@@ -708,7 +708,7 @@
     },
     {
       "name": "Dangal TV (576p)",
-      "url": "http://107.167.16.138/dangal/index.m3u8?token=test",
+      "url": "https://cdn.pishow.tv/ott/live/1141/master.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s142771_ld_h9_aa.png?lock=720x540",
       "group": "General",
       "tvg_id": "DangalTV.in",
@@ -1001,6 +1001,17 @@
       "tvg_name": "MBC TV",
       "country": "IN",
       "language": "ori",
+      "source": "Dearbulut Online"
+    },
+    {
+      "name": "Mei Alai TV (576p)",
+      "url": "https://meialai.iptelevishion.com/meialai/2/index.m3u8",
+      "logo": "https://www.meialai.in/assets/meialai-DBaBUZTH.png",
+      "group": "General",
+      "tvg_id": "MeiAlaiTV.in",
+      "tvg_name": "Mei Alai TV",
+      "country": "IN",
+      "language": "tam",
       "source": "Dearbulut Online"
     },
     {
@@ -1598,28 +1609,6 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Asianet Movies (720p)",
-      "url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies1.smil/playlist.m3u8",
-      "logo": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/7227/1782288617227-h.jpg",
-      "group": "Movies",
-      "tvg_id": "AsianetMovies.in",
-      "tvg_name": "Asianet Movies",
-      "country": "IN",
-      "language": "mal",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "Bflix Movies (576p)",
-      "url": "http://103.151.60.162:2122/play/a01e/index.m3u8?hls",
-      "logo": "https://i.imgur.com/5CtiQ45.png",
-      "group": "Movies",
-      "tvg_id": "BflixMovies.in",
-      "tvg_name": "Bflix Movies",
-      "country": "IN",
-      "language": "hin",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "Bhojpuri Cinema (720p)",
       "url": "https://mumt05.tangotv.in/87NeALx2BHOJPURICINEMA/index.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s142713_ld_h15_aa.png?lock=720x540",
@@ -1670,6 +1659,17 @@
       "group": "Movies",
       "tvg_id": "GoldminesMovies.in",
       "tvg_name": "Goldmines Movies",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "India Talkies (360p)",
+      "url": "https://samitaorigin.tangotv.in/INDIATALKIES/SAMITAORIGIN/index.m3u8",
+      "logo": "https://papaji.freetvindia.com/media/FreeTV_India_Talkies.png",
+      "group": "Movies",
+      "tvg_id": "IndiaTalkies.in",
+      "tvg_name": "India Talkies",
       "country": "IN",
       "language": "hin",
       "source": "Dearbulut Best"
@@ -1730,8 +1730,8 @@
       "source": "Dearbulut Online"
     },
     {
-      "name": "Manoranjan Movies (576p)",
-      "url": "http://107.167.16.138/manoranjanmovies/index.m3u8?token=test",
+      "name": "Manoranjan Movies (360p)",
+      "url": "https://mumt04.tangotv.in/m18aqlK4MANORANJANMOVIES/index.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s143303_ld_h15_aa.png?lock=720x540",
       "group": "Movies",
       "tvg_id": "ManoranjanMovies.in",
@@ -1783,17 +1783,6 @@
       "country": null,
       "language": null,
       "source": "iptv-org Index"
-    },
-    {
-      "name": "Dhamaal (576p)",
-      "url": "http://107.167.16.138/dhamaal/index.m3u8?token=test",
-      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Dhamaal_TV.png",
-      "group": "Music",
-      "tvg_id": "Dhamaal.in",
-      "tvg_name": "Dhamaal",
-      "country": "IN",
-      "language": "hin",
-      "source": "Dearbulut Best"
     },
     {
       "name": "Dhoom Music (720p)",
@@ -2849,7 +2838,7 @@
       "tvg_name": "Ishwar Bhakti TV",
       "country": "IN",
       "language": "hin",
-      "source": "Dearbulut Online"
+      "source": "Dearbulut Best"
     },
     {
       "name": "Jinvani Channel (576p)",
