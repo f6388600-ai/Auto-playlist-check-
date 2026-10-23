@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T22:37:42.292585+00:00",
+  "generated_at": "2026-10-23T01:15:06.550108+00:00",
   "total": 283,
   "channels": [
     {
@@ -344,6 +344,17 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "DD National (1080p)",
+      "url": "http://107.167.16.138/ddnational/index.m3u8?token=test",
+      "logo": "https://dtil.tmsimg.com/assets/s158252_ld_h9_aa.png?lock=720x540",
+      "group": "Entertainment",
+      "tvg_id": "DDNational.in",
+      "tvg_name": "DD National",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "Enterr 10 Bangla (720p)",
       "url": "https://amg01448-samsungin-enterr10bangla-samsungin-ad-gg.amagi.tv/playlist/amg01448-samsungin-enterr10bangla-samsungin/playlist.m3u8",
       "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ENTERR10_BANGLA/images/LOGO_HD/image.png",
@@ -685,19 +696,8 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "CRTV (1080p)",
+      "name": "CRTV (Cameroon)",
       "url": "https://10gb1.acangroup.org:1929/crtv/crtv_all/playlist.m3u8",
-      "logo": "https://i.imgur.com/cQWNh3L.png",
-      "group": "General",
-      "tvg_id": "CRTV.cm",
-      "tvg_name": "CRTV",
-      "country": "CM",
-      "language": "fra;eng",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "CRTV (Cameroon) (576p)",
-      "url": "http://145.239.5.177/147/index.m3u8",
       "logo": "https://i.imgur.com/cQWNh3L.png",
       "group": "General",
       "tvg_id": "CRTV.cm@SD",
@@ -1598,6 +1598,28 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "Asianet Movies (720p)",
+      "url": "https://da86m1sqpm3o0.cloudfront.net/28072023/smil:asianetmovies1.smil/playlist.m3u8",
+      "logo": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/7227/1782288617227-h.jpg",
+      "group": "Movies",
+      "tvg_id": "AsianetMovies.in",
+      "tvg_name": "Asianet Movies",
+      "country": "IN",
+      "language": "mal",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Bflix Movies (576p)",
+      "url": "http://103.151.60.162:2122/play/a01e/index.m3u8?hls",
+      "logo": "https://i.imgur.com/5CtiQ45.png",
+      "group": "Movies",
+      "tvg_id": "BflixMovies.in",
+      "tvg_name": "Bflix Movies",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "Bhojpuri Cinema (720p)",
       "url": "https://mumt05.tangotv.in/87NeALx2BHOJPURICINEMA/index.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s142713_ld_h15_aa.png?lock=720x540",
@@ -1761,6 +1783,17 @@
       "country": null,
       "language": null,
       "source": "iptv-org Index"
+    },
+    {
+      "name": "Dhamaal (576p)",
+      "url": "http://107.167.16.138/dhamaal/index.m3u8?token=test",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Dhamaal_TV.png",
+      "group": "Music",
+      "tvg_id": "Dhamaal.in",
+      "tvg_name": "Dhamaal",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
     },
     {
       "name": "Dhoom Music (720p)",
@@ -2709,17 +2742,6 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Hare Krsna TV (1080p)",
-      "url": "https://hktv.harekrsnatv.com/HKTV/HKWebApp/manifest.mpd",
-      "logo": "https://dtil.tmsimg.com/assets/s143102_ld_h15_aa.png?lock=720x540",
-      "group": "Religious",
-      "tvg_id": "HareKrsnaTV.in",
-      "tvg_name": "Hare Krsna TV",
-      "country": "IN",
-      "language": "hin",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "Harvest TV (720p)",
       "url": "https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvesttvlive1/bbb19eae240ec100af921d511efc86a0.sdp/index.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Harvest-TV-High-Res-Logo-transparent.png",
@@ -2728,28 +2750,6 @@
       "tvg_name": "Harvest TV",
       "country": "IN",
       "language": "mal",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "Harvest TV Keralam (720p)",
-      "url": "https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvestenglish/d1796a22d24e8696c7d5d0b5c349fdd2.sdp/index.m3u8",
-      "logo": "https://i.imgur.com/1DyPuIt.png",
-      "group": "Religious",
-      "tvg_id": "HarvestTVKeralam.in",
-      "tvg_name": "Harvest TV Keralam",
-      "country": "IN",
-      "language": "mal",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "Harvest USA (720p)",
-      "url": "https://7mbd4ogkr3gx-hls-live.wmncdn.net/harvestusa/d57ffba6564caea2fee3f4085f19a098.sdp/playlist.m3u8",
-      "logo": null,
-      "group": "Religious",
-      "tvg_id": "HarvestUSA.in",
-      "tvg_name": "Harvest USA",
-      "country": "IN",
-      "language": "eng",
       "source": "Dearbulut Best"
     },
     {
