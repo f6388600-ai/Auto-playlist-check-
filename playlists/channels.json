@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-24T01:49:12.960537+00:00",
-  "total": 272,
+  "generated_at": "2026-10-24T06:54:37.777833+00:00",
+  "total": 273,
   "channels": [
     {
       "name": "Cartoon Network HD+ (720p)",
@@ -1727,6 +1727,17 @@
       "tvg_name": "ETV Music",
       "country": "IN",
       "language": "tel",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Hindi Hits (720p)",
+      "url": "https://samitaorigin.tangotv.in/HINDIHITS/SAMITAORIGIN/index.m3u8",
+      "logo": "https://i.postimg.cc/ryC1Y2K4/Capture.png",
+      "group": "Music",
+      "tvg_id": "HindiHits.in",
+      "tvg_name": "Hindi Hits",
+      "country": "IN",
+      "language": "hin",
       "source": "Dearbulut Best"
     },
     {
