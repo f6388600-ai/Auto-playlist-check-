@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-23T23:19:50.885813+00:00",
-  "total": 271,
+  "generated_at": "2026-10-24T01:49:12.960537+00:00",
+  "total": 272,
   "channels": [
     {
       "name": "Cartoon Network HD+ (720p)",
@@ -1937,6 +1937,17 @@
       "country": "IN",
       "language": "asm",
       "source": "Dearbulut Best"
+    },
+    {
+      "name": "Bangla Jago (720p)",
+      "url": "https://banglajagotv.livebox.co.in/banglajagohls/24x7.m3u8",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Bangla_Jago.png",
+      "group": "News",
+      "tvg_id": "BanglaJago.in@SD",
+      "tvg_name": null,
+      "country": null,
+      "language": null,
+      "source": "iptv-org Index"
     },
     {
       "name": "Bansal News (576p)",
