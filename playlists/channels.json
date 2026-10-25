@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-25T03:25:50.661460+00:00",
-  "total": 283,
+  "generated_at": "2026-10-25T08:39:18.775157+00:00",
+  "total": 285,
   "channels": [
     {
       "name": "Cartoon Network HD+ (720p)",
@@ -1840,6 +1840,17 @@
       "source": "Dearbulut Online"
     },
     {
+      "name": "Mh 1 Music (1080p)",
+      "url": "https://livestream.jswk.online/playlisttest/live/playlist.m3u8",
+      "logo": "https://dtil.tmsimg.com/assets/s143539_ld_h15_aa.png?lock=720x540",
+      "group": "Music",
+      "tvg_id": "Mh1Music.in",
+      "tvg_name": "Mh 1 Music",
+      "country": "IN",
+      "language": "pan",
+      "source": "Dearbulut Online"
+    },
+    {
       "name": "RTV Drenthe",
       "url": "https://cdn.rtvdrenthe.nl/live/rtvdrenthe/tv/index.m3u8",
       "logo": "https://i.imgur.com/GaGqM4z.png",
@@ -2530,6 +2541,17 @@
       "tvg_name": "Media One",
       "country": "IN",
       "language": "mal",
+      "source": "Dearbulut Online"
+    },
+    {
+      "name": "Mh 1 News (720p)",
+      "url": "https://streams.tangotv.in/MHONENEWS/ORIGIN/index.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/MH%20One%20News.png",
+      "group": "News",
+      "tvg_id": "Mh1News.in",
+      "tvg_name": "Mh 1 News",
+      "country": "IN",
+      "language": "pan",
       "source": "Dearbulut Online"
     },
     {
