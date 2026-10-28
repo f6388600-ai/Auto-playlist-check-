@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-28T04:16:24.264706+00:00",
-  "total": 276,
+  "generated_at": "2026-10-28T10:44:22.082341+00:00",
+  "total": 277,
   "channels": [
     {
       "name": "Cartoon Network HD+ (720p)",
@@ -1379,7 +1379,7 @@
     },
     {
       "name": "Hungama TV (576p)",
-      "url": "http://103.185.24.134:3001/HUNGAMA/index.m3u8",
+      "url": "http://66.102.126.10:8000/play/a023/index.m3u8",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hungama_TV.svg/960px-Hungama_TV.svg.png",
       "group": "Kids",
       "tvg_id": "HungamaTV.in",
@@ -1505,17 +1505,6 @@
       "group": "Movies",
       "tvg_id": "AndTV.in",
       "tvg_name": "&TV",
-      "country": "IN",
-      "language": "hin",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "&xplor HD (1080p)",
-      "url": "http://dksmedia.tv/play/live.php?mac=00:1A:79:B6:60:3D&stream=209743&extension=ts&play_token=mR7FwO88sY",
-      "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDXPLOR_HD/images/LOGO_HD/LOGO_HD_image.png",
-      "group": "Movies",
-      "tvg_id": "AndxplorHD.in",
-      "tvg_name": "&xplor HD",
       "country": "IN",
       "language": "hin",
       "source": "Dearbulut Best"
@@ -2038,17 +2027,6 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "DY 365 (360p)",
-      "url": "https://cdn.smartstream.video/smartstream-us/dy365/dy365/playlist.m3u8",
-      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DY%20365.png",
-      "group": "News",
-      "tvg_id": "DY365.in",
-      "tvg_name": "DY 365",
-      "country": "IN",
-      "language": "asm",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "Good News Today (720p)",
       "url": "https://cc-89m9zu7a2upfe.akamaized.net/hls/live/2016145/gnt/gntlive/playlist.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/GNT-Logo-2021_AT_FONT-transparent.png",
@@ -2148,6 +2126,17 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "Ind 24 (720p)",
+      "url": "https://livestream.jswk.online/ind24/live/index.m3u8",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/IND_24.png",
+      "group": "News",
+      "tvg_id": "Ind24.in",
+      "tvg_name": "Ind 24",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "India Ahead (720p)",
       "url": "https://mumt05.tangotv.in/87NeALx2INDIAAHEAD/index.m3u8",
       "logo": "https://i.imgur.com/hBkTmf9.png",
@@ -2167,6 +2156,28 @@
       "tvg_name": "India Daily Live",
       "country": "IN",
       "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "India News (576p)",
+      "url": "https://mumt03.tangotv.in/Dsly5z3HINDIANEWS/index.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/India%20News.png",
+      "group": "News",
+      "tvg_id": "IndiaNews.in",
+      "tvg_name": "India News",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "India News Punjab/Himachal (576p)",
+      "url": "https://mumt03.tangotv.in/Dsly5z3HINDIANEWSPBHPJ&K/index.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/India%20News%20Punjab.png",
+      "group": "News",
+      "tvg_id": "IndiaNewsPunjabHimachal.in",
+      "tvg_name": "India News Punjab/Himachal",
+      "country": "IN",
+      "language": "pan",
       "source": "Dearbulut Best"
     },
     {
@@ -2772,7 +2783,7 @@
       "tvg_name": "Ishwar Bhakti TV",
       "country": "IN",
       "language": "hin",
-      "source": "Dearbulut Online"
+      "source": "Dearbulut Best"
     },
     {
       "name": "Jinvani Channel (720p)",
