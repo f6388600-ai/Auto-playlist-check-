@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-27T23:32:01.385921+00:00",
-  "total": 274,
+  "generated_at": "2026-10-28T04:16:24.264706+00:00",
+  "total": 276,
   "channels": [
     {
       "name": "Cartoon Network HD+ (720p)",
@@ -1510,6 +1510,17 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "&xplor HD (1080p)",
+      "url": "http://dksmedia.tv/play/live.php?mac=00:1A:79:B6:60:3D&stream=209743&extension=ts&play_token=mR7FwO88sY",
+      "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_SYMANDXPLOR_HD/images/LOGO_HD/LOGO_HD_image.png",
+      "group": "Movies",
+      "tvg_id": "AndxplorHD.in",
+      "tvg_name": "&xplor HD",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "All Time Movies (720p)",
       "url": "https://samitaorigin.tangotv.in/ALLTIMEMOVIES/SAMITAORIGIN/index.m3u8",
       "logo": "https://yt3.googleusercontent.com/U4INXhwmEUOABHoemQBpI6C9t4jb9iBmDvZ3ZT3lAb9Au_jVl32NL8XDpy-9cBjRJ2LP69Ovzg=s900-c-k-c0x00ffffff-no-rj",
@@ -2027,6 +2038,17 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "DY 365 (360p)",
+      "url": "https://cdn.smartstream.video/smartstream-us/dy365/dy365/playlist.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DY%20365.png",
+      "group": "News",
+      "tvg_id": "DY365.in",
+      "tvg_name": "DY 365",
+      "country": "IN",
+      "language": "asm",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "Good News Today (720p)",
       "url": "https://cc-89m9zu7a2upfe.akamaized.net/hls/live/2016145/gnt/gntlive/playlist.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/GNT-Logo-2021_AT_FONT-transparent.png",
@@ -2533,6 +2555,17 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "Angel TV (1080p)",
+      "url": "https://janya-digimix.akamaized.net/vglive-sk-394914/india/ngrp:angelindia_all/playlist.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Angel-TV-hd-transparent.png",
+      "group": "Religious",
+      "tvg_id": "AngelTV.in",
+      "tvg_name": "Angel TV",
+      "country": "IN",
+      "language": "eng;tam;zho;heb;ind;nep;por;rus;spa",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "Aradana TV (576p)",
       "url": "https://cdn.pishow.tv/ott/live/961/master.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/ARADANA-TV-LOGO-transparent.png",
@@ -2605,17 +2638,6 @@
       "group": "Religious",
       "tvg_id": "FatehTV.in",
       "tvg_name": "Fateh TV",
-      "country": "IN",
-      "language": "hin",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "Hare Krsna TV (1080p)",
-      "url": "https://hktv.harekrsnatv.com/HKTV/HKWebApp/manifest.mpd",
-      "logo": "https://dtil.tmsimg.com/assets/s143102_ld_h15_aa.png?lock=720x540",
-      "group": "Religious",
-      "tvg_id": "HareKrsnaTV.in",
-      "tvg_name": "Hare Krsna TV",
       "country": "IN",
       "language": "hin",
       "source": "Dearbulut Best"
