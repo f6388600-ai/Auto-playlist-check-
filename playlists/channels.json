@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-29T01:35:09.370582+00:00",
-  "total": 300,
+  "generated_at": "2026-10-29T08:05:40.053941+00:00",
+  "total": 305,
   "channels": [
     {
       "name": "Cartoon Network HD+ (720p)",
@@ -275,6 +275,17 @@
       "tvg_name": "Ananda TV",
       "country": "BD",
       "language": "ben",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Captain (576p)",
+      "url": "https://fta.ektv.in/live/173/master.m3u8",
+      "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0029CNNM.png?lock=720x540",
+      "group": "Entertainment",
+      "tvg_id": "Captain.in",
+      "tvg_name": "Captain",
+      "country": "IN",
+      "language": "bho",
       "source": "Dearbulut Best"
     },
     {
@@ -1532,17 +1543,6 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "ETV Bal Bharat (576p)",
-      "url": "http://103.185.24.134:3001/ETV-BAL-BHARAT/index.m3u8",
-      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/ETV-Bal-Bahrat-HD-Logo_2000_X_1125_Transpharent.png",
-      "group": "Kids",
-      "tvg_id": "ETVBalBharat.in",
-      "tvg_name": "ETV Bal Bharat",
-      "country": "IN",
-      "language": "hin;tel;tam;kan;mal;mar;ben;pan;ori;guj;asm;eng",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "Hungama TV (576p)",
       "url": "http://66.102.126.10:8000/play/a023/index.m3u8",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hungama_TV.svg/960px-Hungama_TV.svg.png",
@@ -1914,7 +1914,7 @@
       "tvg_name": "Isai Aruvi",
       "country": "IN",
       "language": "tam",
-      "source": "Dearbulut Best"
+      "source": "Dearbulut Online"
     },
     {
       "name": "Kalika TV (576p)",
@@ -2379,14 +2379,69 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "India News Gujarati (576p)",
+      "url": "https://fta.ektv.in/live/653/master.m3u8",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/India_News_Gujarat.png",
+      "group": "News",
+      "tvg_id": "IndiaNewsGujarati.in",
+      "tvg_name": "India News Gujarati",
+      "country": "IN",
+      "language": "guj",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "India News Haryana (576p)",
+      "url": "https://fta.ektv.in/live/590/master.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/India%20News%20Haryana.png",
+      "group": "News",
+      "tvg_id": "IndiaNewsHaryana.in",
+      "tvg_name": "India News Haryana",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "India News Madhya Pradesh/Chhattisgarh (576p)",
+      "url": "https://fta.ektv.in/live/600/master.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/India%20News%20MP%20CH.png",
+      "group": "News",
+      "tvg_id": "IndiaNewsMadhyaPradeshChhattisgarh.in",
+      "tvg_name": "India News Madhya Pradesh/Chhattisgarh",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "India News Punjab/Himachal (576p)",
-      "url": "https://mumt03.tangotv.in/Dsly5z3HINDIANEWSPBHPJ&K/index.m3u8",
+      "url": "https://fta.ektv.in/live/642/master.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/India%20News%20Punjab.png",
       "group": "News",
       "tvg_id": "IndiaNewsPunjabHimachal.in",
       "tvg_name": "India News Punjab/Himachal",
       "country": "IN",
       "language": "pan",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "India News Rajasthan (576p)",
+      "url": "https://fta.ektv.in/live/601/master.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/India%20News%20Rajasthan.png",
+      "group": "News",
+      "tvg_id": "IndiaNewsRajasthan.in",
+      "tvg_name": "India News Rajasthan",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "India News Uttar Pradesh (576p)",
+      "url": "https://fta.ektv.in/live/304/master.m3u8",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/India_News_UP.png",
+      "group": "News",
+      "tvg_id": "IndiaNewsUttarPradesh.in",
+      "tvg_name": "India News Uttar Pradesh",
+      "country": "IN",
+      "language": "hin",
       "source": "Dearbulut Best"
     },
     {
@@ -3025,7 +3080,7 @@
       "tvg_name": "Ishwar Bhakti TV",
       "country": "IN",
       "language": "hin",
-      "source": "Dearbulut Best"
+      "source": "Dearbulut Online"
     },
     {
       "name": "Jinvani Channel (720p)",

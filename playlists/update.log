@@ -1,29 +1,30 @@
-[2026-10-29 01:34:44] INFO    | ============================================================
-[2026-10-29 01:34:44] INFO    | IPTV Auto Aggregator v2.0
-[2026-10-29 01:34:44] INFO    | Sources configured: 4
-[2026-10-29 01:34:44] INFO    | ============================================================
-[2026-10-29 01:34:44] INFO    | FETCH | iptv-org Index
-[2026-10-29 01:34:44] INFO    | OK    | iptv-org Index → 11376 channels
-[2026-10-29 01:34:44] INFO    | LIMIT | iptv-org Index → first 4000
-[2026-10-29 01:34:44] INFO    | FETCH | Free-TV IPTV
-[2026-10-29 01:34:44] INFO    | OK    | Free-TV IPTV → 2053 channels
-[2026-10-29 01:34:44] INFO    | FETCH | Dearbulut Best
-[2026-10-29 01:34:44] INFO    | OK    | Dearbulut Best → 10306 channels
-[2026-10-29 01:34:44] INFO    | LIMIT | Dearbulut Best → first 4000
-[2026-10-29 01:34:44] INFO    | FETCH | Dearbulut Online
-[2026-10-29 01:34:44] INFO    | OK    | Dearbulut Online → 8429 channels
-[2026-10-29 01:34:44] INFO    | LIMIT | Dearbulut Online → first 4000
-[2026-10-29 01:34:44] INFO    | TOTAL | Collected 14053 channels from 4/4 sources
-[2026-10-29 01:34:44] INFO    | DEDUP | 14053 → 7164 unique
-[2026-10-29 01:34:44] INFO    | FILTER| 7164 → 300
-[2026-10-29 01:34:44] INFO    | HEALTH| Checking 300 streams (40 workers, 6s timeout)
-[2026-10-29 01:35:09] INFO    | HEALTH| Progress 300/300
-[2026-10-29 01:35:09] INFO    | HEALTH| Finished → 259 working / 300 total (24.4s)
-[2026-10-29 01:35:09] INFO    | WRITE | playlist.m3u → 300 channels
-[2026-10-29 01:35:09] INFO    | WRITE | online.m3u → 259 channels
-[2026-10-29 01:35:09] INFO    | WRITE | channels.json → 300 channels
-[2026-10-29 01:35:09] INFO    | ============================================================
-[2026-10-29 01:35:09] INFO    | DONE  | Total unique : 300
-[2026-10-29 01:35:09] INFO    | DONE  | Online       : 259
-[2026-10-29 01:35:09] INFO    | DONE  | Sources OK   : 4/4
-[2026-10-29 01:35:09] INFO    | ============================================================
+[2026-10-29 08:05:16] INFO    | ============================================================
+[2026-10-29 08:05:16] INFO    | IPTV Auto Aggregator v2.0
+[2026-10-29 08:05:16] INFO    | Sources configured: 4
+[2026-10-29 08:05:16] INFO    | ============================================================
+[2026-10-29 08:05:16] INFO    | FETCH | iptv-org Index
+[2026-10-29 08:05:16] INFO    | OK    | iptv-org Index → 11376 channels
+[2026-10-29 08:05:16] INFO    | LIMIT | iptv-org Index → first 4000
+[2026-10-29 08:05:16] INFO    | FETCH | Free-TV IPTV
+[2026-10-29 08:05:16] INFO    | OK    | Free-TV IPTV → 2053 channels
+[2026-10-29 08:05:16] INFO    | FETCH | Dearbulut Best
+[2026-10-29 08:05:17] INFO    | OK    | Dearbulut Best → 10329 channels
+[2026-10-29 08:05:17] INFO    | LIMIT | Dearbulut Best → first 4000
+[2026-10-29 08:05:17] INFO    | FETCH | Dearbulut Online
+[2026-10-29 08:05:17] INFO    | OK    | Dearbulut Online → 8428 channels
+[2026-10-29 08:05:17] INFO    | LIMIT | Dearbulut Online → first 4000
+[2026-10-29 08:05:17] INFO    | TOTAL | Collected 14053 channels from 4/4 sources
+[2026-10-29 08:05:17] INFO    | DEDUP | 14053 → 7166 unique
+[2026-10-29 08:05:17] INFO    | FILTER| 7166 → 305
+[2026-10-29 08:05:17] INFO    | HEALTH| Checking 305 streams (40 workers, 6s timeout)
+[2026-10-29 08:05:36] INFO    | HEALTH| Progress 300/305
+[2026-10-29 08:05:40] INFO    | HEALTH| Progress 305/305
+[2026-10-29 08:05:40] INFO    | HEALTH| Finished → 270 working / 305 total (22.8s)
+[2026-10-29 08:05:40] INFO    | WRITE | playlist.m3u → 305 channels
+[2026-10-29 08:05:40] INFO    | WRITE | online.m3u → 270 channels
+[2026-10-29 08:05:40] INFO    | WRITE | channels.json → 305 channels
+[2026-10-29 08:05:40] INFO    | ============================================================
+[2026-10-29 08:05:40] INFO    | DONE  | Total unique : 305
+[2026-10-29 08:05:40] INFO    | DONE  | Online       : 270
+[2026-10-29 08:05:40] INFO    | DONE  | Sources OK   : 4/4
+[2026-10-29 08:05:40] INFO    | ============================================================
