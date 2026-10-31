@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T02:02:49.587026+00:00",
+  "generated_at": "2026-10-31T08:41:08.592931+00:00",
   "total": 298,
   "channels": [
     {
@@ -1848,7 +1848,7 @@
       "tvg_name": "Isai Aruvi",
       "country": "IN",
       "language": "tam",
-      "source": "Dearbulut Online"
+      "source": "Dearbulut Best"
     },
     {
       "name": "Kalika TV (576p)",
@@ -2123,17 +2123,6 @@
       "tvg_name": "CVR English",
       "country": "IN",
       "language": "eng",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "DY 365 (576p)",
-      "url": "https://cdn.pishow.tv/ott/live/1624/master.m3u8",
-      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DY%20365.png",
-      "group": "News",
-      "tvg_id": "DY365.in",
-      "tvg_name": "DY 365",
-      "country": "IN",
-      "language": "asm",
       "source": "Dearbulut Best"
     },
     {
@@ -2709,6 +2698,17 @@
       "source": "Dearbulut Online"
     },
     {
+      "name": "Mathrubhumi News (720p)",
+      "url": "https://streams.tangotv.in/MATHRUBHUMINEWS/ORIGIN/index.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Mathrubhumi%20News.png",
+      "group": "News",
+      "tvg_id": "MathrubhumiNews.in",
+      "tvg_name": "Mathrubhumi News",
+      "country": "IN",
+      "language": "mal",
+      "source": "Dearbulut Online"
+    },
+    {
       "name": "INTV",
       "url": "http://tv1.intv.mk:1935/live/intv/index.m3u8",
       "logo": "https://i.imgur.com/K7BSjqY.png",
@@ -3003,7 +3003,7 @@
       "tvg_name": "Ishwar Bhakti TV",
       "country": "IN",
       "language": "hin",
-      "source": "Dearbulut Online"
+      "source": "Dearbulut Best"
     },
     {
       "name": "Jinvani Channel (576p)",
