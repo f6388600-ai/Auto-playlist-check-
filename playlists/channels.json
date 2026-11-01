@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-01T01:53:38.649694+00:00",
-  "total": 314,
+  "generated_at": "2026-11-01T08:47:11.857268+00:00",
+  "total": 313,
   "channels": [
     {
       "name": "Cartoon Network HD+ (720p)",
@@ -572,6 +572,17 @@
       "tvg_name": "Marutam TV",
       "country": "IN",
       "language": "tam",
+      "source": "Dearbulut Online"
+    },
+    {
+      "name": "Mazhavil Manorama (1080p)",
+      "url": "https://fta.ektv.in/live/245/master.m3u8",
+      "logo": "https://dtil.tmsimg.com/assets/s147769_ld_h15_aa.png?lock=720x540",
+      "group": "Entertainment",
+      "tvg_id": "MazhavilManorama.in",
+      "tvg_name": "Mazhavil Manorama",
+      "country": "IN",
+      "language": "mal",
       "source": "Dearbulut Online"
     },
     {
@@ -1532,17 +1543,6 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "Hungama TV (576p)",
-      "url": "http://66.102.126.10:8000/play/a023/index.m3u8",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hungama_TV.svg/960px-Hungama_TV.svg.png",
-      "group": "Kids",
-      "tvg_id": "HungamaTV.in",
-      "tvg_name": "Hungama TV",
-      "country": "IN",
-      "language": "hin;tam;tel",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "ANTV (Venezuela) (720p)",
       "url": "http://181.78.8.199:8000/play/a0fo/index.m3u8",
       "logo": "https://i.imgur.com/Qm88HT0.png",
@@ -1763,17 +1763,6 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Jalsha Movies (1080p)",
-      "url": "http://103.151.60.162:2122/play/a00x/index.m3u8?hls",
-      "logo": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/1445/1782291521445-h.jpg",
-      "group": "Movies",
-      "tvg_id": "JalshaMovies.in",
-      "tvg_name": "Jalsha Movies",
-      "country": "IN",
-      "language": "ben",
-      "source": "Dearbulut Online"
-    },
-    {
       "name": "Kairali We (576p)",
       "url": "https://cdn.pishow.tv/ott/live/1530/master.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/We%20TV.png",
@@ -1925,7 +1914,7 @@
       "tvg_name": "Isai Aruvi",
       "country": "IN",
       "language": "tam",
-      "source": "Dearbulut Best"
+      "source": "Dearbulut Online"
     },
     {
       "name": "Kalika TV (576p)",
@@ -3179,7 +3168,7 @@
       "tvg_name": "Ishwar Bhakti TV",
       "country": "IN",
       "language": "hin",
-      "source": "Dearbulut Best"
+      "source": "Dearbulut Online"
     },
     {
       "name": "Jinvani Channel (720p)",
