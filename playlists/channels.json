@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-03T11:39:41.224334+00:00",
-  "total": 318,
+  "generated_at": "2026-11-03T19:08:30.571655+00:00",
+  "total": 320,
   "channels": [
     {
       "name": "Cartoon Network HD+ (720p)",
@@ -179,6 +179,17 @@
       "source": "iptv-org Index"
     },
     {
+      "name": "DD Bharati (576p)",
+      "url": "https://fta.ektv.in/live/335/master.m3u8",
+      "logo": "https://dtil.tmsimg.com/assets/s142779_ld_h15_aa.png?lock=720x540",
+      "group": "Culture",
+      "tvg_id": "DDBharati.in",
+      "tvg_name": "DD Bharati",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "DD Punjabi (480p)",
       "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/da821c24a59d4e57960497aeaca8fb33/index.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20Punjabi.png",
@@ -191,7 +202,7 @@
     },
     {
       "name": "History TV18 (1080p)",
-      "url": "https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/playlist/amg01448-samsungindia-historychannelenglish-samsungin/playlist.m3u8",
+      "url": "https://amg01448-amg01448c16-samsung-in-3495.playouts.now.amagi.tv/ts-ap-s1-n1/playlist/amg01448-samsungindia-historychannelhindi-samsungin/playlist.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s143133_ld_h15_aa.png?lock=720x540",
       "group": "Documentary",
       "tvg_id": "HistoryTV18.in",
@@ -224,7 +235,7 @@
     },
     {
       "name": "MagellanTV Now (1080p)",
-      "url": "https://amg00376-magellan-amg00376c5-samsung-au-1708.playouts.now.amagi.tv/playlist/amg00376-magellantv-magellantvnowww-samsungau/playlist.m3u8",
+      "url": "https://amg00376-magellan-amg00376c5-samsung-nz-1714.playouts.now.amagi.tv/playlist/amg00376-magellantv-magellantvnowww-samsungnz/playlist.m3u8",
       "logo": "https://i.imgur.com/gEraSp5.png",
       "group": "Documentary",
       "tvg_id": "MagellanTVNow.us",
@@ -235,7 +246,7 @@
     },
     {
       "name": "DD Kisan (576p)",
-      "url": "https://cdn.pishow.tv/ott/live/223/master.m3u8",
+      "url": "https://fta.ektv.in/live/148/148_0.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20Kisan.png",
       "group": "Education",
       "tvg_id": "DDKisan.in",
@@ -355,6 +366,28 @@
       "source": "iptv-org Index"
     },
     {
+      "name": "Dangal 2 (720p)",
+      "url": "http://107.167.16.138/Dangal2/index.m3u8?token=test",
+      "logo": "https://i.imgur.com/BEr1r7L.png",
+      "group": "Entertainment",
+      "tvg_id": "Dangal2.in",
+      "tvg_name": "Dangal 2",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "DD National (1080p)",
+      "url": "https://fta.ektv.in/live/15/master.m3u8",
+      "logo": "https://dtil.tmsimg.com/assets/s158252_ld_h9_aa.png?lock=720x540",
+      "group": "Entertainment",
+      "tvg_id": "DDNational.in",
+      "tvg_name": "DD National",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "E 24 (576p)",
       "url": "https://fta.ektv.in/live/159/master.m3u8",
       "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_E24/images/LOGO_HD/image.png",
@@ -377,6 +410,17 @@
       "source": "iptv-org Index"
     },
     {
+      "name": "Enterr 10 Bangla (720p)",
+      "url": "https://mumt07.tangotv.in/zHjX9OFlENTERR10BANGLA/index.m3u8",
+      "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ENTERR10_BANGLA/images/LOGO_HD/image.png",
+      "group": "Entertainment",
+      "tvg_id": "Enterr10Bangla.in",
+      "tvg_name": "Enterr 10 Bangla",
+      "country": "IN",
+      "language": "ben",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "Epic Bharat (1080p)",
       "url": "https://epiconvh.akamaized.net/live/nazara/master.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0032BW6T.png?lock=720x540",
@@ -389,24 +433,13 @@
     },
     {
       "name": "Fakt Marathi (576p)",
-      "url": "https://cdn.pishow.tv/ott/live/10002/master.m3u8",
+      "url": "https://fta.ektv.in/live/188/master.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Fakt%20Marathi.png",
       "group": "Entertainment",
       "tvg_id": "FaktMarathi.in",
       "tvg_name": "Fakt Marathi",
       "country": "IN",
       "language": "mar",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "Gangaur TV (576p)",
-      "url": "https://fta.ektv.in/live/22/master.m3u8",
-      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Gangaur.png",
-      "group": "Entertainment",
-      "tvg_id": "GangaurTV.in",
-      "tvg_name": "Gangaur TV",
-      "country": "IN",
-      "language": "hin",
       "source": "Dearbulut Best"
     },
     {
@@ -542,8 +575,8 @@
       "source": "Dearbulut Online"
     },
     {
-      "name": "Manoranjan Prime (576p)",
-      "url": "https://cdn.pishow.tv/ott/live/1474/master.m3u8",
+      "name": "Manoranjan Prime (720p)",
+      "url": "https://mumt06.tangotv.in/qYyB8fXVMANORANJANPRIME/index.m3u8",
       "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrGNUi4TMw8UslbIJF1ja-NrA1Ps656h9cxrj6aTfl3Cm-_C2gxtBBAKz-fLdPk7rJ0YrXfNvcQaBSDFTUdPgSYt8sBA0xn4aSMPnl-J2hiKa7P3Ybjd3BlE3XjoAJ0d7HNvhy8mZFDbf1JfAdMVBpdnPBuim3y3x0zMw1D3ryOw3NCoOsPA5fMMplPbU/s500/manoranjan-prime-tv-schedule-on-dd-freedish.jpg",
       "group": "Entertainment",
       "tvg_id": "ManoranjanPrime.in",
@@ -707,17 +740,6 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "Dangal TV (720p)",
-      "url": "https://streams.tangotv.in/DANGAL/ORIGIN/index.m3u8",
-      "logo": "https://dtil.tmsimg.com/assets/s142771_ld_h9_aa.png?lock=720x540",
-      "group": "General",
-      "tvg_id": "DangalTV.in",
-      "tvg_name": "Dangal TV",
-      "country": "IN",
-      "language": "hin",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "DD Arun Prabha (576p)",
       "url": "https://cdn.pishow.tv/ott/live/32/master.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s142776_ld_h15_aa.png?lock=720x540",
@@ -784,17 +806,6 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "DD India (1080p)",
-      "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/ceda14583477426aa162a65392d8ea07/index.m3u8",
-      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20India.png",
-      "group": "General",
-      "tvg_id": "DDIndia.in",
-      "tvg_name": "DD India",
-      "country": "IN",
-      "language": "eng",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "DD Jharkhand (576p)",
       "url": "https://cdn.pishow.tv/ott/live/1617/master.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s142787_ld_h15_aa.png?lock=720x540",
@@ -806,8 +817,8 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "DD Kashir (576p)",
-      "url": "https://cdn.pishow.tv/ott/live/16/master.m3u8",
+      "name": "DD Kashir (480p)",
+      "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/8a59a828e80c49d0958925950cec0204/index.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20Kashir.png",
       "group": "General",
       "tvg_id": "DDKashir.in",
@@ -818,7 +829,7 @@
     },
     {
       "name": "DD Madhya Pradesh (576p)",
-      "url": "https://fta.ektv.in/live/578/master.m3u8",
+      "url": "https://cdn.pishow.tv/ott/live/31/master.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20Madhya%20Pradesh.png",
       "group": "General",
       "tvg_id": "DDMadhyaPradesh.in",
@@ -861,28 +872,6 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "DD Saptagiri (576p)",
-      "url": "https://cdn.pishow.tv/ott/live/22/master.m3u8",
-      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20Saptagiri.png",
-      "group": "General",
-      "tvg_id": "DDSaptagiri.in",
-      "tvg_name": "DD Saptagiri",
-      "country": "IN",
-      "language": "tel",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "DD Tamil (1080p)",
-      "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/abf46b14847e45499f4a47f3a9afe93d/index.m3u8",
-      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/PHOTO-_HD_2000_X_1125_Transpharent.png",
-      "group": "General",
-      "tvg_id": "DDTamil.in",
-      "tvg_name": "DD Tamil",
-      "country": "IN",
-      "language": "tam",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "DD Tripura (480p)",
       "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/52b998e9510d41c29ad2ceca8ea3d849/index.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD-Tripura-Logo_2000_X_1125_Transpharent.png",
@@ -894,34 +883,12 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "DD Urdu (480p)",
-      "url": "https://d3qs3d2rkhfqrt.cloudfront.net/out/v1/9b91e9007e754db39a8b32c6bfc5b24a/index.m3u8",
-      "logo": "https://dtil.tmsimg.com/assets/s142808_ld_h9_aa.png?lock=720x540",
-      "group": "General",
-      "tvg_id": "DDUrdu.in",
-      "tvg_name": "DD Urdu",
-      "country": "IN",
-      "language": "urd;hin;eng",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "DD Uttar Pradesh (576p)",
       "url": "https://fta.ektv.in/live/263/master.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s142807_ld_h9_ab.png?lock=720x540",
       "group": "General",
       "tvg_id": "DDUttarPradesh.in",
       "tvg_name": "DD Uttar Pradesh",
-      "country": "IN",
-      "language": "hin",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "DD Uttarakhand (576p)",
-      "url": "https://fta.ektv.in/live/576/master.m3u8",
-      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD-Uttarakhand-Logo_2000_X_1125_Transpharent.png",
-      "group": "General",
-      "tvg_id": "DDUttarakhand.in",
-      "tvg_name": "DD Uttarakhand",
       "country": "IN",
       "language": "hin",
       "source": "Dearbulut Best"
@@ -1049,7 +1016,7 @@
     },
     {
       "name": "Kaumudy TV (576p)",
-      "url": "https://cdn.pishow.tv/ott/live/1237/master.m3u8",
+      "url": "https://oqgdrkxby4rm-hls-live.5centscdn.com/kaumudytv/live.stream/playlist.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Kaumudy-Logo-trasparent.png",
       "group": "General",
       "tvg_id": "KaumudyTV.in",
@@ -1587,8 +1554,8 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Ayush TV (720p)",
-      "url": "https://mumt07.tangotv.in/zHjX9OFlAYUSHTV/index.m3u8",
+      "name": "Ayush TV (576p)",
+      "url": "https://cdn.pishow.tv/ott/live/221/master.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/AYTV_transparent.png",
       "group": "Lifestyle",
       "tvg_id": "AyushTV.in",
@@ -1686,23 +1653,12 @@
       "source": "Free-TV IPTV"
     },
     {
-      "name": "All Time Movies (576p)",
-      "url": "https://fta.ektv.in/live/54/54_0.m3u8",
+      "name": "All Time Movies (720p)",
+      "url": "https://samitaorigin.tangotv.in/ALLTIMEMOVIES/SAMITAORIGIN/index.m3u8",
       "logo": "https://yt3.googleusercontent.com/U4INXhwmEUOABHoemQBpI6C9t4jb9iBmDvZ3ZT3lAb9Au_jVl32NL8XDpy-9cBjRJ2LP69Ovzg=s900-c-k-c0x00ffffff-no-rj",
       "group": "Movies",
       "tvg_id": "AllTimeMovies.in",
       "tvg_name": "All Time Movies",
-      "country": "IN",
-      "language": "hin",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "B4U Movies (576p)",
-      "url": "https://cdn.pishow.tv/ott/live/419/master.m3u8",
-      "logo": "https://dtil.tmsimg.com/assets/s140063_ld_h9_aa.png?lock=720x540",
-      "group": "Movies",
-      "tvg_id": "B4UMovies.in",
-      "tvg_name": "B4U Movies",
       "country": "IN",
       "language": "hin",
       "source": "Dearbulut Best"
@@ -1730,8 +1686,8 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "Goldmines (720p)",
-      "url": "https://mumt04.tangotv.in/m18aqlK4GOLDMINES/index.m3u8",
+      "name": "Goldmines (576p)",
+      "url": "https://cdn.pishow.tv/ott/live/1459/master.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s143087_ld_h15_aa.png?lock=720x540",
       "group": "Movies",
       "tvg_id": "Goldmines.in",
@@ -1763,8 +1719,8 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Goldmines Bollywood (576p)",
-      "url": "https://fta.ektv.in/live/52/52_0.m3u8",
+      "name": "Goldmines Bollywood (720p)",
+      "url": "https://streams.tangotv.in/GOLDMINESBOLLYWOOD/ORIGIN/index.m3u8",
       "logo": "https://i.imgur.com/6mNQ9mM.png",
       "group": "Movies",
       "tvg_id": "GoldminesBollywood.in",
@@ -1775,7 +1731,7 @@
     },
     {
       "name": "Goldmines Movies (720p)",
-      "url": "https://mumt04.tangotv.in/m18aqlK4GOLDMINEMOVIES/index.m3u8",
+      "url": "https://streams.tangotv.in/GOLDMINEMOVIES/ORIGIN/index.m3u8",
       "logo": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/GoldminesMovies_Transparent_9b7db248-999e-4200-a459-6cc594650f3d.png",
       "group": "Movies",
       "tvg_id": "GoldminesMovies.in",
@@ -1807,8 +1763,8 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Kairali We (720p)",
-      "url": "https://streams.tangotv.in/WETV/ORIGIN/index.m3u8",
+      "name": "Kairali We (576p)",
+      "url": "https://cdn.pishow.tv/ott/live/1530/master.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/We%20TV.png",
       "group": "Movies",
       "tvg_id": "KairaliWe.in",
@@ -1819,7 +1775,7 @@
     },
     {
       "name": "Maha Movie (576p)",
-      "url": "https://cdn.pishow.tv/ott/live/10007/master.m3u8",
+      "url": "https://fta.ektv.in/live/48/48_0.m3u8",
       "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Maha_Movies.png",
       "group": "Movies",
       "tvg_id": "MahaMovie.in",
@@ -1840,8 +1796,8 @@
       "source": "Dearbulut Online"
     },
     {
-      "name": "Manoranjan Grand (576p)",
-      "url": "https://cdn.pishow.tv/ott/live/1011/master.m3u8",
+      "name": "Manoranjan Grand (720p)",
+      "url": "https://streams.tangotv.in/MANORANJANGRAND/ORIGIN/index.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s143302_ld_h15_aa.png?lock=720x540",
       "group": "Movies",
       "tvg_id": "ManoranjanGrand.in",
@@ -1851,8 +1807,8 @@
       "source": "Dearbulut Online"
     },
     {
-      "name": "Manoranjan Movies (720p)",
-      "url": "https://mumt04.tangotv.in/m18aqlK4MANORANJANMOVIES/index.m3u8",
+      "name": "Manoranjan Movies (576p)",
+      "url": "https://fta.ektv.in/live/47/47_0.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s143303_ld_h15_aa.png?lock=720x540",
       "group": "Movies",
       "tvg_id": "ManoranjanMovies.in",
@@ -1862,14 +1818,25 @@
       "source": "Dearbulut Online"
     },
     {
-      "name": "9X Tashan (1080p)",
-      "url": "https://wiselp.wiseplayout.com/9X_Tashan/master.m3u8",
-      "logo": "https://dtil.tmsimg.com/assets/s142504_ld_h15_aa.png?lock=720x540",
+      "name": "7S Music (720p)",
+      "url": "https://mumbai-edge.smartplaytv.in/7SMusic/index.m3u8",
+      "logo": "https://i.imgur.com/zDiIhdN.png",
       "group": "Music",
-      "tvg_id": "9XTashan.in",
-      "tvg_name": "9X Tashan",
+      "tvg_id": "7SMusic.in",
+      "tvg_name": "7S Music",
       "country": "IN",
-      "language": "pan",
+      "language": "tam",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "9X Jhakaas (1080p)",
+      "url": "https://wiselp.wiseplayout.com/9X_Jhakaas/master.m3u8",
+      "logo": "https://dtil.tmsimg.com/assets/s90012_ld_h15_aa.png?lock=720x540",
+      "group": "Music",
+      "tvg_id": "9XJhakaas.in",
+      "tvg_name": "9X Jhakaas",
+      "country": "IN",
+      "language": "mar",
       "source": "Dearbulut Best"
     },
     {
@@ -1895,17 +1862,6 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "Dhoom Music (720p)",
-      "url": "https://mumt06.tangotv.in/qYyB8fXVDHOOMMUSIC/index.m3u8",
-      "logo": "https://dtil.tmsimg.com/assets/s142882_ld_h15_aa.png?lock=720x540",
-      "group": "Music",
-      "tvg_id": "DhoomMusic.in",
-      "tvg_name": "Dhoom Music",
-      "country": "IN",
-      "language": "ben",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "ETV Music (1080p)",
       "url": "https://cc-szivnms4rlah6.akamaized.net/WWBI/Amagi/ETV_Music_IN/playlist.m3u8",
       "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/ETVMusic12.png",
@@ -1928,8 +1884,8 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Insync (576p)",
-      "url": "https://fta.ektv.in/live/160/master.m3u8",
+      "name": "Insync (720p)",
+      "url": "https://mumt04.tangotv.in/m18aqlK4INSYNC/index.m3u8",
       "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Insync.png",
       "group": "Music",
       "tvg_id": "Insync.in",
@@ -2060,8 +2016,30 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "Aaj Ki Khabar (1080p)",
+      "url": "https://indianews-yupp.vgcdn.net/aajkikhabar/index.m3u8",
+      "logo": "https://m.media-amazon.com/images/I/71q8sOMPwHL.png",
+      "group": "News",
+      "tvg_id": "AajKiKhabar.in",
+      "tvg_name": "Aaj Ki Khabar",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Aaj Tak (1080p)",
+      "url": "https://livehub-voidnet.onrender.com/cluster/streamcore/in/AAJTAK_REDIS.m3u8",
+      "logo": "https://i.imgur.com/gS9Qkfy.png",
+      "group": "News",
+      "tvg_id": "AajTak.in",
+      "tvg_name": "Aaj Tak",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "ABN Andhra Jyoti (576p)",
-      "url": "https://cdn.pishow.tv/ott/live/407/master.m3u8",
+      "url": "https://fta.ektv.in/live/687/master.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s142517_ld_h15_aa.png?lock=720x540",
       "group": "News",
       "tvg_id": "ABNAndhraJyoti.in",
@@ -2082,14 +2060,14 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "ABP Asmita (576p)",
-      "url": "https://fta.ektv.in/live/192/master.m3u8",
-      "logo": "https://dtil.tmsimg.com/assets/s142519_ld_h15_aa.png?lock=720x540",
+      "name": "ABP Majha (1080p)",
+      "url": "https://yupprestreamliveus.akamaized.net/vglive-sk-355289/majha/master.m3u8",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/ABP_Majha_logo.svg/500px-ABP_Majha_logo.svg.png",
       "group": "News",
-      "tvg_id": "ABPAsmita.in",
-      "tvg_name": "ABP Asmita",
+      "tvg_id": "ABPMajha.in",
+      "tvg_name": "ABP Majha",
       "country": "IN",
-      "language": "guj",
+      "language": "mar",
       "source": "Dearbulut Best"
     },
     {
@@ -2115,8 +2093,8 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "ANB News (576p)",
-      "url": "https://fta.ektv.in/live/101/101_0.m3u8",
+      "name": "ANB News (720p)",
+      "url": "https://mumt05.tangotv.in/87NeALx2ANBNEWSNATIONAL/index.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/ANB%20News.png",
       "group": "News",
       "tvg_id": "ANBNews.in",
@@ -2159,8 +2137,8 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Assam Talks (720p)",
-      "url": "https://mumt05.tangotv.in/87NeALx2ASSAMTALKS/index.m3u8",
+      "name": "Assam Talks (576p)",
+      "url": "https://fta.ektv.in/live/675/master.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s142683_ld_h15_aa.png?lock=720x540",
       "group": "News",
       "tvg_id": "AssamTalks.in",
@@ -2193,7 +2171,7 @@
     },
     {
       "name": "Bharat Express (576p)",
-      "url": "https://fta.ektv.in/live/736/master.m3u8",
+      "url": "https://cdn.pishow.tv/ott/live/1139/master.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Bharat-Expess-Transparent.png",
       "group": "News",
       "tvg_id": "BharatExpress.in",
@@ -2222,6 +2200,28 @@
       "tvg_name": "BIG TV",
       "country": "IN",
       "language": "tel",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "BRK News (576p)",
+      "url": "https://cdn.pishow.tv/ott/live/1037/master.m3u8",
+      "logo": "https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/brk-news.png",
+      "group": "News",
+      "tvg_id": "BRKNews.in",
+      "tvg_name": "BRK News",
+      "country": "IN",
+      "language": "tel",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "BSTV (720p)",
+      "url": "https://mumt07.tangotv.in/zHjX9OFlBSTV/index.m3u8",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/BSTV.png",
+      "group": "News",
+      "tvg_id": "BSTV.in",
+      "tvg_name": "BSTV",
+      "country": "IN",
+      "language": "hin",
       "source": "Dearbulut Best"
     },
     {
@@ -2258,6 +2258,17 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "DNN (576p)",
+      "url": "https://fta.ektv.in/live/592/master.m3u8",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/DNN.png",
+      "group": "News",
+      "tvg_id": "DNN.in",
+      "tvg_name": "DNN",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "ETV Andhra Pradesh (1080p)",
       "url": "https://mumbai-edge.smartplaytv.in/ETVAP/index.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/ETV%20Andhra%20Pradesh.png",
@@ -2280,8 +2291,8 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "First India News (576p)",
-      "url": "https://fta.ektv.in/live/596/master.m3u8",
+      "name": "First India News (720p)",
+      "url": "https://xlbor37ydvaj-hls-live.wmncdn.net/firstindianewstv1/live.stream/index.m3u8",
       "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_FIRST_INDIA_NEWS_RAJASTHAN/images/LOGO_HD/image.png",
       "group": "News",
       "tvg_id": "FirstIndiaNews.in",
@@ -2424,7 +2435,7 @@
     },
     {
       "name": "India Daily Live (1080p)",
-      "url": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/60d22520-d44d-48a5-b1f1-75d2742ad209/index.m3u8",
+      "url": "https://indiadaily.ottlive.co.in/indiadailylive/index.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/IndiaDaily24x7_2025_transparent.png",
       "group": "News",
       "tvg_id": "IndiaDailyLive.in",
@@ -2512,7 +2523,7 @@
     },
     {
       "name": "India Today (720p)",
-      "url": "https://d1rc86nwwc9fag.cloudfront.net/vglive-sk-293160/master.m3u8",
+      "url": "https://livehub-voidnet.onrender.com/cluster/streamcore/in/INDIATODAY_StreamOrchestrator.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/INDIA-TODAY_transparent.png",
       "group": "News",
       "tvg_id": "IndiaToday.in",
@@ -2522,8 +2533,8 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "India TV (720p)",
-      "url": "https://streams.tangotv.in/INDIATV/ORIGIN/index.m3u8",
+      "name": "India TV (576p)",
+      "url": "https://fta.ektv.in/live/586/master.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s143199_ld_h15_aa.png?lock=720x540",
       "group": "News",
       "tvg_id": "IndiaTV.in",
@@ -2544,8 +2555,8 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "India Voice (720p)",
-      "url": "https://mumt04.tangotv.in/m18aqlK4INDIAVOICE/index.m3u8",
+      "name": "India Voice (576p)",
+      "url": "https://fta.ektv.in/live/94/94_0.m3u8",
       "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/India_Voice.png",
       "group": "News",
       "tvg_id": "IndiaVoice.in",
@@ -2588,8 +2599,8 @@
       "source": "Dearbulut Online"
     },
     {
-      "name": "Janam TV (720p)",
-      "url": "https://mumt03.tangotv.in/Dsly5z3HJANAMTV/index.m3u8",
+      "name": "Janam TV (360p)",
+      "url": "https://yuppmedtaorire.akamaized.net/v1/master/a0d007312bfd99c47f76b77ae26b1ccdaae76cb1/janamtv_nim_https/140622/janamtv/playlist.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s143221_ld_h15_aa.png?lock=720x540",
       "group": "News",
       "tvg_id": "JanamTV.in",
@@ -2621,8 +2632,8 @@
       "source": "Dearbulut Online"
     },
     {
-      "name": "K News India (720p)",
-      "url": "https://mumt07.tangotv.in/zHjX9OFlKNEWSINDIA/index.m3u8",
+      "name": "K News India (576p)",
+      "url": "https://fta.ektv.in/live/100/100_0.m3u8",
       "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/K_News_India.png",
       "group": "News",
       "tvg_id": "KNewsIndia.in",
@@ -2655,7 +2666,7 @@
     },
     {
       "name": "Kalaignar Seithigal (360p)",
-      "url": "https://raw.githubusercontent.com/amazeyourself/adaptive-streams/refs/heads/main/streams/in/YuppTV/KalaignarSeithigal.m3u8",
+      "url": "https://yuppnimresmum.akamaized.net/120723/smil:seithagal.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Seithigal-transparent.png",
       "group": "News",
       "tvg_id": "KalaignarSeithigal.in",
@@ -2665,8 +2676,8 @@
       "source": "Dearbulut Online"
     },
     {
-      "name": "Kalinga TV (720p)",
-      "url": "https://server.thelegitpro.in/kalingatv/kalingatv/index.m3u8",
+      "name": "Kalinga TV (576p)",
+      "url": "https://cdn.pishow.tv/ott/live/1470/master.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/kalinga-bharat--Logo_2000_X_1125_Transpharent.png",
       "group": "News",
       "tvg_id": "KalingaTV.in",
@@ -2831,7 +2842,7 @@
     },
     {
       "name": "Manorama News (720p)",
-      "url": "https://streams.tangotv.in/MANORAMANEWSNORTH/ORIGIN/index.m3u8",
+      "url": "https://mmtvnews1.akamaized.net/v1/master/673630b269b766886555eebfddd4f27f3de3ab50/mmtvNewsCampaign1/index.m3u8",
       "logo": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/ManoramaNews_Transparent_51fe619b-b5fb-43ab-b231-63f2a6b39950.png",
       "group": "News",
       "tvg_id": "ManoramaNews.in",
@@ -2841,8 +2852,8 @@
       "source": "Dearbulut Online"
     },
     {
-      "name": "Mantavya News (576p)",
-      "url": "https://fta.ektv.in/live/656/master.m3u8",
+      "name": "Mantavya News (720p)",
+      "url": "https://mumt07.tangotv.in/zHjX9OFlMANTAVYA24X7NEWS/index.m3u8",
       "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Mantavya_News.png",
       "group": "News",
       "tvg_id": "MantavyaNews.in",
@@ -2875,7 +2886,7 @@
     },
     {
       "name": "Aadinath TV (576p)",
-      "url": "https://fta.ektv.in/live/343/master.m3u8",
+      "url": "https://cdn.pishow.tv/ott/live/252/master.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Aadinath-TV-Transparent.png",
       "group": "Religious",
       "tvg_id": "AadinathTV.in",
@@ -2984,8 +2995,8 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Bhakthi TV (360p)",
-      "url": "https://yuppnimresmum.akamaized.net/240122/bhakti/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
+      "name": "Bhakthi TV (576p)",
+      "url": "https://mumbai-edge.smartplaytv.in/BhakthiTv/index.m3u8",
       "logo": "https://upload.wikimedia.org/wikipedia/en/6/61/Bhakthi_TV_logo.jpg",
       "group": "Religious",
       "tvg_id": "BhakthiTV.in",
@@ -3028,8 +3039,8 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Channel WIN (576p)",
-      "url": "https://fta.ektv.in/live/648/master.m3u8",
+      "name": "Channel WIN (720p)",
+      "url": "https://mumt05.tangotv.in/87NeALx2CHANNELWIN/index.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Channel-Win-transparent.png",
       "group": "Religious",
       "tvg_id": "ChannelWIN.in",
@@ -3058,6 +3069,17 @@
       "tvg_name": "Fateh TV",
       "country": "IN",
       "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Goodness TV (576p)",
+      "url": "https://fta.ektv.in/live/704/master.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/GOODNESS-TV-transparent.png",
+      "group": "Religious",
+      "tvg_id": "GoodnessTV.in",
+      "tvg_name": "Goodness TV",
+      "country": "IN",
+      "language": "mal",
       "source": "Dearbulut Best"
     },
     {
@@ -3127,8 +3149,8 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Hindu Dharmam (360p)",
-      "url": "https://yuppnimrestreammum.akamaized.net/181224/smil:hindudharmam.smil/playlist.m3u8?hdnts=st=1735898689~exp=1835898688~acl=*~hmac=f5fe24724fe05481e3841f9eb5ab8efdee0a3dd83645ae9dcf45703f525bab7b",
+      "name": "Hindu Dharmam (576p)",
+      "url": "https://cdn.pishow.tv/ott/live/959/master.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Hindu%20Dharmam.png",
       "group": "Religious",
       "tvg_id": "HinduDharmam.in",
@@ -3216,7 +3238,7 @@
     },
     {
       "name": "Jinvani Channel (576p)",
-      "url": "https://cdn.pishow.tv/ott/live/989/master.m3u8",
+      "url": "https://fta.ektv.in/live/169/master.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Jinvani%20Channel.png",
       "group": "Religious",
       "tvg_id": "JinvaniChannel.in",
@@ -3292,8 +3314,8 @@
       "source": "Dearbulut Online"
     },
     {
-      "name": "Madha TV (720p)",
-      "url": "https://mumt07.tangotv.in/zHjX9OFlMADHATV/index.m3u8",
+      "name": "Madha TV (576p)",
+      "url": "https://cdn.pishow.tv/ott/live/1265/master.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Madha%20TV.png",
       "group": "Religious",
       "tvg_id": "MadhaTV.in",
@@ -3424,6 +3446,17 @@
       "source": "iptv-org Index"
     },
     {
+      "name": "DD Sports (1080p)",
+      "url": "https://mumbai-edge.smartplaytv.in/DDSportsHD/index.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20Sports.png",
+      "group": "Sports",
+      "tvg_id": "DDSports.in",
+      "tvg_name": "DD Sports",
+      "country": "IN",
+      "language": "hin;eng;tam;kan;ben;bho;sgn;tel",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "DeporTV (1080p)",
       "url": "http://158.172.155.130:8000/play/a09y/index.m3u8",
       "logo": "https://i.imgur.com/THk9ARS.png",
@@ -3466,17 +3499,6 @@
       "country": null,
       "language": null,
       "source": "iptv-org Index"
-    },
-    {
-      "name": "Fast1 (720p)",
-      "url": "https://samitaorigin.tangotv.in/FAST1/SAMITAORIGIN/index.m3u8",
-      "logo": "https://papaji.freetvindia.com/media/channels/fast1.png",
-      "group": "Undefined",
-      "tvg_id": "Fast1.in",
-      "tvg_name": "Fast1",
-      "country": "IN",
-      "language": "pan",
-      "source": "Dearbulut Best"
     },
     {
       "name": "HSTV (720p)",
