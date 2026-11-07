@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-06T23:41:08.189051+00:00",
-  "total": 299,
+  "generated_at": "2026-11-07T04:51:27.395354+00:00",
+  "total": 301,
   "channels": [
     {
       "name": "Cartoon Network HD+ (720p)",
@@ -1554,6 +1554,17 @@
       "source": "Free-TV IPTV"
     },
     {
+      "name": "&TV (1080p)",
+      "url": "https://amg01117-amg01117c1-amgplt0029.playout.now3.amagi.tv/playlist/amg01117-amg01117c1-amgplt0029/playlist.m3u8",
+      "logo": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/%26TV_Transparent_c5cc189b-8493-48d2-b07c-3fa4f92d754a.png",
+      "group": "Movies",
+      "tvg_id": "AndTV.in",
+      "tvg_name": "&TV",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "B4U Kadak (576p)",
       "url": "https://fta.ektv.in/live/44/44_0.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/B4U-Kadak-BLACK-transparent.png",
@@ -2046,6 +2057,17 @@
       "tvg_name": "Bharat Express",
       "country": "IN",
       "language": "urd;eng",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Bharat24 (1080p)",
+      "url": "https://cdn.ottlive.co.in/bharat24/index.m3u8",
+      "logo": "https://dtil.tmsimg.com/assets/s142710_ld_h15_aa.png?lock=720x540",
+      "group": "News",
+      "tvg_id": "Bharat24.in",
+      "tvg_name": "Bharat24",
+      "country": "IN",
+      "language": "hin",
       "source": "Dearbulut Best"
     },
     {
