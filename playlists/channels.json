@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-08T00:51:04.568132+00:00",
-  "total": 312,
+  "generated_at": "2026-11-08T06:57:02.433657+00:00",
+  "total": 309,
   "channels": [
     {
       "name": "DeporTV",
@@ -344,17 +344,6 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "Colors Infinity (1080p)",
-      "url": "http://103.151.60.162:2122/play/a02r/index.m3u8?hls",
-      "logo": "https://dtil.tmsimg.com/assets/s158150_ld_h15_aa.png?lock=720x540",
-      "group": "Entertainment",
-      "tvg_id": "ColorsInfinity.in",
-      "tvg_name": "Colors Infinity",
-      "country": "IN",
-      "language": "eng",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "Dangal 2 (576p)",
       "url": "http://163.61.226.31:9981/stream/channelid/568470441?profile=pass",
       "logo": "https://i.imgur.com/BEr1r7L.png",
@@ -405,17 +394,6 @@
       "group": "Entertainment",
       "tvg_id": "EpicBharat.in",
       "tvg_name": "Epic Bharat",
-      "country": "IN",
-      "language": "hin",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "Epic Parivar (576p)",
-      "url": "http://103.151.60.162:2122/play/a01p/index.m3u8?hls",
-      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Ishara-LOGO_2000_X_1125_Transpharent.png",
-      "group": "Entertainment",
-      "tvg_id": "EpicParivar.in",
-      "tvg_name": "Epic Parivar",
       "country": "IN",
       "language": "hin",
       "source": "Dearbulut Best"
@@ -1521,28 +1499,6 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "Disney International HD (576p)",
-      "url": "http://103.151.60.162:2122/play/a018/index.m3u8?hls",
-      "logo": "https://plain-apac-prod-public.komododecks.com/202609/07/FAoDDiaq0WPescE65173/image.png",
-      "group": "Kids",
-      "tvg_id": "DisneyInternationalHD.in",
-      "tvg_name": "Disney International HD",
-      "country": "IN",
-      "language": "eng",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "Disney Junior (576p)",
-      "url": "http://103.151.60.162:2122/play/a016/index.m3u8?hls",
-      "logo": "https://plain-apac-prod-public.komododecks.com/202609/07/kDx5CloMCE4tFekQtkOQ/image.png",
-      "group": "Kids",
-      "tvg_id": "DisneyJunior.in",
-      "tvg_name": "Disney Junior",
-      "country": "IN",
-      "language": "hin;eng;tam;tel",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "Hungama TV (576p)",
       "url": "http://103.135.253.32:8080/HUNGAMA/index.m3u8",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Hungama_TV.svg/960px-Hungama_TV.svg.png",
@@ -1947,6 +1903,17 @@
       "tvg_name": "Kalika TV",
       "country": "IN",
       "language": "mal",
+      "source": "Dearbulut Online"
+    },
+    {
+      "name": "Mastiii (720p)",
+      "url": "https://mumbai-edge.smartplaytv.in/MastiMusic/index.m3u8",
+      "logo": "https://i.imgur.com/lxgXHx4.png",
+      "group": "Music",
+      "tvg_id": "Mastiii.in",
+      "tvg_name": "Mastiii",
+      "country": "IN",
+      "language": "hin",
       "source": "Dearbulut Online"
     },
     {
@@ -3157,7 +3124,7 @@
       "tvg_name": "Iqra Bangla",
       "country": "UK",
       "language": "ben",
-      "source": "Dearbulut Best"
+      "source": "Dearbulut Online"
     },
     {
       "name": "Ishwar Bhakti TV (720p)",
