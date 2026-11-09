@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-09T02:24:22.302409+00:00",
-  "total": 304,
+  "generated_at": "2026-11-09T10:06:23.738794+00:00",
+  "total": 305,
   "channels": [
     {
       "name": "Cartoon Network HD+ (720p)",
@@ -231,7 +231,7 @@
       "tvg_name": "Investigation Discovery",
       "country": "IN",
       "language": "hin;eng",
-      "source": "Dearbulut Best"
+      "source": "Dearbulut Online"
     },
     {
       "name": "MagellanTV Now (1080p)",
@@ -594,6 +594,17 @@
       "tvg_name": "Manoranjan TV",
       "country": "IN",
       "language": "hin",
+      "source": "Dearbulut Online"
+    },
+    {
+      "name": "Marutam TV (1080p)",
+      "url": "https://mntv.livebox.co.in/mntvhls/live.m3u8",
+      "logo": "https://i.imgur.com/cFNw4Af.png",
+      "group": "Entertainment",
+      "tvg_id": "MarutamTV.in",
+      "tvg_name": "Marutam TV",
+      "country": "IN",
+      "language": "tam",
       "source": "Dearbulut Online"
     },
     {
