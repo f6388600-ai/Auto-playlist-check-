@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-15T00:07:14.819821+00:00",
-  "total": 304,
+  "generated_at": "2026-11-15T06:58:01.701934+00:00",
+  "total": 307,
   "channels": [
     {
       "name": "DeporTV",
@@ -229,6 +229,17 @@
       "group": "Education",
       "tvg_id": "DDKisan.in",
       "tvg_name": "DD Kisan",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Gyandarshan (720p)",
+      "url": "https://mumt05.tangotv.in/87NeALx2GYANDARSHAN/index.m3u8",
+      "logo": "https://dtil.tmsimg.com/assets/s143100_ld_h15_aa.png?lock=720x540",
+      "group": "Education",
+      "tvg_id": "Gyandarshan.in",
+      "tvg_name": "Gyandarshan",
       "country": "IN",
       "language": "hin",
       "source": "Dearbulut Best"
@@ -2764,6 +2775,17 @@
       "source": "Dearbulut Online"
     },
     {
+      "name": "Mathrubhumi News (1080p)",
+      "url": "https://dn5yap910rvbg.cloudfront.net/live/mbnews/master.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Mathrubhumi%20News.png",
+      "group": "News",
+      "tvg_id": "MathrubhumiNews.in",
+      "tvg_name": "Mathrubhumi News",
+      "country": "IN",
+      "language": "mal",
+      "source": "Dearbulut Online"
+    },
+    {
       "name": "INTV",
       "url": "http://tv1.intv.mk:1935/live/intv/index.m3u8",
       "logo": "https://i.imgur.com/K7BSjqY.png",
@@ -3345,6 +3367,17 @@
       "country": "IN",
       "language": "hin;eng",
       "source": "Dearbulut Best"
+    },
+    {
+      "name": "Matribhumi TV (720p)",
+      "url": "http://live.playmax.live/matribhumi/index.m3u8",
+      "logo": "https://www.jagobd.com/wp-content/uploads/2024/10/matribhumi.jpg",
+      "group": "Undefined",
+      "tvg_id": "MatribhumiTV.bd",
+      "tvg_name": "Matribhumi TV",
+      "country": "BD",
+      "language": "ben",
+      "source": "Dearbulut Online"
     }
   ]
 }
