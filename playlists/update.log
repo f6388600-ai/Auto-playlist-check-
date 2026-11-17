@@ -1,30 +1,30 @@
-[2026-11-16 17:17:41] INFO    | ============================================================
-[2026-11-16 17:17:41] INFO    | IPTV Auto Aggregator v2.0
-[2026-11-16 17:17:41] INFO    | Sources configured: 4
-[2026-11-16 17:17:41] INFO    | ============================================================
-[2026-11-16 17:17:41] INFO    | FETCH | iptv-org Index
-[2026-11-16 17:17:41] INFO    | OK    | iptv-org Index → 11502 channels
-[2026-11-16 17:17:41] INFO    | LIMIT | iptv-org Index → first 4000
-[2026-11-16 17:17:41] INFO    | FETCH | Free-TV IPTV
-[2026-11-16 17:17:41] INFO    | OK    | Free-TV IPTV → 2203 channels
-[2026-11-16 17:17:41] INFO    | FETCH | Dearbulut Best
-[2026-11-16 17:17:41] INFO    | OK    | Dearbulut Best → 10416 channels
-[2026-11-16 17:17:41] INFO    | LIMIT | Dearbulut Best → first 4000
-[2026-11-16 17:17:41] INFO    | FETCH | Dearbulut Online
-[2026-11-16 17:17:42] INFO    | OK    | Dearbulut Online → 8467 channels
-[2026-11-16 17:17:42] INFO    | LIMIT | Dearbulut Online → first 4000
-[2026-11-16 17:17:42] INFO    | TOTAL | Collected 14203 channels from 4/4 sources
-[2026-11-16 17:17:42] INFO    | DEDUP | 14203 → 7266 unique
-[2026-11-16 17:17:42] INFO    | FILTER| 7266 → 318
-[2026-11-16 17:17:42] INFO    | HEALTH| Checking 318 streams (40 workers, 6s timeout)
-[2026-11-16 17:17:48] INFO    | HEALTH| Progress 300/318
-[2026-11-16 17:18:05] INFO    | HEALTH| Progress 318/318
-[2026-11-16 17:18:05] INFO    | HEALTH| Finished → 271 working / 318 total (23.3s)
-[2026-11-16 17:18:05] INFO    | WRITE | playlist.m3u → 318 channels
-[2026-11-16 17:18:05] INFO    | WRITE | online.m3u → 271 channels
-[2026-11-16 17:18:05] INFO    | WRITE | channels.json → 318 channels
-[2026-11-16 17:18:05] INFO    | ============================================================
-[2026-11-16 17:18:05] INFO    | DONE  | Total unique : 318
-[2026-11-16 17:18:05] INFO    | DONE  | Online       : 271
-[2026-11-16 17:18:05] INFO    | DONE  | Sources OK   : 4/4
-[2026-11-16 17:18:05] INFO    | ============================================================
+[2026-11-17 00:57:29] INFO    | ============================================================
+[2026-11-17 00:57:29] INFO    | IPTV Auto Aggregator v2.0
+[2026-11-17 00:57:29] INFO    | Sources configured: 4
+[2026-11-17 00:57:29] INFO    | ============================================================
+[2026-11-17 00:57:29] INFO    | FETCH | iptv-org Index
+[2026-11-17 00:57:29] INFO    | OK    | iptv-org Index → 11558 channels
+[2026-11-17 00:57:29] INFO    | LIMIT | iptv-org Index → first 4000
+[2026-11-17 00:57:29] INFO    | FETCH | Free-TV IPTV
+[2026-11-17 00:57:29] INFO    | OK    | Free-TV IPTV → 2203 channels
+[2026-11-17 00:57:29] INFO    | FETCH | Dearbulut Best
+[2026-11-17 00:57:30] INFO    | OK    | Dearbulut Best → 10416 channels
+[2026-11-17 00:57:30] INFO    | LIMIT | Dearbulut Best → first 4000
+[2026-11-17 00:57:30] INFO    | FETCH | Dearbulut Online
+[2026-11-17 00:57:30] INFO    | OK    | Dearbulut Online → 8445 channels
+[2026-11-17 00:57:30] INFO    | LIMIT | Dearbulut Online → first 4000
+[2026-11-17 00:57:30] INFO    | TOTAL | Collected 14203 channels from 4/4 sources
+[2026-11-17 00:57:30] INFO    | DEDUP | 14203 → 7285 unique
+[2026-11-17 00:57:30] INFO    | FILTER| 7285 → 316
+[2026-11-17 00:57:30] INFO    | HEALTH| Checking 316 streams (40 workers, 6s timeout)
+[2026-11-17 00:57:36] INFO    | HEALTH| Progress 300/316
+[2026-11-17 00:57:56] INFO    | HEALTH| Progress 316/316
+[2026-11-17 00:57:56] INFO    | HEALTH| Finished → 268 working / 316 total (25.8s)
+[2026-11-17 00:57:56] INFO    | WRITE | playlist.m3u → 316 channels
+[2026-11-17 00:57:56] INFO    | WRITE | online.m3u → 268 channels
+[2026-11-17 00:57:56] INFO    | WRITE | channels.json → 316 channels
+[2026-11-17 00:57:56] INFO    | ============================================================
+[2026-11-17 00:57:56] INFO    | DONE  | Total unique : 316
+[2026-11-17 00:57:56] INFO    | DONE  | Online       : 268
+[2026-11-17 00:57:56] INFO    | DONE  | Sources OK   : 4/4
+[2026-11-17 00:57:56] INFO    | ============================================================
