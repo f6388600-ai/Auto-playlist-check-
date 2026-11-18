@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-17T18:18:07.511674+00:00",
-  "total": 730,
+  "generated_at": "2026-11-18T01:09:45.039365+00:00",
+  "total": 734,
   "channels": [
     {
       "name": "WOW Kidz (720p)",
@@ -234,17 +234,6 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "DD Punjabi (576p)",
-      "url": "http://163.61.226.31:9981/stream/channelid/2094424586?profile=pass",
-      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/DD%20Punjabi.png",
-      "group": "Culture",
-      "tvg_id": "DDPunjabi.in",
-      "tvg_name": "DD Punjabi",
-      "country": "IN",
-      "language": "pan",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "Odisha TV (720p)",
       "url": "https://livetv.tarangplus.in/otv-origin/live/playlist.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s143639_ld_h15_aa.png?lock=720x540",
@@ -378,7 +367,7 @@
     },
     {
       "name": "Colors Bangla HD (1080p)",
-      "url": "http://103.165.93.31:8095/colorsBangla/index.m3u8",
+      "url": "http://103.135.253.32:8080/COLORS-BANGLA-HD/index.m3u8",
       "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_BANGLA/images/LOGO_HD/image.png",
       "group": "Entertainment",
       "tvg_id": "ColorsBangla.in@HD",
@@ -2578,7 +2567,7 @@
     },
     {
       "name": "FashionTV (India) (576p)",
-      "url": "https://fta.ektv.in/live/144/144_0.m3u8",
+      "url": "http://163.61.226.31:9981/stream/channelid/448803688?profile=pass",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Fashion%20TV.png",
       "group": "Lifestyle",
       "tvg_id": "FashionTV.in@SD",
@@ -2739,6 +2728,17 @@
       "tvg_name": "Colors Bangla Cinema",
       "country": "IN",
       "language": "ben",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Goldmines (720p)",
+      "url": "https://mumt04.tangotv.in/m18aqlK4GOLDMINES/index.m3u8",
+      "logo": "https://dtil.tmsimg.com/assets/s143087_ld_h15_aa.png?lock=720x540",
+      "group": "Movies",
+      "tvg_id": "Goldmines.in",
+      "tvg_name": "Goldmines",
+      "country": "IN",
+      "language": "hin",
       "source": "Dearbulut Best"
     },
     {
@@ -3853,6 +3853,17 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "Bharat24 (1080p)",
+      "url": "https://vglivessai.akamaized.net/ptnr-lg/title-Bharat24News_LGIndia/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/ebcf5152-686a-43ae-ad13-15bc198112b7/index.m3u8",
+      "logo": "https://dtil.tmsimg.com/assets/s142710_ld_h15_aa.png?lock=720x540",
+      "group": "News",
+      "tvg_id": "Bharat24.in",
+      "tvg_name": "Bharat24",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "BRK News (576p)",
       "url": "https://cdn.pishow.tv/ott/live/1037/master.m3u8",
       "logo": "https://d229kpbsb5jevy.cloudfront.net/yuppfast/content/common/channel/logos/brk-news.png",
@@ -3916,6 +3927,17 @@
       "tvg_name": "CVR News",
       "country": "IN",
       "language": "tel",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Daily Post TV (1080p)",
+      "url": "https://vglivessai.akamaized.net/sg/v1/master/611d79b11b77e2f571934fd80ca1413453772ac7/103b8dd3-a888-4d1d-89a5-8a4bc25e48c1/index.m3u8",
+      "logo": "https://papaji.freetvindia.com/media/Daily_post.png",
+      "group": "News",
+      "tvg_id": "DailyPostTV.in",
+      "tvg_name": "Daily Post TV",
+      "country": "IN",
+      "language": "pan",
       "source": "Dearbulut Best"
     },
     {
@@ -6559,17 +6581,6 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "Channel Divya (1080p)",
-      "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/40f46fa036df45ee9d28b6eda42eb27c/index.m3u8",
-      "logo": "https://dtil.tmsimg.com/assets/s143010_ld_h15_aa.png?lock=720x540",
-      "group": "Religious",
-      "tvg_id": "ChannelDivya.in",
-      "tvg_name": "Channel Divya",
-      "country": "IN",
-      "language": "hin",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "Channel WIN (720p)",
       "url": "https://mumt05.tangotv.in/87NeALx2CHANNELWIN/index.m3u8",
       "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Channel-Win-transparent.png",
@@ -6614,6 +6625,17 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "Dukhniwaran (576p)",
+      "url": "https://mumt03.tangotv.in/Dsly5z3HDUKHNIWARAN/index.m3u8",
+      "logo": "https://papaji.freetvindia.com/media/channels/dukhniwaran.png",
+      "group": "Religious",
+      "tvg_id": "Dukhniwaran.in",
+      "tvg_name": "Dukhniwaran",
+      "country": "IN",
+      "language": "pan",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "Fateh TV (1080p)",
       "url": "https://ott.livelegitpro.in/fatehtv/fatehtv/index.m3u8",
       "logo": "https://i.imgur.com/c4ItNkB.png",
@@ -6644,6 +6666,17 @@
       "tvg_name": "GoodNews TV",
       "country": "IN",
       "language": "eng",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Gospel TV India (1080p)",
+      "url": "https://server.livelegitpro.in:9899/gospeltv/index.m3u8",
+      "logo": "https://i.ibb.co/xhbZvzt/cropped-final-logo-300x127.png",
+      "group": "Religious",
+      "tvg_id": "GospelTVIndia.in",
+      "tvg_name": "Gospel TV India",
+      "country": "IN",
+      "language": "tel",
       "source": "Dearbulut Best"
     },
     {
@@ -7624,6 +7657,17 @@
       "country": "IN",
       "language": "ces;eng;hin;ben;tam;rus",
       "source": "Dearbulut Online"
+    },
+    {
+      "name": "Aryan TV National (720p)",
+      "url": "https://mumt04.tangotv.in/m18aqlK4ARYANTVNATIONAL/index.m3u8",
+      "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_ARYAN_TV_NATIONAL/images/LOGO_HD/image.png",
+      "group": "Undefined",
+      "tvg_id": "AryanTVNational.in",
+      "tvg_name": "Aryan TV National",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
     },
     {
       "name": "BRTV (Indonesia) (720p)",
