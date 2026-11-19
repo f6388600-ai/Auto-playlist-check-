@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-18T23:56:08.752695+00:00",
-  "total": 739,
+  "generated_at": "2026-11-19T06:18:20.655934+00:00",
+  "total": 744,
   "channels": [
     {
       "name": "Sony Yay! (1080p)",
@@ -43,17 +43,6 @@
       "tvg_id": "RTV.at",
       "tvg_name": "RTV",
       "country": "AT",
-      "language": null,
-      "source": "Free-TV IPTV"
-    },
-    {
-      "name": "AzStarTV",
-      "url": "http://live.azstartv.com/azstar/smil:azstar.smil/playlist.m3u8",
-      "logo": "https://i.imgur.com/di3XX5L.png",
-      "group": "Azerbaijan",
-      "tvg_id": "AzStarTV.ca",
-      "tvg_name": "AzStarTV",
-      "country": "AZ",
       "language": null,
       "source": "Free-TV IPTV"
     },
@@ -177,6 +166,17 @@
       "country": "IN",
       "language": "ben",
       "source": "Dearbulut Online"
+    },
+    {
+      "name": "ETV Comedy (1080p)",
+      "url": "https://cc-wie8j8y69d2uy.akamaized.net/WWBI/Amagi/ETV_Comedy_IN/playlist.m3u8",
+      "logo": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN4900003U3_20251106T195117SQUARE.png",
+      "group": "Comedy",
+      "tvg_id": "ETVComedy.in",
+      "tvg_name": "ETV Comedy",
+      "country": "IN",
+      "language": "tel",
+      "source": "Dearbulut Best"
     },
     {
       "name": "Pitaara Comedy (1080p)",
@@ -473,6 +473,28 @@
       "tvg_name": "Epic Bharat",
       "country": "IN",
       "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "ETV Josh (1080p)",
+      "url": "https://cc-uyh1ow5zouoio.akamaized.net/WWBI/Amagi/ETV_Josh_IN/playlist.m3u8",
+      "logo": "https://tvpnlogopus.samsungcloud.tv/platform/image/sourcelogo/vc/00/02/34/IN4900004LP_20250811T033452SQUARE.png",
+      "group": "Entertainment",
+      "tvg_id": "ETVJosh.in",
+      "tvg_name": "ETV Josh",
+      "country": "IN",
+      "language": "tel",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "ETV Telugu (1080p)",
+      "url": "https://mumbai-edge.smartplaytv.in/ETVHD/index.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/ETV%20HD.png",
+      "group": "Entertainment",
+      "tvg_id": "ETVTelugu.in",
+      "tvg_name": "ETV Telugu",
+      "country": "IN",
+      "language": "tel",
       "source": "Dearbulut Best"
     },
     {
@@ -2643,6 +2665,17 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "ETV Life (1080p)",
+      "url": "https://mumbai-edge.smartplaytv.in/ETVLIFE/index.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/ETV_life-Logo_2000_X_1125_Transphrent.png",
+      "group": "Lifestyle",
+      "tvg_id": "ETVLife.in",
+      "tvg_name": "ETV Life",
+      "country": "IN",
+      "language": "tel",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "FashionTV (720p)",
       "url": "https://samitaorigin.tangotv.in/FASHIONTV/SAMITAORIGIN/index.m3u8",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Fashion_TV_logo.svg/960px-Fashion_TV_logo.svg.png",
@@ -3256,6 +3289,17 @@
       "tvg_name": "Dhoom Music",
       "country": "IN",
       "language": "ben",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "ETV Beats (1080p)",
+      "url": "https://jmp2.uk/stvp-IN4900002RV",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/ETVBeats1.png",
+      "group": "Music",
+      "tvg_id": "ETVBeats.in",
+      "tvg_name": "ETV Beats",
+      "country": "IN",
+      "language": "tel",
       "source": "Dearbulut Best"
     },
     {
@@ -4046,6 +4090,17 @@
       "group": "News",
       "tvg_id": "ETVAndhraPradesh.in",
       "tvg_name": "ETV Andhra Pradesh",
+      "country": "IN",
+      "language": "tel",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "ETV Telangana (1080p)",
+      "url": "https://d37d7pfp7vjqhh.cloudfront.net/v1/master/9d43eacaed199f8d5883927e7aef514a8a08e108/ETV_TS_H264_cloud_in/index.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/ETV%20Telengana.png",
+      "group": "News",
+      "tvg_id": "ETVTelangana.in",
+      "tvg_name": "ETV Telangana",
       "country": "IN",
       "language": "tel",
       "source": "Dearbulut Best"
