@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-19T23:00:04.413075+00:00",
-  "total": 745,
+  "generated_at": "2026-11-20T03:56:35.410614+00:00",
+  "total": 753,
   "channels": [
     {
       "name": "Sony Yay! (1080p)",
@@ -1356,6 +1356,17 @@
       "source": "iptv-org Index"
     },
     {
+      "name": "Green TV (720p)",
+      "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8",
+      "logo": "https://www.jagobd.com/wp-content/uploads/2022/12/green-tv.jpg",
+      "group": "Family",
+      "tvg_id": "GreenTV.bd",
+      "tvg_name": "Green TV",
+      "country": "BD",
+      "language": "ben",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "8NTV (1080p)",
       "url": "https://60417ddeaf0d9.streamlock.net/ntv/videontv/playlist.m3u8",
       "logo": "https://i.imgur.com/7ecgGIG.png",
@@ -1460,6 +1471,17 @@
       "logo": "https://i.imgur.com/QSUOxtM.png",
       "group": "General",
       "tvg_id": "CanalMalagaRTV.es@SD",
+      "tvg_name": null,
+      "country": null,
+      "language": null,
+      "source": "iptv-org Index"
+    },
+    {
+      "name": "CBS KRTV (1080p)",
+      "url": "https://amg01438-amg01438c36-vizio-us-10859.playouts.now.amagi.tv/playlist.m3u8",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/3/30/KRTV_3_logo.png?utm_source=en.wikipedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "group": "General",
+      "tvg_id": "CBS.us@KRTV",
       "tvg_name": null,
       "country": null,
       "language": null,
@@ -2566,6 +2588,17 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "Green Gold TV (1080p)",
+      "url": "https://cc-szrmqvu8zkg16.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-szrmqvu8zkg16/greengold/stream/grngld/playlist.m3u8",
+      "logo": "https://i.ibb.co/TDPsPVkT/Greengoldtv.png",
+      "group": "Kids",
+      "tvg_id": "GreenGoldTV.in",
+      "tvg_name": "Green Gold TV",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "Nick Jr. (576p)",
       "url": "http://202.70.146.135:8000/play/a02n/index.m3u8",
       "logo": "https://img10.hotstar.com/image/upload/sources/r1/cms/prod/1730/1785252911730-h.jpg",
@@ -2740,6 +2773,17 @@
       "country": "MN",
       "language": null,
       "source": "Free-TV IPTV"
+    },
+    {
+      "name": "&TV (1080p)",
+      "url": "https://amg01117-amg01117c1-amgplt0029.playout.now3.amagi.tv/playlist/amg01117-amg01117c1-amgplt0029/playlist.m3u8",
+      "logo": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/%26TV_Transparent_c5cc189b-8493-48d2-b07c-3fa4f92d754a.png",
+      "group": "Movies",
+      "tvg_id": "AndTV.in",
+      "tvg_name": "&TV",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
     },
     {
       "name": "All Time Movies (720p)",
@@ -3809,6 +3853,17 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "4 SiDES TV (1080p)",
+      "url": "https://stream.ottlive.co.in/4sidestv/index.m3u8",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/4sites.png",
+      "group": "News",
+      "tvg_id": "4SiDESTV.in",
+      "tvg_name": "4 SiDES TV",
+      "country": "IN",
+      "language": "tel",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "4TV News (576p)",
       "url": "https://cdn.pishow.tv/ott/live/1007/master.m3u8",
       "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/4_TV.png",
@@ -4156,6 +4211,17 @@
       "group": "News",
       "tvg_id": "FirstIndiaNews.in",
       "tvg_name": "First India News",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Good News Today (1080p)",
+      "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/75f3183e143240a29fbddd502a6a3f8d/index.m3u8",
+      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/GNT-Logo-2021_AT_FONT-transparent.png",
+      "group": "News",
+      "tvg_id": "GoodNewsToday.in",
+      "tvg_name": "Good News Today",
       "country": "IN",
       "language": "hin",
       "source": "Dearbulut Best"
@@ -6790,6 +6856,17 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "Grace TV (720p)",
+      "url": "https://samitaorigin.tangotv.in/GRACETV/SAMITAORIGIN/index.m3u8",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Grace_TV.png",
+      "group": "Religious",
+      "tvg_id": "GraceTV.in",
+      "tvg_name": "Grace TV",
+      "country": "IN",
+      "language": "eng",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "Hare Krsna TV (1080p)",
       "url": "https://de3osy3rc63bo.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/hktv/HKTV/HKWebApp/playlist.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/s143102_ld_h15_aa.png?lock=720x540",
@@ -7712,6 +7789,17 @@
       "country": null,
       "language": null,
       "source": "iptv-org Index"
+    },
+    {
+      "name": "Eurosport (1080p)",
+      "url": "https://livetv.shamon-cable.net:8443/Eurosport-HD/index.m3u8",
+      "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_EUROSPORT_HD/images/LOGO_HD/image.png",
+      "group": "Sports",
+      "tvg_id": "Eurosport.in",
+      "tvg_name": "Eurosport",
+      "country": "IN",
+      "language": "eng",
+      "source": "Dearbulut Best"
     },
     {
       "name": "Kabaddi 24x7 (720p)",
