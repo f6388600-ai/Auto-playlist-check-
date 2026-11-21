@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-20T20:56:28.183840+00:00",
-  "total": 749,
+  "generated_at": "2026-11-21T02:00:18.514460+00:00",
+  "total": 747,
   "channels": [
     {
       "name": "Cartoon Network HD+ (1080p)",
@@ -4172,17 +4172,6 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Good News Today (1080p)",
-      "url": "https://d2lk5u59tns74c.cloudfront.net/out/v1/75f3183e143240a29fbddd502a6a3f8d/index.m3u8",
-      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/GNT-Logo-2021_AT_FONT-transparent.png",
-      "group": "News",
-      "tvg_id": "GoodNewsToday.in",
-      "tvg_name": "Good News Today",
-      "country": "IN",
-      "language": "hin",
-      "source": "Dearbulut Best"
-    },
-    {
       "name": "GS TV (720p)",
       "url": "https://mumt05.tangotv.in/87NeALx2GSTV/index.m3u8",
       "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/GS_TV.png",
@@ -6840,17 +6829,6 @@
       "group": "Religious",
       "tvg_id": "GoodNewsTV.in",
       "tvg_name": "GoodNews TV",
-      "country": "IN",
-      "language": "eng",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "Grace TV (720p)",
-      "url": "https://samitaorigin.tangotv.in/GRACETV/SAMITAORIGIN/index.m3u8",
-      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Grace_TV.png",
-      "group": "Religious",
-      "tvg_id": "GraceTV.in",
-      "tvg_name": "Grace TV",
       "country": "IN",
       "language": "eng",
       "source": "Dearbulut Best"
