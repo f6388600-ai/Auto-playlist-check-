@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-21T22:17:34.806382+00:00",
-  "total": 749,
+  "generated_at": "2026-11-22T02:30:21.600126+00:00",
+  "total": 746,
   "channels": [
     {
       "name": "Cartoon Network HD+ (1080p)",
@@ -528,17 +528,6 @@
       "tvg_name": "Fakt Marathi",
       "country": "IN",
       "language": "mar",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "GTC Punjabi (1080p)",
-      "url": "https://cdn.ottlive.co.in/gtcpunjabi/index.m3u8",
-      "logo": "https://media.thegtcnetwork.com/uploads/gtc-pujabin-s.jpg",
-      "group": "Entertainment",
-      "tvg_id": "GTCPunjabi.in",
-      "tvg_name": "GTC Punjabi",
-      "country": "IN",
-      "language": "pan",
       "source": "Dearbulut Best"
     },
     {
@@ -1387,17 +1376,6 @@
       "country": null,
       "language": null,
       "source": "iptv-org Index"
-    },
-    {
-      "name": "Green TV (720p)",
-      "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI2/greentv.stream/live-orgin/greentv.stream/playlist.m3u8",
-      "logo": "https://www.jagobd.com/wp-content/uploads/2022/12/green-tv.jpg",
-      "group": "Family",
-      "tvg_id": "GreenTV.bd",
-      "tvg_name": "Green TV",
-      "country": "BD",
-      "language": "ben",
-      "source": "Dearbulut Best"
     },
     {
       "name": "8NTV (1080p)",
@@ -2585,17 +2563,6 @@
       "tvg_name": "Duronto TV",
       "country": "BD",
       "language": "ben",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "Green Gold TV (1080p)",
-      "url": "https://cc-szrmqvu8zkg16.akamaized.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-szrmqvu8zkg16/greengold/stream/grngld/playlist.m3u8",
-      "logo": "https://i.ibb.co/TDPsPVkT/Greengoldtv.png",
-      "group": "Kids",
-      "tvg_id": "GreenGoldTV.in",
-      "tvg_name": "Green Gold TV",
-      "country": "IN",
-      "language": "hin",
       "source": "Dearbulut Best"
     },
     {
