@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-22T23:31:49.149731+00:00",
-  "total": 751,
+  "generated_at": "2026-11-23T05:59:05.766694+00:00",
+  "total": 754,
   "channels": [
     {
       "name": "Cartoon Network HD+ (1080p)",
@@ -1416,6 +1416,17 @@
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Antv_logo.svg/960px-Antv_logo.svg.png",
       "group": "General",
       "tvg_id": "ANTV.id@SD",
+      "tvg_name": null,
+      "country": null,
+      "language": null,
+      "source": "iptv-org Index"
+    },
+    {
+      "name": "ANTV (Indonesia) HD (480p)",
+      "url": "https://proxy-v.rctiplus.id/live/web/antv/index.m3u8",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Antv_logo.svg/960px-Antv_logo.svg.png",
+      "group": "General",
+      "tvg_id": "ANTV.id@HD",
       "tvg_name": null,
       "country": null,
       "language": null,
@@ -7802,6 +7813,17 @@
       "source": "iptv-org Index"
     },
     {
+      "name": "Eurosport (1080p)",
+      "url": "http://116.90.120.149:8000/play/a118/index.m3u8",
+      "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_EUROSPORT_HD/images/LOGO_HD/image.png",
+      "group": "Sports",
+      "tvg_id": "Eurosport.in",
+      "tvg_name": "Eurosport",
+      "country": "IN",
+      "language": "eng",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "Kabaddi 24x7 (720p)",
       "url": "https://samitaorigin.tangotv.in/KABADDI24X7/SAMITAORIGIN/index.m3u8",
       "logo": "https://papaji.freetvindia.com/media/kabaddi_24x7.png",
@@ -7877,6 +7899,17 @@
       "country": null,
       "language": null,
       "source": "iptv-org Index"
+    },
+    {
+      "name": "Calvary TV (576p)",
+      "url": "https://cdn.pishow.tv/ott/live/963/master.m3u8",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Calvary.png",
+      "group": "Undefined",
+      "tvg_id": "CalvaryTV.in",
+      "tvg_name": "Calvary TV",
+      "country": "IN",
+      "language": "tel",
+      "source": "Dearbulut Best"
     },
     {
       "name": "Fast1 (720p)",
