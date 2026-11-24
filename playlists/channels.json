@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-23T17:55:44.043605+00:00",
-  "total": 740,
+  "generated_at": "2026-11-24T03:51:51.813491+00:00",
+  "total": 743,
   "channels": [
     {
       "name": "Sony Yay! (1080p)",
@@ -370,11 +370,11 @@
       "url": "https://app.ncare.live/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/amarbanglatv.stream/playlist.m3u8",
       "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Amaar_Bangla.png",
       "group": "Entertainment",
-      "tvg_id": "AamarBangla.in@SD",
-      "tvg_name": null,
-      "country": null,
-      "language": null,
-      "source": "iptv-org Index"
+      "tvg_id": "AamarBangla.in",
+      "tvg_name": "Aamar Bangla",
+      "country": "IN",
+      "language": "ben",
+      "source": "Dearbulut Best"
     },
     {
       "name": "Ananda TV (720p)",
@@ -388,6 +388,17 @@
       "source": "iptv-org Index"
     },
     {
+      "name": "Anmol TV (576p)",
+      "url": "https://fta.ektv.in/live/256/master.m3u8",
+      "logo": "https://dvdh7g0f0hwck.cloudfront.net/assets/images/channel/AnmolTV_Transparent_6e1b4782-0685-4ccd-bac0-436a0c0ea947.png",
+      "group": "Entertainment",
+      "tvg_id": "AnmolTV.in",
+      "tvg_name": "Anmol TV",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "Captain (576p)",
       "url": "https://mumbai-edge.smartplaytv.in/captain/index.m3u8",
       "logo": "https://dtil.tmsimg.com/assets/GNLZZGG0029CNNM.png?lock=720x540",
@@ -399,15 +410,15 @@
       "source": "Dearbulut Best"
     },
     {
-      "name": "Colors Bangla HD (1080p)",
+      "name": "Colors Bangla (1080p)",
       "url": "http://103.135.253.32:8080/COLORS-BANGLA-HD/index.m3u8",
-      "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_BANGLA/images/LOGO_HD/image.png",
+      "logo": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/8049/1782291598049-h.jpg",
       "group": "Entertainment",
-      "tvg_id": "ColorsBangla.in@HD",
-      "tvg_name": null,
-      "country": null,
-      "language": null,
-      "source": "iptv-org Index"
+      "tvg_id": "ColorsBangla.in",
+      "tvg_name": "Colors Bangla",
+      "country": "IN",
+      "language": "ben",
+      "source": "Dearbulut Best"
     },
     {
       "name": "Dangal 2 (720p)",
@@ -484,17 +495,6 @@
       "tvg_name": "Epic Bharat",
       "country": "IN",
       "language": "hin",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "Epic TV (1080p)",
-      "url": "https://d1fodel5fjpe8b.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/pb-68r9vf9490xt2/master.m3u8?ads.ads_cdn=cf&ads.cdn=cf",
-      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/Epic-LOGO_2000_X_1125_transpharent.png",
-      "group": "Entertainment",
-      "tvg_id": "EpicTV.in",
-      "tvg_name": "Epic TV",
-      "country": "IN",
-      "language": "hin;eng",
       "source": "Dearbulut Best"
     },
     {
@@ -2799,13 +2799,13 @@
     {
       "name": "Colors Bangla Cinema (576p)",
       "url": "http://103.135.253.32:8080/COLORS-BANGLA-CINEMA/index.m3u8",
-      "logo": "https://xstreamcp-assets-msp.streamready.in/assets/LIVETV/LIVECHANNEL/LIVETV_LIVETVCHANNEL_COLORS_BANGLA_CINEMA/images/LOGO_HD/image.png",
+      "logo": "https://img10.hotstar.com/image/upload/f_auto/sources/r1/cms/prod/4599/1782289524599-h.jpg",
       "group": "Movies",
-      "tvg_id": "ColorsBanglaCinema.in@SD",
-      "tvg_name": null,
-      "country": null,
-      "language": null,
-      "source": "iptv-org Index"
+      "tvg_id": "ColorsBanglaCinema.in",
+      "tvg_name": "Colors Bangla Cinema",
+      "country": "IN",
+      "language": "ben",
+      "source": "Dearbulut Best"
     },
     {
       "name": "ETV Cinema (1080p)",
@@ -3303,12 +3303,23 @@
       "source": "iptv-org Index"
     },
     {
-      "name": "B4U Music (1080p)",
-      "url": "https://amg00877-b4unew-amg00877c3-xiaomi-in-5474.playouts.now.amagi.tv/playlist.m3u8",
-      "logo": "https://dtil.tmsimg.com/assets/s158141_ld_h15_aa.png?lock=720x540",
+      "name": "Deewana HD (576p)",
+      "url": "https://live20.bozztv.com/giatvplayout7/giatv-209592/index.m3u8",
+      "logo": "https://i.imgur.com/xIYITQ9.png",
       "group": "Music",
-      "tvg_id": "B4UMusic.in",
-      "tvg_name": "B4U Music",
+      "tvg_id": "DeewanaHD.in",
+      "tvg_name": "Deewana HD",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Dhamaal (576p)",
+      "url": "https://tvsen6.aynaott.com/F4Z6es8E/index.m3u8",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Dhamaal_TV.png",
+      "group": "Music",
+      "tvg_id": "Dhamaal.in",
+      "tvg_name": "Dhamaal",
       "country": "IN",
       "language": "hin",
       "source": "Dearbulut Best"
@@ -3853,6 +3864,17 @@
       "source": "Dearbulut Best"
     },
     {
+      "name": "22Scope News (720p)",
+      "url": "https://thelegitpro.in/HDlive/22scope/index.fmp4.m3u8",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/22Scope_News.png",
+      "group": "News",
+      "tvg_id": "22ScopeNews.in",
+      "tvg_name": "22Scope News",
+      "country": "IN",
+      "language": "hin",
+      "source": "Dearbulut Best"
+    },
+    {
       "name": "4TV News (576p)",
       "url": "https://cdn.pishow.tv/ott/live/1007/master.m3u8",
       "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/4_TV.png",
@@ -3861,6 +3883,17 @@
       "tvg_name": "4TV News",
       "country": "IN",
       "language": "urd",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Aagaaz Times (1080p)",
+      "url": "https://live1.ottlive.co.in/aagaaztimes/index.m3u8",
+      "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/aagaaztimes.png",
+      "group": "News",
+      "tvg_id": "AagaazTimes.in",
+      "tvg_name": "Aagaaz Times",
+      "country": "IN",
+      "language": "hin",
       "source": "Dearbulut Best"
     },
     {
@@ -3971,6 +4004,17 @@
       "tvg_name": "Asianet Suvarna News",
       "country": "IN",
       "language": "kan",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "Bada Khabar (576p)",
+      "url": "https://mumbai-edge.smartplaytv.in/BADAKHABAR/index.m3u8",
+      "logo": "https://i.imgur.com/XiwygDJ.png",
+      "group": "News",
+      "tvg_id": "BadaKhabar.in",
+      "tvg_name": "Bada Khabar",
+      "country": "IN",
+      "language": "ori",
       "source": "Dearbulut Best"
     },
     {
@@ -4092,17 +4136,6 @@
       "tvg_name": "DNN",
       "country": "IN",
       "language": "hin",
-      "source": "Dearbulut Best"
-    },
-    {
-      "name": "ETV Andhra Pradesh (1080p)",
-      "url": "https://dydgqt7gwzwgp.cloudfront.net/v1/fbb2721f72d04c66a545fee9ca8c728c/airtFED4D.m3u8",
-      "logo": "https://ltsk-cdn.s3.eu-west-1.amazonaws.com/jumpstart/Temp_Live/cdn/HLS/Channel/transparentImages/ETV%20Andhra%20Pradesh.png",
-      "group": "News",
-      "tvg_id": "ETVAndhraPradesh.in",
-      "tvg_name": "ETV Andhra Pradesh",
-      "country": "IN",
-      "language": "tel",
       "source": "Dearbulut Best"
     },
     {
