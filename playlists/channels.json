@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-24T23:46:54.742591+00:00",
-  "total": 730,
+  "generated_at": "2026-11-25T07:13:06.418539+00:00",
+  "total": 729,
   "channels": [
     {
       "name": "Sony Yay! (1080p)",
@@ -1295,17 +1295,6 @@
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Antv_logo.svg/960px-Antv_logo.svg.png",
       "group": "General",
       "tvg_id": "ANTV.id@SD",
-      "tvg_name": null,
-      "country": null,
-      "language": null,
-      "source": "iptv-org Index"
-    },
-    {
-      "name": "ANTV (Indonesia) HD (480p)",
-      "url": "https://proxy-v.rctiplus.id/live/web/antv/index.m3u8",
-      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Antv_logo.svg/960px-Antv_logo.svg.png",
-      "group": "General",
-      "tvg_id": "ANTV.id@HD",
       "tvg_name": null,
       "country": null,
       "language": null,

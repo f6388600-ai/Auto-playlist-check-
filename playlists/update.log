@@ -1,31 +1,31 @@
-[2026-11-24 23:46:21] INFO    | ============================================================
-[2026-11-24 23:46:21] INFO    | IPTV Auto Aggregator v2.0
-[2026-11-24 23:46:21] INFO    | Sources configured: 4
-[2026-11-24 23:46:21] INFO    | ============================================================
-[2026-11-24 23:46:21] INFO    | FETCH | iptv-org Index
-[2026-11-24 23:46:21] INFO    | OK    | iptv-org Index → 11473 channels
-[2026-11-24 23:46:21] INFO    | LIMIT | iptv-org Index → first 4000
-[2026-11-24 23:46:21] INFO    | FETCH | Free-TV IPTV
-[2026-11-24 23:46:22] INFO    | OK    | Free-TV IPTV → 2203 channels
-[2026-11-24 23:46:22] INFO    | FETCH | Dearbulut Best
-[2026-11-24 23:46:22] INFO    | OK    | Dearbulut Best → 10420 channels
-[2026-11-24 23:46:22] INFO    | LIMIT | Dearbulut Best → first 4000
-[2026-11-24 23:46:22] INFO    | FETCH | Dearbulut Online
-[2026-11-24 23:46:22] INFO    | OK    | Dearbulut Online → 8621 channels
-[2026-11-24 23:46:22] INFO    | LIMIT | Dearbulut Online → first 4000
-[2026-11-24 23:46:22] INFO    | TOTAL | Collected 14203 channels from 4/4 sources
-[2026-11-24 23:46:22] INFO    | DEDUP | 14203 → 8847 unique
-[2026-11-24 23:46:23] INFO    | FILTER| 8847 → 730
-[2026-11-24 23:46:23] INFO    | HEALTH| Checking 730 streams (40 workers, 6s timeout)
-[2026-11-24 23:46:29] INFO    | HEALTH| Progress 300/730
-[2026-11-24 23:46:34] INFO    | HEALTH| Progress 600/730
-[2026-11-24 23:46:54] INFO    | HEALTH| Progress 730/730
-[2026-11-24 23:46:54] INFO    | HEALTH| Finished → 663 working / 730 total (31.7s)
-[2026-11-24 23:46:54] INFO    | WRITE | playlist.m3u → 730 channels
-[2026-11-24 23:46:54] INFO    | WRITE | online.m3u → 663 channels
-[2026-11-24 23:46:54] INFO    | WRITE | channels.json → 730 channels
-[2026-11-24 23:46:54] INFO    | ============================================================
-[2026-11-24 23:46:54] INFO    | DONE  | Total unique : 730
-[2026-11-24 23:46:54] INFO    | DONE  | Online       : 663
-[2026-11-24 23:46:54] INFO    | DONE  | Sources OK   : 4/4
-[2026-11-24 23:46:54] INFO    | ============================================================
+[2026-11-25 07:12:33] INFO    | ============================================================
+[2026-11-25 07:12:33] INFO    | IPTV Auto Aggregator v2.0
+[2026-11-25 07:12:33] INFO    | Sources configured: 4
+[2026-11-25 07:12:33] INFO    | ============================================================
+[2026-11-25 07:12:33] INFO    | FETCH | iptv-org Index
+[2026-11-25 07:12:34] INFO    | OK    | iptv-org Index → 11497 channels
+[2026-11-25 07:12:34] INFO    | LIMIT | iptv-org Index → first 4000
+[2026-11-25 07:12:34] INFO    | FETCH | Free-TV IPTV
+[2026-11-25 07:12:34] INFO    | OK    | Free-TV IPTV → 2203 channels
+[2026-11-25 07:12:34] INFO    | FETCH | Dearbulut Best
+[2026-11-25 07:12:34] INFO    | OK    | Dearbulut Best → 10420 channels
+[2026-11-25 07:12:34] INFO    | LIMIT | Dearbulut Best → first 4000
+[2026-11-25 07:12:34] INFO    | FETCH | Dearbulut Online
+[2026-11-25 07:12:34] INFO    | OK    | Dearbulut Online → 8621 channels
+[2026-11-25 07:12:34] INFO    | LIMIT | Dearbulut Online → first 4000
+[2026-11-25 07:12:34] INFO    | TOTAL | Collected 14203 channels from 4/4 sources
+[2026-11-25 07:12:34] INFO    | DEDUP | 14203 → 8851 unique
+[2026-11-25 07:12:34] INFO    | FILTER| 8851 → 729
+[2026-11-25 07:12:34] INFO    | HEALTH| Checking 729 streams (40 workers, 6s timeout)
+[2026-11-25 07:12:41] INFO    | HEALTH| Progress 300/729
+[2026-11-25 07:12:46] INFO    | HEALTH| Progress 600/729
+[2026-11-25 07:13:06] INFO    | HEALTH| Progress 729/729
+[2026-11-25 07:13:06] INFO    | HEALTH| Finished → 658 working / 729 total (31.6s)
+[2026-11-25 07:13:06] INFO    | WRITE | playlist.m3u → 729 channels
+[2026-11-25 07:13:06] INFO    | WRITE | online.m3u → 658 channels
+[2026-11-25 07:13:06] INFO    | WRITE | channels.json → 729 channels
+[2026-11-25 07:13:06] INFO    | ============================================================
+[2026-11-25 07:13:06] INFO    | DONE  | Total unique : 729
+[2026-11-25 07:13:06] INFO    | DONE  | Online       : 658
+[2026-11-25 07:13:06] INFO    | DONE  | Sources OK   : 4/4
+[2026-11-25 07:13:06] INFO    | ============================================================
