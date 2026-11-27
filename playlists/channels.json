@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-27T11:48:52.170280+00:00",
-  "total": 731,
+  "generated_at": "2026-11-27T20:44:07.165863+00:00",
+  "total": 730,
   "channels": [
     {
       "name": "Sony Yay! (1080p)",
@@ -58,34 +58,12 @@
       "source": "Free-TV IPTV"
     },
     {
-      "name": "RTV Glas Drine",
-      "url": "http://glasdrine.cutuk.net:8081/433ssdsw/GlasDrineSD/playlist.m3u8",
-      "logo": "https://i.imgur.com/9NgxOdb.png",
-      "group": "Bosnia and Herzegovina",
-      "tvg_id": "RTVGlasDrine.ba",
-      "tvg_name": "RTV Glas Drine",
-      "country": "BA",
-      "language": null,
-      "source": "Free-TV IPTV"
-    },
-    {
       "name": "RTV HB Ⓢ",
       "url": "https://prd-hometv-live-open.spectar.tv/ERO_1_083/playlist.m3u8",
       "logo": "https://upload.wikimedia.org/wikipedia/en/6/60/Logo_of_TV_Herceg-Bosne.png",
       "group": "Bosnia and Herzegovina",
       "tvg_id": "RTVHB.ba",
       "tvg_name": "RTV HB",
-      "country": "BA",
-      "language": null,
-      "source": "Free-TV IPTV"
-    },
-    {
-      "name": "RTV USK Ⓨ",
-      "url": "https://www.youtube.com/@rtvusk/live",
-      "logo": "https://upload.wikimedia.org/wikipedia/en/f/ff/Logo_of_RTVUSK.png",
-      "group": "Bosnia and Herzegovina",
-      "tvg_id": "RTVUSK.ba",
-      "tvg_name": "RTV USK",
       "country": "BA",
       "language": null,
       "source": "Free-TV IPTV"
@@ -103,7 +81,7 @@
     },
     {
       "name": "SuperTV",
-      "url": "https://live.tv-m.net/hls/stream.m3u8",
+      "url": "https://live.probaj.net/live/mirtv/index.m3u8",
       "logo": "https://i.imgur.com/XYWgd3E.png",
       "group": "Bosnia and Herzegovina",
       "tvg_id": "SuperTV.ba",
@@ -2035,6 +2013,17 @@
       "tvg_name": "RTV",
       "country": "BD",
       "language": "ben",
+      "source": "Dearbulut Best"
+    },
+    {
+      "name": "RTV Glas Drine (404p)",
+      "url": "http://glasdrine.cutuk.net:8081/433ssdsw/GlasDrineSD/playlist.m3u8",
+      "logo": "https://i.imgur.com/9NgxOdb.png",
+      "group": "General",
+      "tvg_id": "RTVGlasDrine.ba",
+      "tvg_name": "RTV Glas Drine",
+      "country": "BA",
+      "language": "bos",
       "source": "Dearbulut Best"
     },
     {
